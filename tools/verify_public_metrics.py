@@ -4,9 +4,7 @@ from fractions import Fraction
 import json
 
 
-def main():
-    root = Path(__file__).resolve().parents[1]
-    data = json.loads((root / 'evidence/development-metrics.json').read_text())
+def verify(data):
     c = data['confusion']
     assert len(c) == 5 and all(len(row) == 5 for row in c)
     assert all(type(x) is int and x >= 0 for row in c for x in row)
@@ -25,8 +23,19 @@ def main():
     assert total+data['invalid_epochs'] == data['complete_epochs']
     assert data['confirmatory'] is False
     assert data['gate_A'] == data['gate_B'] == 'NOT_RUN'
-    print(json.dumps({'status':'PASS','source':'public aggregate counts',**values,
-                      'macro_f1_exact':str(f1),'valid_epochs':total,'confirmation':'NOT_RUN'},indent=2))
+    return {'status':'PASS','source':'public aggregate counts',**values,
+            'macro_f1_exact':str(f1),'valid_epochs':total,'confirmation':'NOT_RUN'}
+
+
+def main():
+    root = Path(__file__).resolve().parents[1]
+    data = json.loads((root / 'evidence/development-metrics.json').read_text())
+    first = verify(data)
+    native = json.loads((root / 'evidence/sleepyland-yasa-development.json').read_text())
+    m = native['metrics']
+    m.update(valid_epochs=m['evaluated_epochs'], complete_epochs=m['complete_psg_epochs'],
+             confirmatory=False, gate_A=native['gate_A'], gate_B=native['gate_B'])
+    print(json.dumps({'best_development':first,'sleepyland_yasa_development':verify(m)},indent=2))
 
 
 if __name__ == '__main__':

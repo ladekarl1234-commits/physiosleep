@@ -23,8 +23,8 @@ The frozen registry is a preregistration snapshot, not a live training dashboard
 - AttnSleep: native 100-epoch route with pinned legacy environment; qualification/probes do not equal completed serious training.
 - XSleepNet: native one/two-channel routes and MATLAB preprocessing parity required; code-use rights unresolved.
 - TinySleepNet: native sequence training and TensorFlow 1.13.1 route; conflicting terms unresolved.
-- U-Time / U-Sleep: distinct native architectures/configurations; 128 Hz preprocessing, sampler/loss equivalence and adequate clean fits required. Bounded runtime probes do not complete them.
-- Sleepyland YASA: the repaired string-class facade preserves original saved model bytes and native probabilities in an actual saved-fold test. A clean five-fold development fit is being evaluated separately; full route and container equivalence must not be assumed.
+- U-Time / U-Sleep: distinct native architectures/configurations; 128 Hz preprocessing, sampler/loss equivalence and adequate clean fits required. Bounded runtime probes do not complete them. The next U-Time fold-0 inner epoch has been dispatched under the existing one-job CPU/resource supervisor; this is not completed training.
+- Sleepyland YASA: the repaired string-class facade preserves original saved model bytes and native probabilities in an actual saved-fold test. A clean five-fold development fit is independently verified at 0.783662 Macro-F1 on 119 recordings. All five-fold parity checks passed. Full mandatory-slot adequacy and unchanged-container equivalence must not be assumed.
 - Sleepyland deep families: register all 18 family/year/modality variants plus the equal-probability 2024 EEG+EOG ensemble. Released-weight rights/ancestry and Linux/container availability remain unresolved. Clean native training is only an alternative where permitted and demonstrated.
 
 | Blocker | What resolves it |

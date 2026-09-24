@@ -37,6 +37,8 @@ Original modeling modules in `sleepedf/` are included for inspection. Their CLIs
 
 No public replay command opens an audit. The repository does not include released weights or silently download data. See the [ADR index](adr/README.md) and [baseline gaps](BASELINES.md).
 
-## Release checks
+## Completed release checks
 
-The first fresh local clone passed92synthetic tests, but its source-byte scan detected Windows checkout line-ending conversion. Repository attributes now preserve exact bytes on every host; a fresh clone is being rechecked. This is same-host verification, not external full-training replay. A pinned GitHub Actions workflow repeats the public checks after publication.
+A fresh local clone passed **92 synthetic tests**, exact aggregate arithmetic, and the tracked-file/link/source-hash scan in a separately created minimal Python 3.11 environment. The initial clone exposed Windows line-ending conversion; repository attributes now preserve exact source bytes. The corrected fresh clone passed all checks. See [the receipt](../evidence/clean-clone-verification.json).
+
+This is same-host verification, not independent external full-training replay. A pinned GitHub Actions workflow repeats public checks on a hosted runner after publication; its live status remains separate from this local receipt.

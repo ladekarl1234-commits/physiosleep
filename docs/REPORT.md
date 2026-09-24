@@ -49,6 +49,12 @@ The transition prior is fitted only on each fold's training people. It improves 
 
 Round-prefix sensitivity increased from 0.782354 at 100 rounds to 0.786267 at 400; the best prefix sits at the endpoint, so convergence remains unresolved. Two-view averaging worsened the fixed control. Historical duration-only and combined-prior experiments did not replace the selected system. Missing ablations, longer training and other native families remain work, not successful experiments.
 
+## Newly completed Sleepyland/YASA development route
+
+The repaired native-classifier route completed all five clean development folds on 119 recordings / 60 people, using pooled Fpz-Cz+EOG and Pz-Oz+EOG feature groups. Seed 17, 400 boosting rounds and learning rate 0.1 produce Macro-F1 **0.7836621841**, accuracy **0.9046052991** and kappa **0.8272591097**. Independent saved-artifact checks reproduced all 119 output/reference grids, all five-fold native float32 parity arrays, checkpoint/source hashes, participant ancestry and confusion metrics. Runtime was 1,655.5 seconds with peak combined RSS 2.20 GB.
+
+This resolves the previous stage-alias truncation failure through a copied object-dtype class-label facade; original saved model bytes and predictions are unchanged by that compatibility repair. This is a new clean development fit, not unchanged-container equivalence, released-weight reproduction or completion of the full mandatory slot. The best existing development candidate exceeds this route by 0.0061165, still below 0.02. [Public aggregate receipt](../evidence/sleepyland-yasa-development.json). The seven-figure set documents the earlier frozen development comparisons; this later result is reported separately.
+
 ## Descriptive uncertainty
 
 Ten thousand common paired participant resamples preserve SC46/ST14 and all nights. PCG64 seed 2026092403, linear percentiles and Bonferroni tails 0.00625/0.99375 cover four prespecified contrasts. The three-seed-minus-control band is [+0.000364,+0.003084], transition-minus-control [+0.001620,+0.005431], transition-minus-parent [+0.000431,+0.003101], and two-view-minus-control [-0.006649,+0.001564].

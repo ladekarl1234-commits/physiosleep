@@ -18,6 +18,8 @@ These figures come from saved predictions. They are not generated performance il
 | Hardware | Acquisition concept and synthetic engineering checks; no built or validated device |
 | Specialist interface | Local standalone review demonstration; no consumer workflow in current scope |
 
+A newly completed, independently verified Sleepyland/YASA clean development route scored **0.783662 Macro-F1** on the same 119 recordings. Its compatibility and scope are documented in the [report](docs/REPORT.md#newly-completed-sleepylandyasa-development-route); it does not complete the mandatory benchmark.
+
 ## Read and reproduce
 
 - [Full scientific report](docs/REPORT.md): methods, actual results, adverse findings and limits.

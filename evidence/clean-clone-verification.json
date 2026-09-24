@@ -1,13 +1,14 @@
 {
-  "status": "FAILED_SOURCE_BYTES_LINE_ENDINGS",
+  "status": "PASS",
   "scope": "Same-host fresh local clone with separate minimal venv; not external training replay",
-  "commit": "ee1222eccdb26ccee2cb2878022d6112de076c07",
+  "commit": "b98e2656526aec92244b6661d12a154afd48fca8",
   "tests": 92,
-  "log_sha256": "473b965d395580435463df4b7e03babf1a25f1219e81c0037b5b570fd7cf38c5",
-  "aggregate_metrics": "exact confusion-count replay passed",
-  "publication_scanner": "FAIL: Windows clone auto-converted LF to CRLF",
+  "test_exit_code": 0,
+  "log_sha256": "0fd909d6e5ecbd9f3ed5ae9bfeb0a20385309cb47bbd144c3fa4ce1e574aa2ca",
+  "aggregate_metrics": "PASS exact confusion-count replay",
+  "publication_scanner": "PASS 148 tracked files; all source hashes and links match",
+  "line_endings": "Repository attributes preserve exact source bytes; initial failed checkout retained locally",
   "inputs": "synthetic fixtures and public aggregate counts only",
   "model_training": false,
-  "audit_access": false,
-  "resolution": "Added repository .gitattributes * -text; fresh clone recheck pending"
+  "audit_access": false
 }

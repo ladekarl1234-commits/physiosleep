@@ -1,0 +1,78 @@
+{
+  "scope": "development only, clean local five-fold fit, adapted Windows native route",
+  "system": "Sleepyland/YASA pooled Fpz-Cz+EOG and Pz-Oz+EOG groups",
+  "seed": 17,
+  "boosting_rounds": 400,
+  "learning_rate": 0.1,
+  "participants": 60,
+  "recordings": 119,
+  "class_order": [
+    "W",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+  ],
+  "metrics": {
+    "confusion": [
+      [
+        169879,
+        2931,
+        446,
+        49,
+        232
+      ],
+      [
+        2483,
+        7042,
+        3739,
+        113,
+        984
+      ],
+      [
+        862,
+        3618,
+        43608,
+        2452,
+        1364
+      ],
+      [
+        71,
+        19,
+        2864,
+        10287,
+        10
+      ],
+      [
+        320,
+        1289,
+        2252,
+        66,
+        17291
+      ]
+    ],
+    "macro_f1": 0.7836621840961124,
+    "accuracy": 0.9046052991384433,
+    "kappa": 0.8272591097192791,
+    "complete_psg_epochs": 276133,
+    "evaluated_epochs": 274271,
+    "invalid_epochs": 1862,
+    "per_class_f1": [
+      0.9787009724846752,
+      0.4813397129186603,
+      0.8321105206415235,
+      0.7847280494316882,
+      0.8414316650040147
+    ]
+  },
+  "result_sha256": "bb19a4779318ee6f2fe87f0bf1790efbaabb22f35255b35d4898ea14207eefd9",
+  "verification_sha256": "8f7137bbffa3444e15bf32ee4b6d2d9210dce31689be0dcc71166f6abca29496",
+  "verification_status": "PASS",
+  "checks": "119 saved output/reference grids, five fold native parity arrays and checkpoints, complete participant ancestry and pooled metric recomputation",
+  "elapsed_seconds": 1655.515,
+  "peak_combined_rss_bytes": 2197434368,
+  "mandatory_slot_completed": false,
+  "unchanged_container_equivalence": false,
+  "gate_A": "NOT_RUN",
+  "gate_B": "NOT_RUN"
+}

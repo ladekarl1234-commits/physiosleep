@@ -1,0 +1,296 @@
+{
+  "schema_version": "physiosleep-simulated-research-judge-v1",
+  "review_date": "2026-09-25",
+  "judge_type": "simulated_independent_data_ml_reproducibility_review",
+  "not_official_competition_or_clinical_certification": true,
+  "rubric_frozen_for_later_regrade": true,
+  "score": {
+    "total": 59,
+    "maximum": 100,
+    "data": {
+      "earned": 25,
+      "maximum": 30
+    },
+    "ml": {
+      "earned": 16,
+      "maximum": 45
+    },
+    "reproducibility": {
+      "earned": 18,
+      "maximum": 25
+    }
+  },
+  "rubric": [
+    {
+      "id": "data_content_provenance",
+      "category": "data",
+      "max": 7,
+      "earned": 6,
+      "full_credit": "Publisher-linked original file identities and content hashes plus a reproducible acquisition/checksum procedure for every evaluated input.",
+      "evidence": [
+        "reports/FINAL_RESEARCH_RESULT.md",
+        "reports/data-readiness.json"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "data_reader_annotation_timing",
+      "category": "data",
+      "max": 7,
+      "earned": 6,
+      "full_credit": "Native signal and annotation content, reader compatibility, timing and invalid intervals validated with all exceptions accounted for.",
+      "evidence": [
+        "reports/data-readiness.json",
+        "docs/SCIENTIFIC_PROTOCOL.md"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "data_participant_leakage",
+      "category": "data",
+      "max": 8,
+      "earned": 7,
+      "full_credit": "Frozen participant/night-grouped D/A/B and fold assignments with independently protected holdouts and verified no cross-partition derived-sample leakage.",
+      "evidence": [
+        "docs/EXECUTION_PLAN.md",
+        "reports/FINAL_RESEARCH_RESULT.md"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "data_grid_labels_denominators",
+      "category": "data",
+      "max": 5,
+      "earned": 5,
+      "full_credit": "Fixed five-class labels, original epoch grid, invalid/missing accounting and prespecified metric denominators in all evaluated outputs.",
+      "evidence": [
+        "docs/SCIENTIFIC_PROTOCOL.md",
+        "reports/FINAL_RESEARCH_RESULT.md"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "data_holdout_and_official_rules",
+      "category": "data",
+      "max": 3,
+      "earned": 1,
+      "full_credit": "Untouched externally protected holdouts and settled applicable official crop, permission and scoring rules.",
+      "evidence": [
+        "docs/SCIENTIFIC_PROTOCOL.md",
+        "reports/FINAL_RESEARCH_RESULT.md"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "ml_candidate_development",
+      "category": "ml",
+      "max": 8,
+      "earned": 7,
+      "full_credit": "Complete participant-disjoint candidate development predictions, fixed class metrics and source-bound model selection with selection limits disclosed.",
+      "evidence": [
+        "reports/FINAL_RESEARCH_RESULT.md"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "ml_mandatory_comparators",
+      "category": "ml",
+      "max": 12,
+      "earned": 2,
+      "full_credit": "All registered mandatory clean comparators and required variants executed with complete eligible grids, rights, provenance and verified comparable D/A/B outcomes.",
+      "evidence": [
+        "reports/sleepyland-yasa-alias-v2-actual-verification.json",
+        "research/baseline_registry.json",
+        "publication/physiosleep/docs/BASELINES.md"
+      ],
+      "regrade_reason": "One additional complete, independently verified clean D-only Sleepyland/YASA route; no mandatory audit slot completed."
+    },
+    {
+      "id": "ml_native_routes_and_lineage",
+      "category": "ml",
+      "max": 7,
+      "earned": 3,
+      "full_credit": "Native or demonstrated equivalent routes for each comparator with code/weight rights, checkpoint hashes and excluded-participant training/selection ancestry.",
+      "evidence": [
+        "reports/sleepyland-yasa-alias-v2-actual-verification.json",
+        "publication/physiosleep/evidence/sleepyland-yasa-development.json",
+        "research/blockers.json"
+      ],
+      "regrade_reason": "Five-fold checkpoint hashes, held-person ancestry and saved native float32 parity independently checked; unchanged-container equivalence and other native routes remain unresolved."
+    },
+    {
+      "id": "ml_selection_uncertainty_targets",
+      "category": "ml",
+      "max": 8,
+      "earned": 4,
+      "full_credit": "Frozen development selection, paired participant uncertainty and all prespecified staging and score targets met without post-selection confirmation claims.",
+      "evidence": [
+        "reports/FINAL_RESEARCH_RESULT.md",
+        "reports/PHASE2_RESULT.md"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "ml_audit_confirmation",
+      "category": "ml",
+      "max": 10,
+      "earned": 0,
+      "full_credit": "Untouched Gate A and Gate B completed against unchanged criteria with every eligible mandatory comparison and independent result verification.",
+      "evidence": [
+        "reports/FINAL_RESEARCH_RESULT.md",
+        "research/baseline_registry.json"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "repro_code_environment_commands",
+      "category": "reproducibility",
+      "max": 6,
+      "earned": 5,
+      "full_credit": "Pinned runnable code, environment, commands, seeds and resource bounds for every reported result across a clean setup.",
+      "evidence": [
+        "publication/physiosleep/evidence/clean-clone-verification.json",
+        "runs/publication-qa/clean-clone-v2-tests.log",
+        "publication/physiosleep/docs/REPRODUCIBILITY.md"
+      ],
+      "regrade_reason": "Fresh same-host clone in a separate minimal venv passed 92 public synthetic tests and exact aggregate replay; protected-data full training was not replayed."
+    },
+    {
+      "id": "repro_hash_bound_artifacts",
+      "category": "reproducibility",
+      "max": 7,
+      "earned": 6,
+      "full_credit": "Complete immutable hash-bound source, input, model, prediction and result ancestry in a public-safe package or access-controlled manifest.",
+      "evidence": [
+        "reports/FINAL_RESEARCH_RESULT.md",
+        "runs/sleepyland-yasa-alias-v2/attempt-v1/result.json"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "repro_independent_actual_outputs",
+      "category": "reproducibility",
+      "max": 5,
+      "earned": 5,
+      "full_credit": "Independent checks of actual executed commands and output arrays for each adopted result, separate from code text and synthetic fixtures.",
+      "evidence": [
+        "reports/sleepyland-yasa-alias-v2-actual-verification.json",
+        "runs/sleepyland-yasa-pool-s17-b95d886cc9/result.json"
+      ],
+      "regrade_reason": "Independent actual saved-array check covered 119 prediction/truth grids, five fold parity arrays, confusion matrices and metrics."
+    },
+    {
+      "id": "repro_external_fresh_replay",
+      "category": "reproducibility",
+      "max": 4,
+      "earned": 0,
+      "full_credit": "Independent fresh-host replay from the publishable materials and permitted data, with terminal logs and output identity checks.",
+      "evidence": [
+        "reports/REPRODUCE.md"
+      ],
+      "regrade_reason": "Unchanged from frozen initial rubric; no new qualifying evidence."
+    },
+    {
+      "id": "repro_public_privacy_and_rights",
+      "category": "reproducibility",
+      "max": 3,
+      "earned": 2,
+      "full_credit": "Reviewed public allowlist, raw/private/credential exclusion, third-party redistribution decisions and staged repository scan.",
+      "evidence": [
+        "publication/physiosleep/evidence/source-copy-manifest.json",
+        "publication/physiosleep/RIGHTS.md",
+        "publication/physiosleep/tools/check_publication.py"
+      ],
+      "regrade_reason": "Explicit source allowlist, rights/exclusion statement and current 149-file scanner PASS; unresolved upstream rights and pattern scan limit full credit."
+    }
+  ],
+  "current_failures_or_blockers": [
+    {
+      "id": "mandatory_and_gates",
+      "finding": "All 11 mandatory audit slots and Gate A/B remain NOT_RUN; +0.02 required superiority remains unmet.",
+      "paths": [
+        "research/baseline_registry.json",
+        "publication/physiosleep/README.md"
+      ]
+    },
+    {
+      "id": "route_adequacy",
+      "finding": "New Sleepyland/YASA fit is clean D-only adapted-route evidence, not unchanged-container equivalence or a complete mandatory slot; other baseline rights and runtime gaps remain.",
+      "paths": [
+        "reports/sleepyland-yasa-alias-v2-actual-verification.json",
+        "publication/physiosleep/docs/BASELINES.md"
+      ]
+    },
+    {
+      "id": "score_targets",
+      "finding": "Experimental score and TST/WASO development targets remain unmet; no clinical qualification.",
+      "paths": [
+        "reports/PHASE2_RESULT.md",
+        "publication/physiosleep/docs/REPORT.md"
+      ]
+    },
+    {
+      "id": "external_replay",
+      "finding": "Same-host fresh clone tested synthetic/public aggregate checks only; no independent external full-training replay with permitted data.",
+      "paths": [
+        "publication/physiosleep/evidence/clean-clone-verification.json",
+        "publication/physiosleep/docs/REPRODUCIBILITY.md"
+      ]
+    },
+    {
+      "id": "rights",
+      "finding": "No public redistribution of original data or third-party weights; several external code/weight rights and lineage questions remain unresolved.",
+      "paths": [
+        "publication/physiosleep/RIGHTS.md",
+        "research/blockers.json"
+      ]
+    }
+  ],
+  "publication_actions": [
+    "Update public simulated-judging table to the final 59/100 score and include the final fixed-rubric receipt.",
+    "Keep the new Sleepyland/YASA route visibly D-only and separate from mandatory-slot/A/B completion.",
+    "Resolve third-party rights and lineage before redistributing external code or weights; retain public-package exclusions.",
+    "Complete mandatory development comparators and later predeclared audits before any benchmark or clinical claim.",
+    "Seek an independent external fresh-host full-training replay only with permitted data and resource controls."
+  ],
+  "checks_not_performed": [
+    "No raw EDF/PSG or A/B audit accessed",
+    "No training or checkpoint inference by judge",
+    "No external fresh-host full-training replay",
+    "No official competition adjudication or clinical/device assessment",
+    "No credential inventory beyond public-package scanner patterns",
+    "No GitHub publication by judge"
+  ],
+  "initial_score": {
+    "total": 53,
+    "maximum": 100,
+    "data": {
+      "earned": 25,
+      "maximum": 30
+    },
+    "ml": {
+      "earned": 14,
+      "maximum": 45
+    },
+    "reproducibility": {
+      "earned": 14,
+      "maximum": 25
+    }
+  },
+  "scope": "Simulated independent data/ML/reproducibility regrade of available local evidence and staged public package; no official or clinical certification",
+  "verification": {
+    "actual_fit_receipt_sha256": "8f7137bbffa3444e15bf32ee4b6d2d9210dce31689be0dcc71166f6abca29496",
+    "clean_clone_receipt_sha256": "ad01415d60cbbd9cae23e028189e8f14d56c4c8678617b4b78adfd827ad4f2ed",
+    "clean_clone_terminal_log_sha256": "0fd909d6e5ecbd9f3ed5ae9bfeb0a20385309cb47bbd144c3fa4ce1e574aa2ca",
+    "clean_clone_tests": 92,
+    "current_publication_scanner": {
+      "command": "C:\\Program Files\\develop\\hachaton\\sleep\\.venvs\\research\\Scripts\\python.exe tools/check_publication.py",
+      "cwd": "publication/physiosleep",
+      "exit_code": 0,
+      "status": "PASS",
+      "tracked_files": 149,
+      "errors": []
+    },
+    "staged_diff_check": "git diff --cached --check reports trailing whitespace on new CRLF text lines; no source-hash or scanner failure. Formatting warning remains for publication owner."
+  }
+}
