@@ -1,0 +1,15 @@
+# Independent environment; does not change the bootstrap uv.lock.
+numpy==1.26.4
+scipy==1.13.1
+scikit-learn==1.5.2
+mne==1.8.0
+pyedflib==0.1.42
+xlrd==2.0.2
+psutil==6.1.1
+joblib==1.4.2
+pandas==2.2.3
+seaborn==0.13.2
+antropy==0.1.9
+numba==0.61.2
+lspopt==1.4.0
+lightgbm==4.6.0

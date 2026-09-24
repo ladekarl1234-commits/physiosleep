@@ -1,0 +1,104 @@
+# PhysioSleep scientific report
+
+## Abstract and current decision
+
+PhysioSleep investigates participant-disjoint five-class staging, interpretable recording-window summaries and the requirements for a later acquisition device. On the original 60-person development set, the best completed system uses native YASA physiological features, locally fitted LightGBM classifiers, a three-seed probability ensemble and a train-only transition prior. Pooled Macro-F1 is **0.7897786854**, accuracy **0.9073799272**, and Cohen's kappa **0.8322544088**. The gain over the fixed seed-17 EEG+EOG control is **0.0035116988**, not the required 0.02. No mandatory multi-family superiority or independent confirmation is established.
+
+Audit A/B remain untouched and NOT_RUN. The owner explicitly chose to finish required baselines before opening A and to preserve B for the subsequent reduced model. Earlier provisional specialist and hardware work was authorized as a scope exception, without changing the benchmark criteria. This report supersedes historical deadline prose as a status description; retained evidence hashes preserve those earlier snapshots.
+
+## Data and preprocessing
+
+Sleep-EDF Expanded 1.0.0 contains 197 local recording pairs from 100 participants: SC 153/78 and ST 44/22. Source provenance is tied to the publisher's SHA-256 manifest. The completed data-readiness receipt covers the 394 paired EDF files; the earlier inventory also checked the 398 manifest entries. These are distinct recorded checks. Originals, source headers and annotations are never rewritten. See [PhysioNet acquisition description](https://physionet.org/content/sleep-edfx/1.0.0/).
+
+EEG and EOG are natively 100 Hz. SC EMG is a processed 1 Hz envelope; ST EMG is 100 Hz. These measurements are not interchangeable. Local ST Marker channels are 10 Hz and excluded from predictive inputs. Physiological channels are selected by verified name and role. Participant IDs, scorer identity and markers are not model features.
+
+Seven ST Hypnogram header compatibility cases were resolved through provenance-preserving reader handling; original bytes remain unchanged. Timing exceptions remain explicit: SC4362 has two annotation intervals outside PSG coverage; ST7011 has 3,140 seconds without annotation coverage and a 20-second trailing fragment. LightsOff exists in source metadata; LightsOn does not. None of these facts licenses guessing a whole-night window.
+
+Epochs are fixed half-open 30-second intervals on the PSG timeline. Movement, Unknown, gaps and invalid annotations retain their positions. R&K stages 3 and 4 map to N3; this label mapping is not AASM rescoring. The fixed order is W, N1, N2, N3, REM. The 119 development recordings contain **276,133 complete epochs**, of which **274,271 are reference-valid** and **1,862 invalid**. Every complete epoch receives an output; the evaluator alone applies the common valid mask.
+
+## Participants, fitting and estimands
+
+Development contains 46 SC and 14 ST people; A and B each contain 16 SC and four ST people. Five fixed development folds each hold out 12 participants and fit on 48. Every night, window and derived feature follows its participant. SC:36 and ST:01 were assigned to development because their annotations had already been inspected. Cohort/age blocking and seeded hashing fixed the allocation. Audit data cannot enter normalization, self-supervision, pretraining, teacher fitting, calibration or selection.
+
+These are procedural holdouts on a shared account, not externally administered independent custody. Twenty participants per audit, including only four ST participants, limit precision and subgroup interpretation. Neither 10,000 bootstrap draws nor many epochs increases the number of independent people.
+
+The headline estimand pools confusion counts over reference-valid epochs before calculating the mean of five class F1 scores; absent-denominator classes contribute zero. Participant-average F1 is a separate estimand. Exact rational confusion arithmetic is used for the point-margin comparison. Whole-record normalization and centered context make the evaluated route **offline**, not causal online inference.
+
+## Development experiments and results
+
+The six-configuration screen varied EEG versus EEG+EOG and learning-rate multipliers 0.3, 1 and 3. It selected EEG+EOG, learning rate 0.1 and 400 boosting rounds. All classifiers were locally trained; released YASA weights were not used. Fixed seeds 17, 43 and 101 were run. Selection used development evidence; cross-validation results therefore remain conditional on adaptive recipe selection.
+
+| System | Pooled Macro-F1 | Absolute change from fixed EEG+EOG seed-17 control |
+|---|---:|---:|
+| EOG feature model | 0.723293 | -0.062974 |
+| EEG feature model | 0.751696 | -0.034571 |
+| EEG+EOG, seed 17 | 0.786267 | 0 |
+| EEG+EOG, seed 43 | 0.785769 | -0.000498 |
+| EEG+EOG, seed 101 | 0.784727 | -0.001540 |
+| Equal EEG / EEG+EOG probability mean | 0.783920 | -0.002347 |
+| Three-seed EEG+EOG probability mean | 0.787989 | +0.001722 |
+| Three-seed ensemble + transition prior | **0.789779** | **+0.003512** |
+
+![Local comparisons](../reports/publication-figures/02_model_comparison.png)
+
+The best result's participant-average Macro-F1 is 0.756066, distinct from pooled 0.789779. Its class F1 values are W 0.97855, N1 0.47219, N2 0.84141, N3 0.81255 and REM 0.84420. N1 remains the weakest class. Wake constitutes 173,537 / 274,271 = 63.27% of valid epochs; high accuracy alone is insufficient.
+
+![Stage performance](../reports/publication-figures/03_class_metrics.png)
+
+The transition prior is fitted only on each fold's training people. It improves its undecoded ensemble parent by 0.001789. In Figure 01D, stage-fraction error uses all reference-valid recording epochs as the denominator, not sleep-only epochs. Its saved probabilities are original emissions, **not posterior probabilities of the decoded path**. Confidence plots label this distinction. The separate all-development refit checkpoint is the single seed-17 control; its own independent generalization accuracy has not been measured. A 2,266-epoch signal-only demonstration on a training recording proves functional inference, not accuracy.
+
+Round-prefix sensitivity increased from 0.782354 at 100 rounds to 0.786267 at 400; the best prefix sits at the endpoint, so convergence remains unresolved. Two-view averaging worsened the fixed control. Historical duration-only and combined-prior experiments did not replace the selected system. Missing ablations, longer training and other native families remain work, not successful experiments.
+
+## Descriptive uncertainty
+
+Ten thousand common paired participant resamples preserve SC46/ST14 and all nights. PCG64 seed 2026092403, linear percentiles and Bonferroni tails 0.00625/0.99375 cover four prespecified contrasts. The three-seed-minus-control band is [+0.000364,+0.003084], transition-minus-control [+0.001620,+0.005431], transition-minus-parent [+0.000431,+0.003101], and two-view-minus-control [-0.006649,+0.001564].
+
+These are approximate descriptive bands conditional on frozen development predictions. They do not account fully for adaptive selection, repeated fitting or overlapping fold training sets. They are neither audit confirmation nor a post-selection coverage guarantee. No readiness or superiority declaration follows from them.
+
+![Participant-level development distributions](../reports/publication-figures/04_participant_spread.png)
+
+![Cohort stage recall](../reports/publication-figures/07_cohort_recall.png)
+
+## Mandatory benchmark and audit protocol
+
+All eleven slots remain mandatory; the [registry](BASELINES.md) distinguishes implementations from completed executions. Unknown released-weight training overlap or rights produces descriptive-only evidence. An executed duplicate requires both routes and verified equality. Omission, family resemblance, published scores or a two-epoch toy fit cannot complete a slot.
+
+Before Audit A, require adequate native routes, complete clean predictions, frozen selected checkpoints, seed robustness and a development planning simulation meeting the 80% target. Current development gain and baseline completeness do not satisfy readiness. Do not redraw A/B or use B to retry a failed A.
+
+For each distinct frozen comparator b, require delta(b) = pooled F1(candidate) − pooled F1(b) >= **1/50**. A value of 0.0199 fails; values above 0.04 pass. Use 10,000 paired participant draws stratified by cohort, all nights retained, q=0.05/(2m), linear percentile intervals, and fixed PCG64 seeds 2026092301 (A), 2026092302 (B). Every lower bound must exceed zero. Report exact point-margin pass, positive-superiority support, and lower-bound >=0.02 support separately. Positive superiority does not establish that the true margin is at least 0.02.
+
+Integrity requires identical participant/record/epoch/mask identities, all mandatory executions, clean fitted ancestry, frozen choices and independent artifact recomputation. Hand-written status files cannot authorize downstream commands. A failed A stays failed. B is reserved for a genuinely frozen reduced model after A passes; its teacher's A result cannot certify it.
+
+## Provisional score and sensors: adverse results
+
+The exploratory formula is Q=100*sqrt(min(TST/420 minutes,1)*TST/SPT). It combines duration adequacy and within-sleep-period continuity. It is insensitive to redistribution among sleep stages when TST/SPT remain fixed. It cannot demonstrate restorative sleep, normal architecture, subjective sleep quality or absence of disease.
+
+TST is valid sleep minutes. SPT extends from the first sleep epoch start through the final sleep epoch end. WASO counts Wake only within SPT, excluding terminal Wake. The frozen score domain requires a declared observation window of at least seven hours, complete coverage and some sleep. All-Wake TST is zero, but continuity and Q are unavailable.
+
+Score agreement uses the same formula on predicted and reference stages, with participant-balanced weighting among **61 eligible recordings / 40 people**, drawn from 119 / 60. Fifty-eight recordings were ineligible. No recording had independently established complete nightly boundaries. This is conditional recording-window arithmetic, not validated whole-night SQI. Missing LightsOn leaves TIB-dependent SE unavailable; SOL needs an independent attempt-to-sleep anchor. Missing intervals remain in coverage denominators.
+
+| Model | Score MAE, points | TST MAE, minutes | Within-SPT WASO MAE, minutes |
+|---|---:|---:|---:|
+| EOG | 6.90 | 41.69 | 104.86 |
+| EEG | 7.25 | 22.65 | 98.85 |
+| EEG+EOG | 6.37 | 24.71 | 73.31 |
+| Train-only constant | 7.84 | 46.23 | 101.61 |
+| Planned maximum | **5** | **15** | **10** |
+
+EEG+EOG descriptive 95% participant-bootstrap intervals are score MAE [4.58,8.45], TST MAE [17.74,32.76] and WASO MAE [42.72,110.13], using 2,000 cohort-stratified participant draws with participant-balanced errors. Score bias is −3.02 points and score P90 absolute error 16.56 points; these also miss their proposed B thresholds. EEG+EOG WASO P90 absolute error is 229 minutes. The 18-configuration sensitivity study preserved the frozen 420-minute/equal-weight geometric formula. Lower arithmetic-composition MAE is a sensitivity result, not selection or clinical validation.
+
+![Score agreement among eligible windows](../reports/publication-figures/05_score_agreement.png)
+
+![Score component errors and descriptive intervals](../reports/publication-figures/06_score_errors.png) All tested channel configurations fail the joint targets. Three separately trained models do not constitute the full sensor-subset study, nor proof of a minimum channel set. The future B charter also requires score absolute bias <=3, score P90 <=10, and SE MAE <=5 percentage points where TIB is independently valid.
+
+## Products, hardware and limitations
+
+The specialist HTML is a local review demonstration with synthetic example epochs and editing/undo/export. It does not itself establish real inference or clinical usability. Consumer work was removed from scope. Owner-supplied fonts and private application state are excluded from this repository.
+
+Hardware work establishes inspectable acquisition, filtering, clock and packet contracts and generated fault cases. It establishes no manufactured board, measured noise, 12-hour recording, safety compliance or paired-device performance. The [hardware section](HARDWARE.md) documents unresolved EOG geometry, electrode counts, calculated budgets and physical acceptance prerequisites.
+
+The principal limitations are incomplete mandatory comparators, unavailable confirmation, uncertain generalization outside this dataset, weak N1 classification, adaptive development selection, limited ST audit sample size, missing independent night boundaries, score failure and no physical device validation. The research contribution currently consists of its transparent implementation, retained failures, participant-level protocol and measured development analyses. It does not support clinical deployment or a competition-winning claim.
+
+## Evidence and reproducibility
+
+The public [aggregate metrics](../evidence/development-metrics.json) permit exact confusion-count replay. Figures are generated from saved development artifacts with source hashes. The [reproduction guide](REPRODUCIBILITY.md) separates public replay from protected-data retraining. [Local evidence identities](../evidence/local-evidence-identities.json) bind retained verification receipts; a hash alone is not independent access to their contents. No raw signals, labels, per-epoch predictions or checkpoints are published. External literature is [context only](../literature/README.md).

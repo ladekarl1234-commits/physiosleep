@@ -1,0 +1,21 @@
+{
+  "scope": "Fresh local isolated venv, public cwd; not external fresh-host training replay",
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "packages": {
+      "numpy": "1.26.4",
+      "pyedflib": "0.1.42",
+      "xlrd": "2.0.2",
+      "PyYAML": "6.0.3"
+    }
+  },
+  "command": "python -m unittest discover -s tests -v",
+  "terminal_log_sha256": "8f89e036d6461c0238bd2959b99e3d46c2adb16244a6124747a0e46292afc2ec",
+  "reported_count": 92,
+  "result": "PASS",
+  "terminal_summary": "Ran 92 tests; OK",
+  "raw_inputs_accessed": false,
+  "gate_A": "NOT_RUN",
+  "gate_B": "NOT_RUN",
+  "creation_command": "uv venv --python 3.11; uv pip install numpy==1.26.4 pyedflib==0.1.42 xlrd==2.0.2 PyYAML==6.0.3"
+}

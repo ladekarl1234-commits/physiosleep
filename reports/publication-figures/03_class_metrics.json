@@ -1,0 +1,42 @@
+{
+  "data": {
+    "class_order": [
+      "W",
+      "N1",
+      "N2",
+      "N3",
+      "REM"
+    ],
+    "f1": [
+      0.978548463302488,
+      0.4721927149367783,
+      0.8414099846988718,
+      0.812545475433692,
+      0.8441967886208667
+    ],
+    "recall": [
+      0.9786443236888963,
+      0.479771603648771,
+      0.8528629778051788,
+      0.8006188212210399,
+      0.8139786973324535
+    ],
+    "support": [
+      173537,
+      14361,
+      51904,
+      13251,
+      21218
+    ]
+  },
+  "note": "Support is reference-valid epochs; F1 and recall are computed from the displayed pooled confusion matrix.",
+  "scope": "development out-of-fold; descriptive; not confirmatory or clinical",
+  "sources": [
+    "best_prediction_pairs_119",
+    "reference_truth_payloads_119",
+    "runs/temporal-transition-d60-153801fcc3/config.json",
+    "runs/temporal-transition-d60-153801fcc3/result.json"
+  ],
+  "subtitle": "Transition decoder \u00b7 valid development epochs \u00b7 fixed class order",
+  "title": "Stage-wise performance"
+}

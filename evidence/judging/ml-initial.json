@@ -1,0 +1,48 @@
+{
+  "schema_version": "physiosleep-simulated-research-judge-v1",
+  "review_date": "2026-09-24",
+  "judge_type": "simulated_independent_data_ml_reproducibility_review",
+  "not_official_competition_or_clinical_certification": true,
+  "rubric_frozen_for_later_regrade": true,
+  "score": {
+    "total": 53,
+    "maximum": 100,
+    "data": { "earned": 25, "maximum": 30 },
+    "ml": { "earned": 14, "maximum": 45 },
+    "reproducibility": { "earned": 14, "maximum": 25 }
+  },
+  "rubric": [
+    { "id": "data_content_provenance", "category": "data", "max": 7, "earned": 6, "full_credit": "Publisher-linked original file identities and content hashes plus a reproducible acquisition/checksum procedure for every evaluated input.", "evidence": ["reports/FINAL_RESEARCH_RESULT.md", "reports/data-readiness.json"] },
+    { "id": "data_reader_annotation_timing", "category": "data", "max": 7, "earned": 6, "full_credit": "Native signal and annotation content, reader compatibility, timing and invalid intervals validated with all exceptions accounted for.", "evidence": ["reports/data-readiness.json", "docs/SCIENTIFIC_PROTOCOL.md"] },
+    { "id": "data_participant_leakage", "category": "data", "max": 8, "earned": 7, "full_credit": "Frozen participant/night-grouped D/A/B and fold assignments with independently protected holdouts and verified no cross-partition derived-sample leakage.", "evidence": ["docs/EXECUTION_PLAN.md", "reports/FINAL_RESEARCH_RESULT.md"] },
+    { "id": "data_grid_labels_denominators", "category": "data", "max": 5, "earned": 5, "full_credit": "Fixed five-class labels, original epoch grid, invalid/missing accounting and prespecified metric denominators in all evaluated outputs.", "evidence": ["docs/SCIENTIFIC_PROTOCOL.md", "reports/FINAL_RESEARCH_RESULT.md"] },
+    { "id": "data_holdout_and_official_rules", "category": "data", "max": 3, "earned": 1, "full_credit": "Untouched externally protected holdouts and settled applicable official crop, permission and scoring rules.", "evidence": ["docs/SCIENTIFIC_PROTOCOL.md", "reports/FINAL_RESEARCH_RESULT.md"] },
+    { "id": "ml_candidate_development", "category": "ml", "max": 8, "earned": 7, "full_credit": "Complete participant-disjoint candidate development predictions, fixed class metrics and source-bound model selection with selection limits disclosed.", "evidence": ["reports/FINAL_RESEARCH_RESULT.md"] },
+    { "id": "ml_mandatory_comparators", "category": "ml", "max": 12, "earned": 1, "full_credit": "All registered mandatory clean comparators and required variants executed with complete eligible grids, rights, provenance and verified comparable D/A/B outcomes.", "evidence": ["research/baseline_registry.json", "reports/FINAL_RESEARCH_RESULT.md"] },
+    { "id": "ml_native_routes_and_lineage", "category": "ml", "max": 7, "earned": 2, "full_credit": "Native or demonstrated equivalent routes for each comparator with code/weight rights, checkpoint hashes and excluded-participant training/selection ancestry.", "evidence": ["runs/sleepyland-yasa-alias-v2/attempt-v1/result.json", "research/blockers.json"] },
+    { "id": "ml_selection_uncertainty_targets", "category": "ml", "max": 8, "earned": 4, "full_credit": "Frozen development selection, paired participant uncertainty and all prespecified staging and score targets met without post-selection confirmation claims.", "evidence": ["reports/FINAL_RESEARCH_RESULT.md", "reports/PHASE2_RESULT.md"] },
+    { "id": "ml_audit_confirmation", "category": "ml", "max": 10, "earned": 0, "full_credit": "Untouched Gate A and Gate B completed against unchanged criteria with every eligible mandatory comparison and independent result verification.", "evidence": ["reports/FINAL_RESEARCH_RESULT.md", "research/baseline_registry.json"] },
+    { "id": "repro_code_environment_commands", "category": "reproducibility", "max": 6, "earned": 4, "full_credit": "Pinned runnable code, environment, commands, seeds and resource bounds for every reported result across a clean setup.", "evidence": ["reports/REPRODUCE.md", "reports/FINAL_RESEARCH_RESULT.md"] },
+    { "id": "repro_hash_bound_artifacts", "category": "reproducibility", "max": 7, "earned": 6, "full_credit": "Complete immutable hash-bound source, input, model, prediction and result ancestry in a public-safe package or access-controlled manifest.", "evidence": ["reports/FINAL_RESEARCH_RESULT.md", "runs/sleepyland-yasa-alias-v2/attempt-v1/result.json"] },
+    { "id": "repro_independent_actual_outputs", "category": "reproducibility", "max": 5, "earned": 4, "full_credit": "Independent checks of actual executed commands and output arrays for each adopted result, separate from code text and synthetic fixtures.", "evidence": ["reports/FINAL_RESEARCH_RESULT.md", "research/sleepyland-yasa-alias-v2-readiness.json"] },
+    { "id": "repro_external_fresh_replay", "category": "reproducibility", "max": 4, "earned": 0, "full_credit": "Independent fresh-host replay from the publishable materials and permitted data, with terminal logs and output identity checks.", "evidence": ["reports/REPRODUCE.md"] },
+    { "id": "repro_public_privacy_and_rights", "category": "reproducibility", "max": 3, "earned": 0, "full_credit": "Reviewed public allowlist, raw/private/credential exclusion, third-party redistribution decisions and staged repository scan.", "evidence": ["research/blockers.json", "docs/EXTERNAL_RIGHTS_HANDOFF.md"] }
+  ],
+  "current_failures_or_blockers": [
+    { "id": "mandatory_slots", "finding": "All 11 mandatory execution slots remain NOT_RUN in the immutable registry; partial development runs do not complete audit slots.", "paths": ["research/baseline_registry.json", "reports/FINAL_RESEARCH_RESULT.md"] },
+    { "id": "margin_and_gates", "finding": "Best completed development improvement shown is +0.0035116988 over one fixed control, below +0.02 and without every comparator; Gate A/B remain NOT_RUN.", "paths": ["reports/FINAL_RESEARCH_RESULT.md", "docs/EXECUTION_PLAN.md"] },
+    { "id": "alias_v2_scope", "finding": "Saved-fold float32 parity covers one held development recording and is not an unchanged-container equivalence or completed mandatory slot; independent code review remains incomplete.", "paths": ["runs/sleepyland-yasa-alias-v2/attempt-v1/result.json", "research/sleepyland-yasa-alias-v2-readiness.json"] },
+    { "id": "external_rights", "finding": "MSA-CNN, XSleepNet, TinySleepNet, Sleepyland weights/lineage and native runtime issues remain unresolved.", "paths": ["research/blockers.json", "docs/EXTERNAL_RIGHTS_HANDOFF.md"] },
+    { "id": "score_targets", "finding": "Phase-2 development score, TST and WASO error targets are unmet; score formula remains an unvalidated recording-window index.", "paths": ["reports/PHASE2_RESULT.md"] },
+    { "id": "public_release", "finding": "A public-safe artifact allowlist, third-party redistribution review, secret/raw-data scan and fresh-host replay are not evidenced.", "paths": ["reports/REPRODUCE.md", "research/blockers.json"] }
+  ],
+  "live_fit_observation": "The new alias-v2 fit attempt had request.json and an empty worker.log but no terminal attempt.json when reviewed; no fit completion credit was awarded.",
+  "publication_actions": [
+    "Present D-only results with cohort and epoch denominators, adaptive-selection limits, adverse results and visible NOT_RUN gates.",
+    "List every mandatory slot and variant with pinned source, rights, model route, trained/partial/not-run status, eligibility and actual output hashes.",
+    "Provide public-safe code/environment/seed/command manifests and an independent fresh-host replay using permitted inputs.",
+    "Stage an explicit allowlist that excludes original EDFs, annotations, participant-linked outputs, private checkpoints, credentials and unlicensed vendor or weight copies; inspect staged Git contents before push.",
+    "Keep the provisional SQI formula, unavailable timing quantities, restricted 61-recording score cohort and unmet targets explicit."
+  ],
+  "checks_not_performed": ["No audits or held-out labels accessed", "No training or model invocation", "No raw EDF read", "No credential inspection", "No public GitHub write", "No external competition or clinical adjudication"]
+}

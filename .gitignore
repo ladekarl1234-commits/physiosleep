@@ -1,0 +1,16 @@
+__pycache__/
+*.py[cod]
+.venv/
+.venvs/
+vendor/
+data/
+runs/
+replay/
+*.edf
+*.npz
+*.joblib
+*.pt
+*.pth
+*.h5
+*.ckpt
+.env

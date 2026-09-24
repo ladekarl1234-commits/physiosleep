@@ -1,0 +1,57 @@
+{
+  "data": {
+    "class_order": [
+      "W",
+      "N1",
+      "N2",
+      "N3",
+      "REM"
+    ],
+    "cohorts": {
+      "SC": {
+        "evaluated_epochs": 246918,
+        "recall": [
+          0.9808566895822316,
+          0.4598582742809504,
+          0.8538434414668548,
+          0.8024120829576195,
+          0.8070805223742031
+        ],
+        "support": [
+          170190,
+          11995,
+          39704,
+          8872,
+          16157
+        ]
+      },
+      "ST": {
+        "evaluated_epochs": 27353,
+        "recall": [
+          0.8661487899611593,
+          0.5807269653423499,
+          0.849672131147541,
+          0.7969856131536881,
+          0.8360007903576369
+        ],
+        "support": [
+          3347,
+          2366,
+          12200,
+          4379,
+          5061
+        ]
+      }
+    }
+  },
+  "note": "SC and ST supports differ; these are epoch-pooled cohort values, not participant-balanced estimates.",
+  "scope": "development out-of-fold; descriptive; not confirmatory or clinical",
+  "sources": [
+    "best_prediction_pairs_119",
+    "reference_truth_payloads_119",
+    "runs/temporal-transition-d60-153801fcc3/config.json",
+    "runs/temporal-transition-d60-153801fcc3/result.json"
+  ],
+  "subtitle": "Transition decoder \u00b7 valid development epochs \u00b7 descriptive SC/ST split",
+  "title": "Reference-stage recall by cohort"
+}

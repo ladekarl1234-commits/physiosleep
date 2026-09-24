@@ -1,0 +1,37 @@
+{
+  "blockers": [
+    {
+      "id": "msa_code_rights",
+      "reason": "No license grant at pinned revision; public visibility is not a license.",
+      "scope": "msa_cnn_official",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "xsleepnet_use_rights",
+      "reason": "CC-BY-NC code requires intended-use resolution; released weights have distinct terms.",
+      "scope": "xsleepnet_official",
+      "status": "UNRESOLVED"
+    },
+    {
+      "id": "tiny_conflicting_terms",
+      "reason": "Apache license file conflicts with academic/non-commercial README limitation.",
+      "scope": "tinysleepnet_official",
+      "status": "UNRESOLVED"
+    },
+    {
+      "alternative": "MIT native code with clean random-initialized training; does not reproduce released weights.",
+      "id": "sleepyland_weight_rights",
+      "reason": "Maintainer explicitly excludes pretrained weights from MIT; NSRR registration and use restrictions apply.",
+      "scope": "released_NSRR_weights",
+      "source": "https://github.com/biomedical-signal-processing/sleepyland/issues/4#issuecomment-3907571732",
+      "status": "BLOCKED_EXTERNAL"
+    },
+    {
+      "id": "native_container_runtime",
+      "reason": "No Docker or WSL distribution. Investigate native CPU engine with explicit routing/parity evidence.",
+      "scope": "unmodified_sleepyland_delivery",
+      "status": "MISSING_RUNTIME"
+    }
+  ],
+  "schema_version": "1.0"
+}

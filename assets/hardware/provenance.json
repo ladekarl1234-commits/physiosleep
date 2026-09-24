@@ -1,0 +1,18 @@
+[
+  {
+    "file": "acquisition-concept.png",
+    "sha256": "1e04bed49bf117a90c0fd59cd10f40bac83bd422a991fe945c31d27660295b3b",
+    "method": "OpenAI image generation tool",
+    "date": "2026-09-24",
+    "scope": "Concept illustration only; not a built device, verified wiring diagram, clinical claim or measured result",
+    "prompt_summary": "Industrial design exploded recorder with four-channel capacity, generic PCB, battery and local storage, explicit not-built caption"
+  },
+  {
+    "file": "bench-validation-concept.png",
+    "sha256": "0cb418b87bc91f95ca6321b686a3eb35e595c4a39d673204b434fcbbf7455d4f",
+    "method": "OpenAI image generation tool",
+    "date": "2026-09-24",
+    "scope": "Concept illustration only; not a built device, verified wiring diagram, clinical claim or measured result",
+    "prompt_summary": "Studio bench validation concept with generic generator, scope, passive test fixture, recorder and disconnected USB; explicit physical-tests-not-run heading"
+  }
+]

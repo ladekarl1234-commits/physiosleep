@@ -1,0 +1,308 @@
+{
+  "additional_comparisons": [
+    {
+      "aggregation": "arithmetic_mean_probabilities",
+      "id": "sleepyland_uniform_2024_ensemble",
+      "members": [
+        "u-sleep-nsrr-2024",
+        "deepresnet-nsrr-2024",
+        "sleeptransformer-nsrr-2024"
+      ],
+      "status": "BLOCKED_WEIGHT_RIGHTS"
+    }
+  ],
+  "dependencies": {
+    "usleepyland": "16995de750d2c3724e9ec82456a26a820a0b7a05"
+  },
+  "development_variants": {
+    "msa_cnn_official": [
+      "small_mono",
+      "large_mono",
+      "small_multi",
+      "large_multi"
+    ],
+    "sleepyland": [
+      "u-sleep-nsrr-2022",
+      "u-sleep-nsrr-2022_eeg",
+      "u-sleep-nsrr-2022_eog",
+      "u-sleep-nsrr-2024",
+      "u-sleep-nsrr-2024_eeg",
+      "u-sleep-nsrr-2024_eog",
+      "deepresnet-nsrr-2022",
+      "deepresnet-nsrr-2022_eeg",
+      "deepresnet-nsrr-2022_eog",
+      "deepresnet-nsrr-2024",
+      "deepresnet-nsrr-2024_eeg",
+      "deepresnet-nsrr-2024_eog",
+      "sleeptransformer-nsrr-2022",
+      "sleeptransformer-nsrr-2022_eeg",
+      "sleeptransformer-nsrr-2022_eog",
+      "sleeptransformer-nsrr-2024",
+      "sleeptransformer-nsrr-2024_eeg",
+      "sleeptransformer-nsrr-2024_eog"
+    ],
+    "xsleepnet_official": [
+      "xsleepnet1_1channel",
+      "xsleepnet1_2channel",
+      "xsleepnet2_1channel",
+      "xsleepnet2_2channel"
+    ],
+    "yasa_native": [
+      "eeg_clean_local",
+      "eeg_eog_clean_local",
+      "released_weights_pending_rights"
+    ]
+  },
+  "duplicates_require_executed_equivalence": true,
+  "freeze_commit_and_variants_in_plan": true,
+  "initial_required_execution_slot_count": 11,
+  "registry_hash": "sha256:3f99b9748e18961ee7e4815915fd9efbe8b2715f3a923157fdf308a1cd1ea767",
+  "repositories": [
+    {
+      "checkpoint_provenance": "PENDING_OR_CLEAN_LOCAL_RETRAINING",
+      "commit_sha": "e581bf452097e01b493b3072964e206ae9b01dc4",
+      "execution_slots": [
+        {
+          "clean_comparison_eligible": null,
+          "id": "yasa_native",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R03",
+          "status": "NOT_RUN",
+          "system": "Native sleep staging"
+        }
+      ],
+      "id": "yasa",
+      "inspected_extent": "README_and_selected_documentation_not_model_execution",
+      "observed_license_note": "BSD-3-Clause observed in repository metadata; verify code and weights separately.",
+      "repository": "raphaelvallat/yasa",
+      "required": true,
+      "source_id": "R02",
+      "status": "NOT_RUN",
+      "url": "https://github.com/raphaelvallat/yasa"
+    },
+    {
+      "checkpoint_provenance": "PENDING_OR_CLEAN_LOCAL_RETRAINING",
+      "commit_sha": "f01455eb0396f790571b165fd0350b105476f043",
+      "execution_slots": [
+        {
+          "clean_comparison_eligible": null,
+          "id": "msa_cnn_official",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R04",
+          "status": "NOT_RUN",
+          "system": "MSA-CNN"
+        }
+      ],
+      "id": "msa_cnn",
+      "inspected_extent": "README_and_selected_documentation_not_model_execution",
+      "observed_license_note": "Root README/file listing inspected; no commercial-use conclusion. Resolve license at pinned revision.",
+      "repository": "sgoerttler/MSA-CNN",
+      "required": true,
+      "source_id": "R04",
+      "status": "NOT_RUN",
+      "url": "https://github.com/sgoerttler/MSA-CNN"
+    },
+    {
+      "checkpoint_provenance": "PENDING_OR_CLEAN_LOCAL_RETRAINING",
+      "commit_sha": "6b4d2665884628c8a7bb09f36589a8ec0992f8e2",
+      "execution_slots": [
+        {
+          "clean_comparison_eligible": null,
+          "id": "attnsleep_official",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R14",
+          "status": "NOT_RUN",
+          "system": "AttnSleep"
+        }
+      ],
+      "id": "attnsleep",
+      "inspected_extent": "README_and_selected_documentation_not_model_execution",
+      "observed_license_note": "MIT license file inspected; inspect any separate checkpoint terms.",
+      "repository": "emadeldeen24/AttnSleep",
+      "required": true,
+      "source_id": "R14",
+      "status": "NOT_RUN",
+      "url": "https://github.com/emadeldeen24/AttnSleep"
+    },
+    {
+      "checkpoint_provenance": "PENDING_OR_CLEAN_LOCAL_RETRAINING",
+      "commit_sha": "7a2248e78cf8f12ae6d2ae5041bb30ac3133bf29",
+      "execution_slots": [
+        {
+          "clean_comparison_eligible": null,
+          "id": "xsleepnet_official",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R05",
+          "status": "NOT_RUN",
+          "system": "XSleepNet; freeze released variant selection"
+        }
+      ],
+      "id": "xsleepnet",
+      "inspected_extent": "README_and_selected_documentation_not_model_execution",
+      "observed_license_note": "README states CC-BY-NC-4.0; proposed use rights require review.",
+      "repository": "pquochuy/XSleepNet",
+      "required": true,
+      "source_id": "R05",
+      "status": "NOT_RUN",
+      "url": "https://github.com/pquochuy/XSleepNet"
+    },
+    {
+      "checkpoint_provenance": "PENDING_OR_CLEAN_LOCAL_RETRAINING",
+      "commit_sha": "70f45cff92ac0bf0a718e522bc27cca2c63ceff7",
+      "execution_slots": [
+        {
+          "clean_comparison_eligible": null,
+          "id": "tinysleepnet_official",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R06",
+          "status": "NOT_RUN",
+          "system": "TinySleepNet"
+        }
+      ],
+      "id": "tinysleepnet",
+      "inspected_extent": "README_and_selected_documentation_not_model_execution",
+      "observed_license_note": "Apache-2.0 observed in repository metadata; verify pinned files and weights.",
+      "repository": "akaraspt/tinysleepnet",
+      "required": true,
+      "source_id": "R06",
+      "status": "NOT_RUN",
+      "url": "https://github.com/akaraspt/tinysleepnet"
+    },
+    {
+      "checkpoint_provenance": "PENDING_OR_CLEAN_LOCAL_RETRAINING",
+      "commit_sha": "7fc4cbf79e5454661f1c0d0768886e4dfbe9d42a",
+      "execution_slots": [
+        {
+          "clean_comparison_eligible": null,
+          "id": "utime_official",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R07",
+          "status": "NOT_RUN",
+          "system": "U-Time"
+        },
+        {
+          "clean_comparison_eligible": null,
+          "id": "usleep_official",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R07",
+          "status": "NOT_RUN",
+          "system": "U-Sleep"
+        }
+      ],
+      "id": "utime",
+      "inspected_extent": "README_and_selected_documentation_not_model_execution",
+      "observed_license_note": "MIT observed for repository; weights/services may have distinct terms.",
+      "repository": "perslev/U-Time",
+      "required": true,
+      "source_id": "R07",
+      "status": "NOT_RUN",
+      "url": "https://github.com/perslev/U-Time"
+    },
+    {
+      "checkpoint_provenance": "PENDING_OR_CLEAN_LOCAL_RETRAINING",
+      "commit_sha": "db420a5c1d3329304907d14f9b3b314fa6605aa9",
+      "execution_slots": [
+        {
+          "clean_comparison_eligible": null,
+          "id": "sleepyland_yasa",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R08",
+          "status": "NOT_RUN",
+          "system": "Packaged YASA"
+        },
+        {
+          "clean_comparison_eligible": null,
+          "id": "sleepyland_usleep",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R08",
+          "status": "NOT_RUN",
+          "system": "Packaged U-Sleep"
+        },
+        {
+          "clean_comparison_eligible": null,
+          "id": "sleepyland_deepresnet",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R08",
+          "status": "NOT_RUN",
+          "system": "Packaged DeepResNet"
+        },
+        {
+          "clean_comparison_eligible": null,
+          "id": "sleepyland_sleeptransformer",
+          "macro_f1": null,
+          "model_sha": null,
+          "prediction_artifacts": [],
+          "protocol_hash": null,
+          "required": true,
+          "selected_variant": null,
+          "source_id": "R08",
+          "status": "NOT_RUN",
+          "system": "Packaged SleepTransformer"
+        }
+      ],
+      "id": "sleepyland",
+      "inspected_extent": "README_and_selected_documentation_not_model_execution",
+      "observed_license_note": "MIT license file inspected; embedded model/weight terms require separate checks.",
+      "repository": "biomedical-signal-processing/sleepyland",
+      "required": true,
+      "source_id": "R08",
+      "status": "NOT_RUN",
+      "url": "https://github.com/biomedical-signal-processing/sleepyland"
+    }
+  ],
+  "retrieved_on": "2026-09-23",
+  "schema_version": "2.0",
+  "source_scope": "pinned_native_code; source-only acquisition until weight rights verified",
+  "status": "EXECUTION_REGISTRY_NOT_RESULTS",
+  "unique_repository_count": 7
+}

@@ -1,0 +1,40 @@
+{
+  "warning": "Hashes identify retained local evidence; they do not allow independent recovery or prove its claims.",
+  "artifacts": [
+    {
+      "local_artifact": "reports/FINAL_RESEARCH_RESULT.md",
+      "sha256": "e8ed5540c7dd5f46c7dda006899ccb1dd2ac64f057f760522c5736001a31cbcf",
+      "public_payload_included": false
+    },
+    {
+      "local_artifact": "reports/PHASE2_RESULT.md",
+      "sha256": "cdc5895dbb77874d5cd9fad78e06b0c23379eb6a95bdc66d8e2fe2fd13cd0f5f",
+      "public_payload_included": false
+    },
+    {
+      "local_artifact": "reports/data-readiness.json",
+      "sha256": "09f2db2fc6fe8384d9bc4fdecea8a18bb6cde8e7f9ac56931747a45c551bda9c",
+      "public_payload_included": false
+    },
+    {
+      "local_artifact": "reports/development-transition-actual-verification.json",
+      "sha256": "cb06fde28d56fb95b4a75d4c91ea72d9dae53e1d4ac3c89391fedc157b7c7f2a",
+      "public_payload_included": false
+    },
+    {
+      "local_artifact": "reports/provisional-three-model-score-verification.json",
+      "sha256": "32d1bf46eac37cfc1ac1b4a3161702d1d416d45bedac4dc78b3d81384dfcd93d",
+      "public_payload_included": false
+    },
+    {
+      "local_artifact": "reports/hardware-handover-verification-v1.json",
+      "sha256": "dcfd6aab081e8a164efa74fe19a1927383b6e8f9d74fcc617738abba870fc77d",
+      "public_payload_included": false
+    },
+    {
+      "local_artifact": "runs/sleepyland-yasa-alias-v2/attempt-v1/result.json",
+      "sha256": "9393e09a467b3f77287bab2ee5240a72c0e20c07f9ef01426c3a66c890df3349",
+      "public_payload_included": false
+    }
+  ]
+}

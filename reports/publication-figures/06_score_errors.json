@@ -1,0 +1,111 @@
+{
+  "data": {
+    "bootstrap_draws": 2000,
+    "systems": {
+      "EEG": {
+        "score": {
+          "bias": -1.6209424903747234,
+          "mae": 7.248557159593095,
+          "mae_ci95": [
+            5.169598798494468,
+            9.751587388907692
+          ],
+          "nights": 61,
+          "participants": 40
+        },
+        "tst_minutes": {
+          "bias": 2.525,
+          "mae": 22.65,
+          "mae_ci95": [
+            15.649062500000003,
+            30.400937499999998
+          ],
+          "nights": 61,
+          "participants": 40
+        },
+        "waso_minutes": {
+          "bias": 34.625,
+          "mae": 98.85,
+          "mae_ci95": [
+            59.89734375,
+            147.0384375
+          ],
+          "nights": 61,
+          "participants": 40
+        }
+      },
+      "EEG + EOG": {
+        "score": {
+          "bias": -3.024874184970181,
+          "mae": 6.374389701146714,
+          "mae_ci95": [
+            4.5751583582793165,
+            8.449298200849272
+          ],
+          "nights": 61,
+          "participants": 40
+        },
+        "tst_minutes": {
+          "bias": 3.21875,
+          "mae": 24.70625,
+          "mae_ci95": [
+            17.7428125,
+            32.75625
+          ],
+          "nights": 61,
+          "participants": 40
+        },
+        "waso_minutes": {
+          "bias": 52.0625,
+          "mae": 73.3125,
+          "mae_ci95": [
+            42.71859375,
+            110.12765624999994
+          ],
+          "nights": 61,
+          "participants": 40
+        }
+      },
+      "EOG": {
+        "score": {
+          "bias": -3.679948171308996,
+          "mae": 6.901623189507099,
+          "mae_ci95": [
+            4.973633479405503,
+            8.91424916436522
+          ],
+          "nights": 61,
+          "participants": 40
+        },
+        "tst_minutes": {
+          "bias": 15.43125,
+          "mae": 41.69375,
+          "mae_ci95": [
+            28.873593750000005,
+            56.4190625
+          ],
+          "nights": 61,
+          "participants": 40
+        },
+        "waso_minutes": {
+          "bias": 77.73125,
+          "mae": 104.85625,
+          "mae_ci95": [
+            68.19734375,
+            144.02296875
+          ],
+          "nights": 61,
+          "participants": 40
+        }
+      }
+    }
+  },
+  "note": "Dots are participant-balanced MAE; lines are saved 95% participant-bootstrap intervals (2,000 draws). Score is experimental points; TST and WASO are minutes. Development only.",
+  "scope": "development out-of-fold; descriptive; not confirmatory or clinical",
+  "sources": [
+    "reports/provisional-phase2-three-sensor/recording-summaries.csv",
+    "runs/provisional-score-study-f1c65dcf6215/result.json"
+  ],
+  "subtitle": "61 eligible recording windows / 40 participants \u00b7 equal weight per participant",
+  "title": "Participant-balanced endpoint error"
+}

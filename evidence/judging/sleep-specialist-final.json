@@ -1,0 +1,142 @@
+{
+  "rubric_id": "sleep-specialist-rubric-v1",
+  "review_date": "2026-09-24",
+  "status": "FINAL_SCOPED_DOCUMENT_AND_VISUAL_REVIEW",
+  "simulated_perspective": true,
+  "clinical_or_competition_attestation": false,
+  "score": 71,
+  "maximum": 100,
+  "raw_data_accessed": false,
+  "audits_accessed": false,
+  "rubric": [
+    {
+      "category": "understanding",
+      "id": "five_class_interpretation",
+      "maximum": 5,
+      "earned": 5
+    },
+    {
+      "category": "understanding",
+      "id": "independent_sleep_windows",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "understanding",
+      "id": "population_applicability",
+      "maximum": 5,
+      "earned": 3
+    },
+    {
+      "category": "understanding",
+      "id": "objective_vs_clinical_constructs",
+      "maximum": 5,
+      "earned": 5
+    },
+    {
+      "category": "staging",
+      "id": "participant_separation",
+      "maximum": 8,
+      "earned": 8
+    },
+    {
+      "category": "staging",
+      "id": "matched_comparators_confirmation",
+      "maximum": 8,
+      "earned": 1
+    },
+    {
+      "category": "staging",
+      "id": "metrics_masks_aggregation",
+      "maximum": 6,
+      "earned": 6
+    },
+    {
+      "category": "staging",
+      "id": "clustered_uncertainty_selection",
+      "maximum": 4,
+      "earned": 3
+    },
+    {
+      "category": "staging",
+      "id": "reproducibility",
+      "maximum": 4,
+      "earned": 4
+    },
+    {
+      "category": "score",
+      "id": "formula_domain_missingness",
+      "maximum": 5,
+      "earned": 5
+    },
+    {
+      "category": "score",
+      "id": "component_fidelity",
+      "maximum": 5,
+      "earned": 2
+    },
+    {
+      "category": "score",
+      "id": "sensitivity_failure_cases",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "score",
+      "id": "clinical_subjective_validity",
+      "maximum": 5,
+      "earned": 0
+    },
+    {
+      "category": "device",
+      "id": "montage_contacts",
+      "maximum": 5,
+      "earned": 3
+    },
+    {
+      "category": "device",
+      "id": "acquisition_conversion",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "device",
+      "id": "paired_device_qualification",
+      "maximum": 5,
+      "earned": 0
+    },
+    {
+      "category": "communication",
+      "id": "calibrated_claims",
+      "maximum": 5,
+      "earned": 5
+    },
+    {
+      "category": "communication",
+      "id": "accessible_traceable_provenance",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "communication",
+      "id": "failures_eligibility",
+      "maximum": 5,
+      "earned": 5
+    }
+  ],
+  "findings": [
+    "No mandatory superiority or confirmation",
+    "Score MAE 6.37, TST MAE 24.71, WASO MAE 73.31; all targets unmet",
+    "Score eligibility 61 nights/40 people of119/60; zero independently bounded whole nights",
+    "TinySleepNet workbook EDF rows are secondary-source numbers",
+    "Fpz-Cz requires Cz; EOG geometry unresolved; no physical bench",
+    "Offline centered context, not causal online inference"
+  ],
+  "initial_score": 69,
+  "additional_clinical_confirmation_or_device_credit": 0,
+  "review_scope": "Public report and ADR definitions; figures01/05/06; frozen rubric fidelity. Corrected figure02 separately checked by data/ML reviewer.",
+  "changes": [
+    "Accessible public aggregate provenance",
+    "Explicit failures, eligibility, uncertainty, sensitivity and current status"
+  ]
+}

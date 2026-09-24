@@ -1,0 +1,15 @@
+[project]
+name = "sleepedf-research"
+version = "0.1.0"
+description = "Local Sleep-EDF inventory and research contracts"
+requires-python = ">=3.11,<3.12"
+dependencies = []
+
+[project.optional-dependencies]
+audit = ["pyedflib==0.1.42", "xlrd==2.0.2"]
+
+[dependency-groups]
+dev = ["PyYAML>=6,<7"]
+
+[tool.uv]
+package = false

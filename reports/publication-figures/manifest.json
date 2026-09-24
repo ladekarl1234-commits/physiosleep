@@ -1,0 +1,126 @@
+{
+  "class_order": [
+    "W",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+  ],
+  "development_only": true,
+  "figures": {
+    "01_night_overview": {
+      "data": "01_night_overview.json",
+      "png": "01_night_overview.png",
+      "source_count": 7,
+      "svg": "01_night_overview.svg"
+    },
+    "02_model_comparison": {
+      "data": "02_model_comparison.json",
+      "png": "02_model_comparison.png",
+      "source_count": 10,
+      "svg": "02_model_comparison.svg"
+    },
+    "03_class_metrics": {
+      "data": "03_class_metrics.json",
+      "png": "03_class_metrics.png",
+      "source_count": 4,
+      "svg": "03_class_metrics.svg"
+    },
+    "04_participant_spread": {
+      "data": "04_participant_spread.json",
+      "png": "04_participant_spread.png",
+      "source_count": 7,
+      "svg": "04_participant_spread.svg"
+    },
+    "05_score_agreement": {
+      "data": "05_score_agreement.json",
+      "png": "05_score_agreement.png",
+      "source_count": 3,
+      "svg": "05_score_agreement.svg"
+    },
+    "06_score_errors": {
+      "data": "06_score_errors.json",
+      "png": "06_score_errors.png",
+      "source_count": 2,
+      "svg": "06_score_errors.svg"
+    },
+    "07_cohort_recall": {
+      "data": "07_cohort_recall.json",
+      "png": "07_cohort_recall.png",
+      "source_count": 4,
+      "svg": "07_cohort_recall.svg"
+    }
+  },
+  "gate_A": "NOT_RUN",
+  "gate_B": "NOT_RUN",
+  "pooled_metric_spotcheck": {
+    "accuracy": 0.9073799271523421,
+    "confusion": [
+      [
+        169831,
+        2974,
+        413,
+        91,
+        228
+      ],
+      [
+        2550,
+        6890,
+        3898,
+        58,
+        965
+      ],
+      [
+        674,
+        3652,
+        44267,
+        2081,
+        1230
+      ],
+      [
+        78,
+        20,
+        2539,
+        10609,
+        5
+      ],
+      [
+        438,
+        1286,
+        2200,
+        23,
+        17271
+      ]
+    ],
+    "evaluated_epochs": 274271,
+    "macro_f1": 0.7897786853985393,
+    "matches_saved_result": true,
+    "participants": 60,
+    "recordings": 119
+  },
+  "render_command": "$env:OMP_NUM_THREADS='1'; $env:MKL_NUM_THREADS='1'; $env:OPENBLAS_NUM_THREADS='1'; .\\.venvs\\research\\Scripts\\python.exe tools\\build_research_figures.py --from-summary reports\\publication-figures\\summary.json",
+  "schema_version": "research-figures-v1",
+  "script_sha256": "89d61e0a77bbc2f3b6f3b515f03a4affd875675da5bf6be5b73fb6ea6344cbed",
+  "source_sha256": {
+    "best_prediction_pairs_119": "fe4e9c540fc2269758ff7e3886e488d1818abadbc6a33a4e9ac56c286961f7cf",
+    "direct_prediction_pairs_119": "75371bf489a828163c6ff692475f88243e078c22c701a2b8c2e39a006d180eb1",
+    "reference_truth_payloads_119": "0f78c4bf6ba58fa4d3a7d636d3866ba6f22721a704a66eea4c286b63b25b720c",
+    "reports/provisional-phase2-three-sensor/recording-summaries.csv": "a372fd87fa634b829ffaedc16744ed8ad3932486644b298a0341c76964d9e246",
+    "runs/development-equal-probability-4a6932b4182c/members.json": "45b489eebb57d611ffe6f80bce984968bfa065ae9205a2f27fd4049d1b7da81c",
+    "runs/development-equal-probability-4a6932b4182c/result.json": "87cb01f4928f2fb6cc3f1f17f86c36af9fba162e090af0f6186d0cc6cfe50f00",
+    "runs/development-equal-probability-b5b1e708bd1e/members.json": "a961be7a0611695e1e220ec14834058b356b1d6e34c142bc6fd8904a6b3c90c6",
+    "runs/development-equal-probability-b5b1e708bd1e/result.json": "e0a4ed31f7b43e609fc29789e81cbf17a517193eb6d28cce8946f550bfa8dcfe",
+    "runs/provisional-eog/2174694681ab0041/result.json": "578b08aa5110c0ab296a41a5a7adcf646a0811305b5358880a9cd002163e0841",
+    "runs/provisional-score-study-f1c65dcf6215/config.json": "298dfea065c7c94a1d2070368a40c56669353ce4f5072b42501f593e0f53a373",
+    "runs/provisional-score-study-f1c65dcf6215/result.json": "bd0165211f9516b6f0944f2d67a8d5a4a0b55808035f544b1a3470eb63232f80",
+    "runs/temporal-transition-d60-153801fcc3/config.json": "8409c075ad02dde3a145bb95edbc3a05a4d31a18de9fd4ea14d5ef9d411f86e3",
+    "runs/temporal-transition-d60-153801fcc3/result.json": "b64a92f0338addaefcf9211f311edd181374edd153dd9791636ef0fa954056d8",
+    "runs/yasa-eeg-s17-lr1-016e83b2f3/result.json": "8fbe491d78633091a403802df1323888998d86da50c59858e2649848fff697ad",
+    "runs/yasa-eeg_eog-s101-lr1-d8a9381b60/result.json": "6ec015b8a583238fa377b36913eaeccf76fd8fe6a376d8e528fee2fada4513eb",
+    "runs/yasa-eeg_eog-s17-lr1-493ef41680/config.json": "478956992525f244563618fcd307c6b6aaf5a6311a22a1891b45a13d18b1b5ea",
+    "runs/yasa-eeg_eog-s17-lr1-493ef41680/result.json": "1739ac9a8f5acb882acb0d996e2661455a4a0675513b9f9be84fd91b37ddc2d0",
+    "runs/yasa-eeg_eog-s43-lr1-44993977b7/result.json": "478792b9276a550a0af15980caf49f48b2c69f14834019e88f9c326ac33631e1"
+  },
+  "split_id": "sha256:ef9ec0ab7b4124cd7be4600459f23c13a2b4fee7033237d3aab9fe123df1be60",
+  "summary_sha256": "a614419ca3755065473341e615f23ce38e030f99e3cb998e02b0805ede43f459"
+}

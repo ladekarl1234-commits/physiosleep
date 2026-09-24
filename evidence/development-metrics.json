@@ -1,0 +1,65 @@
+{
+  "accuracy": 0.9073799271523421,
+  "confusion": [
+    [
+      169831,
+      2974,
+      413,
+      91,
+      228
+    ],
+    [
+      2550,
+      6890,
+      3898,
+      58,
+      965
+    ],
+    [
+      674,
+      3652,
+      44267,
+      2081,
+      1230
+    ],
+    [
+      78,
+      20,
+      2539,
+      10609,
+      5
+    ],
+    [
+      438,
+      1286,
+      2200,
+      23,
+      17271
+    ]
+  ],
+  "macro_f1": 0.7897786853985393,
+  "kappa": 0.832254408791906,
+  "support": [
+    173537,
+    14361,
+    51904,
+    13251,
+    21218
+  ],
+  "class_order": [
+    "W",
+    "N1",
+    "N2",
+    "N3",
+    "REM"
+  ],
+  "development_participants": 60,
+  "development_recordings": 119,
+  "complete_epochs": 276133,
+  "valid_epochs": 274271,
+  "invalid_epochs": 1862,
+  "confirmatory": false,
+  "gate_A": "NOT_RUN",
+  "gate_B": "NOT_RUN",
+  "source_result_sha256": "b64a92f0338addaefcf9211f311edd181374edd153dd9791636ef0fa954056d8"
+}
