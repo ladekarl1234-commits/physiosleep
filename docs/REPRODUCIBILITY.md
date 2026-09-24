@@ -36,3 +36,7 @@ Original modeling modules in `sleepedf/` are included for inspection. Their CLIs
 6. Only after A passes, finalize the reduced model and score charter on the original development people, then freeze and evaluate B.
 
 No public replay command opens an audit. The repository does not include released weights or silently download data. See the [ADR index](adr/README.md) and [baseline gaps](BASELINES.md).
+
+## Release checks
+
+The first fresh local clone passed92synthetic tests, but its source-byte scan detected Windows checkout line-ending conversion. Repository attributes now preserve exact bytes on every host; a fresh clone is being rechecked. This is same-host verification, not external full-training replay. A pinned GitHub Actions workflow repeats the public checks after publication.

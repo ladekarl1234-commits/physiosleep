@@ -1,0 +1,2 @@
+# Preserve source bytes: published SHA-256 identities include line endings.
+* -text
