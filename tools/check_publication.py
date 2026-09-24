@@ -34,6 +34,12 @@ def main():
     for item in manifest['files']:
         if hashlib.sha256((ROOT/item['public_path']).read_bytes()).hexdigest()!=item['sha256']:
             errors.append('Changed copied source: '+item['public_path'])
+    figures=ROOT/'reports/publication-figures'
+    figure_manifest=json.loads((figures/'manifest.json').read_text())
+    if hashlib.sha256((figures/'summary.json').read_bytes()).hexdigest()!=figure_manifest['summary_sha256']:
+        errors.append('Figure summary differs from bound manifest')
+    if hashlib.sha256((ROOT/'tools/build_research_figures.py').read_bytes()).hexdigest()!=figure_manifest['script_sha256']:
+        errors.append('Figure builder differs from bound manifest')
     print(json.dumps({'status':'FAIL' if errors else 'PASS','tracked_files':len(names),
                       'scope':'staged/committed paths; pattern scan is not a formal privacy proof',
                       'errors':errors},indent=2))

@@ -1,2 +1,4 @@
 # Preserve source bytes: published SHA-256 identities include line endings.
-* -text
+* -text whitespace=cr-at-eol
+# Matplotlib emits intentional trailing spaces in path data; retain its exact bytes.
+reports/publication-figures/*.svg -whitespace
