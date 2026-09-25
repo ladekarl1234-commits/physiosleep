@@ -1,32 +1,50 @@
 {
-  "observed_at_utc": "2026-09-25T01:08:40.869396+00:00",
-  "scope": "Static observation; not a live scheduler or confirmation result",
+  "attnsleep": {
+    "completed_epoch": 38,
+    "epoch_log_sha256_at_snapshot": "cadff80f794910236792137c6ae861ac7b8ac57a6331c5b79110aa513972ae4a",
+    "fold": 0,
+    "last_train_loss": 0.3264043498455988,
+    "native_batch_size": 128,
+    "required_epochs_per_fold": 100,
+    "seed": 17,
+    "status": "RUNNING_AT_SNAPSHOT",
+    "training_loss_is_not_validation": true,
+    "updates_per_epoch": 1702
+  },
   "audit_A": "NOT_RUN",
   "audit_B": "NOT_RUN",
-  "attnsleep": {
-    "status": "RUNNING_AT_SNAPSHOT",
-    "seed": 17,
-    "fold": 0,
-    "completed_epoch": 23,
-    "required_epochs_per_fold": 100,
-    "last_train_loss": 0.33546742972875176,
-    "training_loss_is_not_validation": true,
-    "native_batch_size": 128,
-    "updates_per_epoch": 1702,
-    "epoch_log_sha256_at_snapshot": "05f3db8170a1229a8bf58858d0b1693dacff3b351ba5dba38db3d6c884b18253"
-  },
-  "utime": {
-    "status": "FAILED_STATE_COMMIT_AFTER_NUMERICAL_EPOCH",
-    "completed_training_updates": 433,
-    "completed_baseline": false,
-    "failed_execution_sha256": "ce84aff82445157ca2b59e8afd68e4e8a1191044a6e32b84e660bab8c836a741",
-    "actual_checkpoint_adopted": false,
-    "synthetic_recovery_qualification": "PASS",
-    "qualification_sha256": "d453f043f9b116f93409799f0ae67a593e653c24ea51a1b039d9c7d5808a39bf"
-  },
+  "heldout_truth_exposed": false,
+  "observed_at_utc": "2026-09-25T02:11:00.624500+00:00",
   "public_tests": {
     "count": 92,
     "scope": "synthetic software/contract tests; no accuracy or audit evaluation"
   },
-  "heldout_truth_exposed": false
+  "scope": "Static observation; not a live scheduler or confirmation result",
+  "usleep_preprocessing": {
+    "elapsed_seconds": 54.328,
+    "fit": "NOT_RUN",
+    "full_development_preparation": "NOT_RUN",
+    "model_preflights": "RENEW_REQUIRED_AFTER_SHARED_WORKER_FIX",
+    "peak_combined_rss_bytes": 1039224832,
+    "real_parity": "PASS_TWO_PREEXPOSED_DEVELOPMENT_RECORDINGS",
+    "real_parity_independent_verification": "PENDING_AT_SNAPSHOT",
+    "result_sha256": "169dbfc8dae745e488e7764e530d1a611af3fa862b3c54e7f8c5849370f35fc1",
+    "synthetic_tests_passed": 6
+  },
+  "utime": {
+    "activation_verification_sha256": "3cbf80e00cef983b79784d6f2152e3cb1c154445b7fcfc55592e09cf5b5efddb",
+    "active_pointer_fix": "27_FOCUSED_TESTS_PASSED",
+    "actual_checkpoint_adopted": false,
+    "actual_restore_verification": "PASS_READ_ONLY_NO_TRAINING",
+    "actual_restore_verification_sha256": "6111216767bfd15ec4dab1b4527fb42d97fed93e1ade4156f1a8f8767c1e4655",
+    "cache_verification": "PASS_119_DEVELOPMENT_RECORDS",
+    "cache_verification_sha256": "76e408ba502df406091a846e8cdbefb0803f02afeefb5984303a1fd0d3498dbe",
+    "completed_baseline": false,
+    "completed_training_updates": 433,
+    "failed_execution_sha256": "ce84aff82445157ca2b59e8afd68e4e8a1191044a6e32b84e660bab8c836a741",
+    "qualification_sha256": "d453f043f9b116f93409799f0ae67a593e653c24ea51a1b039d9c7d5808a39bf",
+    "replacement_strategy": "FRESH_ORIGINAL_SEED_FIT_PENDING_CURRENT_SOURCE_QUALIFICATIONS",
+    "status": "FAILED_STATE_COMMIT_AFTER_NUMERICAL_EPOCH",
+    "synthetic_recovery_qualification": "PASS"
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "completed_epochs": 38,
+  "fold": 0,
+  "no_extrapolation": true,
+  "observed_at_utc": "2026-09-25T02:11:00.624500+00:00",
+  "required_epochs": 100,
+  "scope": "Aggregate development training diagnostics, not held-out predictions or confirmatory evidence",
+  "seed": 17,
+  "source_log_prefix_sha256": "cadff80f794910236792137c6ae861ac7b8ac57a6331c5b79110aa513972ae4a",
+  "source_prefix_bytes": 15089,
+  "system": "attnsleep_official"
+}

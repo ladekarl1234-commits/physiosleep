@@ -52,6 +52,30 @@
     {
       "path": "reports/judge-guide/score-results.csv",
       "sha256": "2a9c29819a95f8c597897f1748c16f0be8fa69f5297cf32e1d95de886afed70d"
+    },
+    {
+      "path": "tools/build_training_progress.py",
+      "sha256": "207533f51100282ea134c388a25b54e9a8e6de638929bbb81bb1522662641d60"
+    },
+    {
+      "path": "reports/training-progress/attnsleep-epochs.csv",
+      "sha256": "9db9c21102c79ef3dac717d7096af838317e452563c5a813389f5562b20a016f"
+    },
+    {
+      "path": "reports/training-progress/snapshot.json",
+      "sha256": "a9a8bec19eeed580bd1d21e6f86c6c49f1a7a9d06916a4527b12aa9376c28e3e"
+    },
+    {
+      "path": "reports/training-progress/attnsleep-progress.png",
+      "sha256": "5f870175b5eb9b0ba808735127090d2129755b5a81dfdc5bb985f2b72d8afb9a"
+    },
+    {
+      "path": "reports/training-progress/attnsleep-progress.svg",
+      "sha256": "e61328055b8f00d7ce48dca6aa5b0646a8bd6a4baa0fcf851255b39653f1911e"
+    },
+    {
+      "path": "evidence/job-status.json",
+      "sha256": "c1b8528f14506f7522d37d897be9908a07c71f18ede66288889a3b0a9e8110ae"
     }
   ]
 }

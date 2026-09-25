@@ -54,7 +54,7 @@ These are **workbook-reported literature values** with different cohorts, croppi
 | Local feature models, ensembles and transition decoder | Complete five-fold development outputs and aggregate replay | Adequacy, broader native comparators and confirmation |
 | Sleepyland/YASA compatibility route | Clean five-fold fit; five-fold numerical parity; Macro-F1 0.783662 | Full mandatory-route adequacy and native-container equivalence |
 | AttnSleep | Native 100-epoch training in progress at the dated [job snapshot](docs/EXPERIMENTS.md) | All folds, seed evaluations and saved validation predictions |
-| U-Time | Numerical epoch preserved after state-commit failure; synthetic recovery qualification | Verified actual recovery and adequate native fitting |
+| U-Time | Failed epoch preserved; actual restore/cache verified; corrected state handling passes 27 tests | Renewed source-bound qualification and fresh native fit |
 | Public software checks | **92 synthetic tests**, exact aggregate replay and publication checks in [hosted CI](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml) | CI does not retrain models or open audits |
 | Audit A / B | Fixed procedural holdouts of 20 people each | Baselines → readiness → A → reduced-model freeze → B |
 

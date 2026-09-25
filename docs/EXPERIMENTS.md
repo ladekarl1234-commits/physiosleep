@@ -2,7 +2,7 @@
 
 [Judge guide](JUDGE_GUIDE.md) · [Results](RESULTS.md) · [Mandatory registry](BASELINES.md)
 
-**Snapshot: 2026-09-25T01:08:40.869396+00:00.** This is a dated observation, not a live job dashboard. A development fit, a software test and a confirmatory audit are different jobs. [Machine-readable snapshot](../evidence/job-status.json).
+**Snapshot: 2026-09-25T02:11:00.624500+00:00.** This is a dated observation, not a live job dashboard. A development fit, a software test and a confirmatory audit are different jobs. [Machine-readable snapshot](../evidence/job-status.json).
 
 ## Completed development work
 
@@ -20,11 +20,16 @@
 
 | Job | Observed status | Next completion requirement |
 |---|---|---|
-| AttnSleep seed17, fold0 | **RUNNING_AT_SNAPSHOT**, completed **23/100 epochs**; batch128, 1,702 updates/epoch | Complete serious native folds, seed evaluations and prediction verification. Training loss is not held-out F1. |
-| U-Time fold0, inner seed17 | **FAILED** after 433 training updates and validation; final state commit rejected tuple/list JSON representation | Synthetic restart qualification passed; actual checkpoint adoption, named restoration and cache verification still pending. Full native fit not complete. |
+| AttnSleep seed17, fold0 | **RUNNING_AT_SNAPSHOT**, completed **38/100 epochs**; batch128, 1,702 updates/epoch | Complete serious native folds, seed evaluations and prediction verification. Training loss is not held-out F1. |
+| U-Time fold0, inner seed17 | **FAILED** after 433 training updates and validation; final state commit rejected tuple/list JSON representation | Read-only actual restoration and all 119 prepared-record hashes verified. Pointer fix passed 27 tests. Fresh original-seed replacement selected; renew source-bound qualifications before fitting. Old failed run remains preserved. |
+| Original U-Sleep preprocessing | Six synthetic tests and full-record numerical parity on two preexposed development recordings passed; independent real-output check pending at snapshot | Full development preparation, renewed model preflight and native fitting remain. |
 | Remaining mandatory native families/variants | Incomplete; some code rights, weights/lineage and runtime prerequisites unresolved | [Family-by-family registry](BASELINES.md) and [rights recheck](../evidence/rights-recheck-20260925.md) |
 
 Observed protected-workspace commands were `python -B -m sleepedf.attnsleep_cuda run-development --seed 17` and `python -B -m sleepedf.tf_experiment epoch --root . --manifest runs/utime/fits/fold-0/seed-17/inner/manifest.json`, each under its separately pinned environment and resource supervisor. **They require private protocol/data/runtime artifacts absent from a plain public clone.** No command here authorizes bypassing a source hash or resuming the failed U-Time identity as if it succeeded.
+
+![Actual AttnSleep fold-0 training loss and runtime; unobserved epochs are shaded](../reports/training-progress/attnsleep-progress.png)
+
+[Epoch data](../reports/training-progress/attnsleep-epochs.csv) · [Snapshot provenance](../reports/training-progress/snapshot.json) · [Rebuild script](../tools/build_training_progress.py). This is one incomplete development fold. No held-out accuracy is inferred from decreasing training loss.
 
 ## Software and verification jobs
 
