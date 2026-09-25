@@ -1,0 +1,45 @@
+{
+  "artifact_type": "simulated_independent_data_ml_candidate_lineage_regrade",
+  "status": "REVIEW_COMPLETE",
+  "review_date": "2026-09-25",
+  "source_rubric_sha256": "0c5ce135406242295a459f532b5e7d0ef8fe45d825f6c804e06c11980b10083e",
+  "rubric_changed": false,
+  "previous_score": 60,
+  "score": 61,
+  "maximum": 100,
+  "only_change": {
+    "criterion_id": "ml_candidate_development",
+    "previous_earned": 7,
+    "earned": 8,
+    "maximum": 8,
+    "reason": "The independent methodologist reviewed complete participant-disjoint development predictions, source-bound six-configuration screening and finalist selection, and existing saved-array metric verifications. The separate private crosswalk joined 15 fold checkpoints, 357 OOF predictions, the three-seed parent and transition ablation, and the distinct D60 seed-17 audit refit. Development selection used all 60 development people and remains adaptive; the three-seed transition result was not the model tested on A/B."
+  },
+  "category_totals": {
+    "data": 26,
+    "ml": 17,
+    "reproducibility": 18
+  },
+  "evidence_sha256": {
+    "previous_review": "27e599e08c0f5942ee012d415f6db8fc0441f55ee04b3d6e9c54ee8ab3ff8d66",
+    "public_aggregate": "67c4bf3da2894a9334b12292bf8594f984b14c72c6e8b4fae80839e90575e0a9",
+    "access_controlled_script": "b86a3888c41cf18b93160029dbd7e2eca4e0bdf40305b9cac2349e5ce204ba6b",
+    "access_controlled_receipt": "d0cc90d7967c67ed4d23bc5656223ac075f888da587d19b7c0432a3ec4a4b5e6",
+    "completed_six_configuration_screen_selection": "893f1e5bf689bbd640efcf599e7bf1ee56d82a1d224fa522fc7a1a82c7c9925a",
+    "transition_metric_verification": "cb06fde28d56fb95b4a75d4c91ea72d9dae53e1d4ac3c89391fedc157b7c7f2a"
+  },
+  "independent_checks": {
+    "private_receipt_rerun": "BYTE_IDENTICAL",
+    "injected_mismatches_rejected_before_receipt_write": 7,
+    "six_screen_result_config_and_plan_hashes": "MATCHED",
+    "candidate_development_criterion": "PASS",
+    "complete_hash_bound_artifact_criterion": "REMAINS_6_OF_7"
+  },
+  "no_new_credit": [
+    "complete_immutable_artifact_ancestry",
+    "fresh_host_full_training_replay",
+    "mandatory_baseline_completeness",
+    "formal_audit_confirmation",
+    "clinical_or_physical_device_validation"
+  ],
+  "scope": "Simulated evidence-quality review of existing candidate development, not a new training or performance result. The full byte freeze repair was not completed and must not be inferred from the private crosswalk."
+}

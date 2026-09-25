@@ -1,0 +1,86 @@
+{
+  "artifact_type": "public_safe_model_lineage_crosswalk_aggregate",
+  "private_script_sha256": "b86a3888c41cf18b93160029dbd7e2eca4e0bdf40305b9cac2349e5ce204ba6b",
+  "private_receipt_sha256": "d0cc90d7967c67ed4d23bc5656223ac075f888da587d19b7c0432a3ec4a4b5e6",
+  "review_scope": "Independent rerun reproduced the private receipt byte for byte and rejected seven injected lineage mismatches. Candidate-development evidence was accepted; complete immutable artifact ancestry was not.",
+  "derived": {
+    "development_recordings": 119,
+    "feature_manifest_sha256": "319837e0cc3940ac3692589a7bc21d3f9379f649ea102b305c874b2106e6ba76",
+    "payloads_hashed": 238,
+    "sidecars_hashed": 238,
+    "truth_manifest_sha256": "dfe15d13f3070cab6ce03139a9f911ea58dfaee6a22f805770c67bdedb97069c"
+  },
+  "development": {
+    "candidate_selection_manifests_verified": 3,
+    "ensemble_metric_verification_sha256": "e2380bf523330886e0b427fd1974d0a80a6fbd5fcc633a62a8dcdda646167acf",
+    "fold_OOF_predictions_hashed": 357,
+    "fold_checkpoints_hashed": 15,
+    "frozen_snapshot_source_files_hashed": 44,
+    "parent_predictions_hashed": 119,
+    "three_seed_member_result_sha256": [
+      "1739ac9a8f5acb882acb0d996e2661455a4a0675513b9f9be84fd91b37ddc2d0",
+      "478792b9276a550a0af15980caf49f48b2c69f14834019e88f9c326ac33631e1",
+      "6ec015b8a583238fa377b36913eaeccf76fd8fe6a376d8e528fee2fada4513eb"
+    ],
+    "three_seed_members_manifest_sha256": "45b489eebb57d611ffe6f80bce984968bfa065ae9205a2f27fd4049d1b7da81c",
+    "three_seed_parent_sha256": "87cb01f4928f2fb6cc3f1f17f86c36af9fba162e090af0f6186d0cc6cfe50f00",
+    "transition_metric_verification_sha256": "cb06fde28d56fb95b4a75d4c91ea72d9dae53e1d4ac3c89391fedc157b7c7f2a",
+    "transition_predictions_hashed": 119,
+    "transition_prior_content_ids": {
+      "0": "sha256:58c8a56dec69158d2a4b9b43e541f1b4c53c2a5e276d6e26bed4ce478d941794",
+      "1": "sha256:dfc4872a1ed182179144fda7e09c92a71eab650ff5fd91da41635bcba93b499b",
+      "2": "sha256:e70c9860109ab910bba4612ca28448f48af25345b4b504328299edebb706fa53",
+      "3": "sha256:4d77bea6a9f4c91aab028ab353fb01823af55126ae761321bc414523bd225213",
+      "4": "sha256:ee79de26ada2ccbdd7d097f4ced8c62bc934926a7f68f9fdc7c074daea46dd8e"
+    },
+    "transition_result_sha256": "b64a92f0338addaefcf9211f311edd181374edd153dd9791636ef0fa954056d8",
+    "transition_scope": "separate development ablation"
+  },
+  "exploratory_audits": {
+    "formal_gate_A": "NOT_RUN",
+    "formal_gate_B": "NOT_RUN",
+    "independent_metric_verification_sha256": "1524e43a480e2458731afcc291d97034a2944cd5ab77ba06049c0edf82d7c4c2",
+    "phases": {
+      "A": {
+        "participants": 20,
+        "predictions": 39,
+        "result_sha256": "ea587149451af65e5815e70576cfbd9d86ca4a712c1d05c003df21d985209071"
+      },
+      "B": {
+        "participants": 20,
+        "predictions": 39,
+        "result_sha256": "366e3155e303207d344e8573d9d10ab4a36bb6d421ac6830d1f2467cafe92843"
+      }
+    },
+    "selection_sha256": "0eead74d2dfe8795f91126aa69f9385857011374c682925ba398e5fd7952fb0c",
+    "total_predictions": 78,
+    "truth_payloads_hashed": 78
+  },
+  "limits": [
+    "No EDF bytes or decoded arrays read",
+    "No inference or metric replay",
+    "Source authenticity rests on the previously frozen readiness verification",
+    "The complete six-configuration screen edge and an independently anchored byte map of transition priors, output sidecars and audit receipts are not in this crosswalk; no full hash-ancestry credit is claimed",
+    "The private script and participant-linked arrays are excluded from public release; this aggregate cannot replay training, inference, or metrics"
+  ],
+  "refit": {
+    "checkpoint_sha256": "abdc64d3cd736f0a2e6c89fb5843eee06a3af26f64f0abb80120ade794d83860",
+    "fit_sha256": "664426393361f70893b4e88eb7d837831722c4caf02f485cd154618dc216de38",
+    "participants": 60,
+    "seed": 17
+  },
+  "source": {
+    "participants": 100,
+    "readiness_sha256": "09f2db2fc6fe8384d9bc4fdecea8a18bb6cde8e7f9ac56931747a45c551bda9c",
+    "recordings": 197,
+    "source_content_scope": "frozen readiness report, official checksum comparison attested; EDF bytes not reread"
+  },
+  "split": {
+    "audit_A_people": 20,
+    "audit_B_people": 20,
+    "development_people": 60,
+    "identity": "sha256:ef9ec0ab7b4124cd7be4600459f23c13a2b4fee7033237d3aab9fe123df1be60",
+    "sha256": "f595d36d4002610cb93e2b5fc886806e7269c8e21509ca77c7df617a8b248bed"
+  },
+  "status": "PASS"
+}

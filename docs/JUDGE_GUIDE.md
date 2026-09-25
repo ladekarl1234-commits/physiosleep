@@ -27,7 +27,7 @@ For a deeper technical review, inspect the [17 ADRs](adr/README.md), run the [pu
 | Perspective | Latest | Review cutoff | Interpretation |
 |---|---:|---|---|
 | Sleep specialist | **75 / 100** | 25 September 2026 | Simulated review after test-linked score sensitivity and generated hardware replay; no clinical certification |
-| Data / ML | **60 / 100** | 25 September 2026 | Simulated review after publisher-byte and independent annotation/grid crosschecks; no official competition grade |
+| Data / ML | **61 / 100** | 25 September 2026 | Simulated review after publisher-byte, annotation/grid and candidate-lineage checks; no official competition grade |
 
 The [frozen criteria and original records](JUDGING.md) retain individual scores. The documentation review that produced this guide is separate and does not automatically rescore the science. Missing confirmation, external validity, adequate mandatory baselines and physical-device measurements remain substantive gaps.
 

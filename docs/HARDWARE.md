@@ -6,6 +6,8 @@ This is an AI-generated industrial-design illustration, not a photograph, manufa
 
 ## Measurement contract
 
+The [dataset publisher](https://physionet.org/content/sleep-edfx/1.0.0/) identifies Fpz-Cz EEG and a horizontal EOG channel, but does not give the exact EOG contact positions or polarity on that page. The contact proposal below therefore remains provisional.
+
 The desk concept has four ADC channels of capacity, with provisional Fpzâˆ’Cz EEG and horizontal EOG requirements. An ADS1299-4 / nRF52840 concept supports local storage planning; part availability and physical performance require procurement-time checks. Fpzâˆ’Cz requires the Cz contact; a forehead-only band cannot be substituted. Horizontal EOG electrode geometry and polarity remain unresolved. Two separate bipolar measurements conditionally imply four sensing contacts plus bias. Shared references may change the contact count and must be validated explicitly.
 
 Native acquisition is proposed at 250 Hz; a derived 100 Hz model route needs an explicit calibrated conversion contract and validation. The Sleep-EDF SC 1 Hz EMG envelope is not equivalent to raw EMG. Current models are not validated on this device or montage.
