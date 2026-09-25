@@ -6,20 +6,30 @@ PhysioSleep is an offline sleep-research pipeline for specialist review. It chec
 
 **For judges: [read the final English report](docs/FINAL_REPORT.md) or [start the five-minute review](docs/JUDGE_GUIDE.md). For developers: [setup and source map](docs/DEVELOPER_GUIDE.md).**
 
+[Research snapshot and release notes](RELEASE_NOTES.md)
+
 [![Public software checks](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml/badge.svg)](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml)
 
-## Audit A and B: completed exploratory tests
+## Three evaluation stages at a glance
+
+![Separate development, Audit 1 and Audit 2 Macro-F1 results, with model identities and uncertainty](reports/evaluation-overview/stages.png)
+
+**Dev/train** selected a three-seed transition pipeline on 60 people (**0.789779** out-of-fold Macro-F1). **Audit 1 (A)** and **Audit 2 (B)** each tested 20 different people using the **same frozen D60 seed-17 single-model checkpoint** (**0.759022** and **0.798875**). The selected development pipeline was not audit-tested. Neither audit is an untouched confirmation set now. [See the stages, denominators and exact metric calculation](docs/EVALUATION_STAGES.md).
+
+## Audit 1 and Audit 2: completed exploratory tests
 
 | Test | Macro-F1 | Descriptive 95% interval | Accuracy | Participants / recordings |
 |---|---:|---:|---:|---:|
-| Audit A | **0.7590** | 0.7245 to 0.7873 | **88.76%** | 20 / 39 |
-| Audit B | **0.7989** | 0.7816 to 0.8156 | **91.24%** | 20 / 39 |
+| Audit 1 (A) | **0.7590** | 0.7245 to 0.7873 | **88.76%** | 20 / 39 |
+| Audit 2 (B) | **0.7989** | 0.7816 to 0.8156 | **91.24%** | 20 / 39 |
 
 Actual reference scoring of all 78 recordings is complete. The tested system is the existing **single seed-17 LightGBM control trained on D60 using YASA EEG+EOG features**. The development ensemble below is a different system. N1 remains the weakest stage (F1 0.469 / 0.499). These exploratory tests do not complete the all-baseline +0.02 gate; the original holdouts are consumed and fresh participants are required for confirmation.
 
 [Final English report, formula and interpretation](docs/FINAL_REPORT.md) | [Audit class metrics and provenance](reports/exploratory-audits-v1/report.md) | [Replayable aggregate](reports/exploratory-audits-v1/aggregate.json)
 
 ![Measured exploratory A/B results](reports/exploratory-audits-v1/summary.png)
+
+![Five-stage F1 for Audit 1 and Audit 2, highlighting weaker N1 recognition](reports/exploratory-audits-v1/class-f1.png)
 
 | Measured development result | Research status | Latest simulated scientific reviews |
 |---|---|---|
@@ -36,7 +46,9 @@ The review grades are simulated scientific assessments, not official competition
 | What was measured, and what does it prove? | [Final English report](docs/FINAL_REPORT.md), [judge guide](docs/JUDGE_GUIDE.md) and [documentation index](docs/README.md) |
 | How do signals become stages, scores and evidence? | [Pipeline and architecture](docs/PIPELINE.md) |
 | Which training jobs, tests and audits actually ran? | [Development / test job ledger](docs/EXPERIMENTS.md) |
+| Where are Dev/train, Audit 1 and Audit 2 explained side by side? | [Three-stage evaluation guide](docs/EVALUATION_STAGES.md) |
 | How do our models compare on the same people? | [Local results and ablations](docs/RESULTS.md) |
+| How does this code relate to YASA, SLEEPYLAND, U-Time/U-Sleep and AttnSleep? | [Upstream repository comparison](docs/REPOSITORY_COMPARISON.md) |
 | What do the models in the supplied Excel report? | [56-row literature comparison](literature/COMPARISON.md), [31 papers](literature/PAPERS.md), [CSV](literature/experiments.csv) |
 | Why these decisions? Can the reviewer score exceed 90? | [17 architecture decisions](docs/adr/README.md), [fixed-rubric feasibility](docs/ROAD_TO_90.md) |
 

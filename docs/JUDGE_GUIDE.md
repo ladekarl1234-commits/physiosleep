@@ -1,6 +1,6 @@
 # Start here: a judge's review guide
 
-The [final English report](FINAL_REPORT.md) contains the completed exploratory A/B results, exact Macro-F1 calculation and current evidence limits. The owner has ended additional baseline testing for this delivery; the historical +0.02 formal gate remains NOT_RUN.
+The [final English report](FINAL_REPORT.md) contains the completed exploratory A/B results, exact Macro-F1 calculation and current evidence limits. [Dev/train → Audit 1 → Audit 2](EVALUATION_STAGES.md) names the three evaluation stages and their measured performance. The owner has ended additional baseline testing for this delivery; the historical +0.02 formal gate remains NOT_RUN.
 
 [Documentation index](README.md) | [Repository home](../README.md)
 
@@ -15,9 +15,9 @@ The best completed system is an integration of existing physiological features a
 | Time | Open | Decision to make |
 |---|---|---|
 | 0-1 min | [Pipeline](PIPELINE.md) | Can I trace signals to stages without reference-label leakage? |
-| 1-2 min | [Job ledger](EXPERIMENTS.md) | Which fits completed, which tests passed, which jobs failed and which exploratory tests completed and which formal criteria remain unmet? |
+| 1-2 min | [Three-stage overview](EVALUATION_STAGES.md) and [job ledger](EXPERIMENTS.md) | Which model and people produced each score, and which jobs remain incomplete? |
 | 2-3 min | [Local results](RESULTS.md) | Do Macro-F1, N1, denominators and failed score targets support the claims? |
-| 3-4 min | [Excel comparison](../literature/COMPARISON.md) | Are published results attributed with their different protocols rather than treated as matched wins? |
+| 3-4 min | [Upstream code comparison](REPOSITORY_COMPARISON.md) and [Excel rows](../literature/COMPARISON.md) | Are measured local runs separated from available code and unmatched paper scores? |
 | 4-5 min | [Grades](JUDGING.md) and [claims](CLAIMS.md) | What credit is supported, what is missing and what would change the decision? |
 
 For a deeper technical review, inspect the [17 ADRs](adr/README.md), run the [public checks](DEVELOPER_GUIDE.md), inspect the [historical fixed audit criteria](REPORT.md#historical-mandatory-benchmark-and-audit-protocol), and follow the claim links to aggregate evidence. Hardware is a separate [optional review branch](HARDWARE.md).
@@ -46,7 +46,7 @@ The [frozen criteria and original records](JUDGING.md) retain individual scores.
 
 ## A practical review exercise
 
-1. Run `python tools/verify_public_metrics.py`: compare the recomputed Macro-F1 and epoch total with the [result table](RESULTS.md).
+1. Run `python tools/verify_public_metrics.py` and `python tools/verify_exploratory_metrics.py`: compare the recomputed development and Audit 1/2 Macro-F1 values with the [stage table](EVALUATION_STAGES.md).
 2. Run `python -m unittest discover -s tests -v`: these are software and contract checks, not model-accuracy tests.
 3. Open one literature row's source and compare its cohort/window/metric to ours before making a performance claim.
 4. Read the failed score endpoints and U-Time terminal-state entry, then check whether the headline text preserves those limitations.

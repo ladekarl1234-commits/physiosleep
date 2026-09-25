@@ -1,5 +1,7 @@
 # Audit A and B: exploratory evaluation guide
 
+These are the stages called **Audit 1 (A)** and **Audit 2 (B)** in the [three-stage reviewer overview](EVALUATION_STAGES.md); both followed development training and used the same frozen checkpoint.
+
 [Measured results and class table](../reports/exploratory-audits-v1/report.md) | [Numeric aggregate](../reports/exploratory-audits-v1/aggregate.json) | [Owner decision](adr/0016-exploratory-audits.md)
 
 ## What was tested
