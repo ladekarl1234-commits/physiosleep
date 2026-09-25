@@ -14,11 +14,13 @@ These figures come from saved predictions. They are not generated performance il
 | Development | Five participant-disjoint folds; 274,271 reference-valid epochs; all complete epochs retained |
 | Required superiority | Not established; all 11 mandatory audit execution slots remain incomplete |
 | Confirmation | A and B preserved; baselines → readiness → A → reduced-model freeze → B |
-| Experimental score | Best displayed MAE 6.37 points, TST MAE 24.71 min, WASO MAE 73.31 min; planned targets unmet |
+| Experimental score | Three-seed + transition: MAE 5.68 points, TST MAE 24.33 min, WASO MAE 63.09 min; planned targets unmet |
 | Hardware | Acquisition concept and synthetic engineering checks; no built or validated device |
 | Specialist interface | Local standalone review demonstration; no consumer workflow in current scope |
 
 A newly completed, independently verified Sleepyland/YASA clean development route scored **0.783662 Macro-F1** on the same 119 recordings. Its compatibility and scope are documented in the [report](docs/REPORT.md#newly-completed-sleepylandyasa-development-route); it does not complete the mandatory benchmark.
+
+The frozen staging candidate has now been evaluated under the unchanged provisional score charter: **5.68 points score MAE, 24.33 minutes TST MAE and 63.09 minutes WASO MAE**. All three remain above their planned targets, and their paired differences versus EEG+EOG have intervals crossing zero. See the [new verified analysis](docs/REPORT.md#frozen-candidate-score-extension) and [evidence required for reviewer scores of 90](docs/ROAD_TO_90.md).
 
 ## Read and reproduce
 

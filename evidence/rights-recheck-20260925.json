@@ -1,0 +1,142 @@
+{
+  "schema_version": "physiosleep_primary_source_rights_recheck_v1",
+  "checked_date": "2026-09-25",
+  "scope": "Read-only official public GitHub repository tree, pinned/current README and license files, first 100 issues/comments per repository, and targeted Sleepyland maintainer comment; no external contact, agreements, weights, vendor source download, or runtime invocation.",
+  "method": "agent-reach GitHub route via gh api, with official GitHub page cross-check",
+  "frozen_pins_unchanged": true,
+  "blockers_resolved": [],
+  "repositories": [
+    {
+      "id": "msa_code_rights",
+      "repository": "sgoerttler/MSA-CNN",
+      "pin": "f01455eb0396f790571b165fd0350b105476f043",
+      "pin_date_utc": "2025-11-30T13:18:15Z",
+      "current_head_same_pin": true,
+      "pinned_license_files": [],
+      "github_license_metadata": null,
+      "sources": [
+        {
+          "url": "https://github.com/sgoerttler/MSA-CNN/blob/f01455eb0396f790571b165fd0350b105476f043/README.md",
+          "sha256": "e968844dc668c11d02143524176b2ef85d3cb082357b8d6a7215f6941a9bcdfb",
+          "github_blob_sha": "9655776e703cf0b56e56d2c09dfac3932b95e1f4"
+        },
+        {
+          "url": "https://github.com/sgoerttler/MSA-CNN/tree/f01455eb0396f790571b165fd0350b105476f043",
+          "role": "pinned_tree_no_license_path"
+        }
+      ],
+      "public_issues_checked": 20,
+      "public_issue_comments_checked": 48,
+      "finding": "Pinned/current tree has no LICENSE/COPYING/NOTICE file; README requests citation but gives no code reuse grant. Inspected public issues/comments contain no explicit applicable grant.",
+      "local_noncommercial_research": "No explicit revision-covering permission established by inspected sources.",
+      "public_distribution_or_future_commercial": "No grant established.",
+      "blocker_resolved": false
+    },
+    {
+      "id": "tiny_conflicting_terms",
+      "repository": "akaraspt/tinysleepnet",
+      "pin": "70f45cff92ac0bf0a718e522bc27cca2c63ceff7",
+      "pin_date_utc": "2023-08-23T04:42:49Z",
+      "current_head_same_pin": true,
+      "pinned_license_files": [
+        "LICENSE"
+      ],
+      "github_license_metadata": "Apache-2.0",
+      "sources": [
+        {
+          "url": "https://github.com/akaraspt/tinysleepnet/blob/70f45cff92ac0bf0a718e522bc27cca2c63ceff7/README.md#licence",
+          "sha256": "236ff450b988186072ea9544b4d564f950c5e4ca0d2122dfe7ff7b8099965835",
+          "github_blob_sha": "48f39e7508158caff69391c426aa38c847d7cd41",
+          "lines": [
+            56,
+            58
+          ]
+        },
+        {
+          "url": "https://github.com/akaraspt/tinysleepnet/blob/70f45cff92ac0bf0a718e522bc27cca2c63ceff7/LICENSE",
+          "sha256": "b8ff9ab2c93331dbc050c9b95074a1e1c469c5746833e72d7385fa6223c74d4a",
+          "github_blob_sha": "f54b9b734afb394cd9c38999109643b823af26db"
+        }
+      ],
+      "public_issues_checked": 9,
+      "public_issue_comments_checked": 19,
+      "finding": "Pinned/current README states academic and non-commercial use only beside Apache License 2.0; pinned LICENSE contains Apache-2.0 text. No later maintainer clarification appeared in inspected issues/comments.",
+      "local_noncommercial_research": "The intended local non-commercial research fits the README use description, but the exact operative grant/conditions remain contradictory; do not count as resolved.",
+      "public_distribution_or_future_commercial": "Do not infer broader rights from GitHub metadata while the same-revision README restriction remains; obtain clarification for intended distribution/commercial scope.",
+      "blocker_resolved": false
+    },
+    {
+      "id": "xsleepnet_use_rights",
+      "repository": "pquochuy/xsleepnet",
+      "pin": "7a2248e78cf8f12ae6d2ae5041bb30ac3133bf29",
+      "pin_date_utc": "2023-12-07T00:18:59Z",
+      "current_head_same_pin": true,
+      "pinned_license_files": [],
+      "github_license_metadata": null,
+      "sources": [
+        {
+          "url": "https://github.com/pquochuy/xsleepnet/blob/7a2248e78cf8f12ae6d2ae5041bb30ac3133bf29/readme.md#license",
+          "sha256": "c23480f8f395a7c472284068d33b32f239a8a070b0f469a8c10c16d2ed904756",
+          "github_blob_sha": "1c9775bdebb237ada37015d3b99d118055c5c343",
+          "lines": [
+            51,
+            53
+          ]
+        }
+      ],
+      "public_issues_checked": 7,
+      "public_issue_comments_checked": 8,
+      "finding": "Pinned/current README states CC-BY-NC-4.0 for code; no separate LICENSE file and no later applicable clarification in inspected public issues/comments. Weight and third-party component terms are separate.",
+      "local_noncommercial_research": "Conditional published non-commercial code path, subject to actually qualifying as non-commercial and complying with attribution; intended-use determination remains needed.",
+      "public_distribution_or_future_commercial": "No commercial code grant, weight grant, or third-party redistribution permission established.",
+      "blocker_resolved": false
+    },
+    {
+      "id": "sleepyland_weight_rights",
+      "repository": "biomedical-signal-processing/sleepyland",
+      "pin": "db420a5c1d3329304907d14f9b3b314fa6605aa9",
+      "pin_date_utc": "2026-04-16T08:54:26Z",
+      "current_head_same_pin": true,
+      "pinned_license_files": [
+        "LICENSE"
+      ],
+      "github_license_metadata": "MIT",
+      "sources": [
+        {
+          "url": "https://github.com/biomedical-signal-processing/sleepyland/blob/db420a5c1d3329304907d14f9b3b314fa6605aa9/LICENSE",
+          "sha256": "8bb49eba194f1cd644151faf088bcbe416e2dd8fa4a254c24bce3b9b7923f9db",
+          "github_blob_sha": "afb8f7198833675885db3a670823b4efcad14364"
+        },
+        {
+          "url": "https://github.com/biomedical-signal-processing/sleepyland/blob/db420a5c1d3329304907d14f9b3b314fa6605aa9/README.md",
+          "sha256": "ed0dc97c51404103456dc3e44b068244fcc2cca588b93c6eedbfdd84b1a7ef1f",
+          "github_blob_sha": "06845b5373d11ffe03addcae55906d4c30e9c5d5"
+        },
+        {
+          "url": "https://github.com/biomedical-signal-processing/sleepyland/issues/4#issuecomment-3907571732",
+          "comment_created_at_utc": "2026-02-16T10:07:56Z",
+          "comment_updated_at_utc": "2026-02-16T10:08:55Z",
+          "maintainer": "biomedical-signal-processing",
+          "body_sha256": "62ceea7d3b57c546a7615319f22d886345d5d178cf104f4592dd69d48b829320"
+        },
+        {
+          "url": "https://github.com/biomedical-signal-processing/uSLEEPYLAND/blob/16995de750d2c3724e9ec82456a26a820a0b7a05/README.md",
+          "sha256": "e1ff22fdeb4f3ef74fadc750fd228b73c9181aaa812e235082476225ebd7b7bf"
+        }
+      ],
+      "public_issues_checked": 5,
+      "public_issue_comments_checked": 6,
+      "finding": "MIT is for software code, not released pretrained weights. Maintainer states weights were trained on NSRR data requiring registration and non-commercial research restrictions, with no redistribution, clinical or commercial use without authorization. Individual dataset DUAs and per-checkpoint ancestry were not inspected or supplied.",
+      "local_noncommercial_research": "Clean random-initialized code training is distinct from released-weight use. Released-weight access/use still needs applicable NSRR registration and dataset terms plus overlap lineage.",
+      "public_distribution_or_future_commercial": "No released-weight redistribution, clinical or commercial grant established.",
+      "blocker_resolved": false,
+      "uSLEEPYLAND_code_pin": "16995de750d2c3724e9ec82456a26a820a0b7a05"
+    }
+  ],
+  "limitations": [
+    "Absence of a grant in inspected public material is not proof no private/off-platform permission exists.",
+    "First-page public issue/comment inspection and targeted search are bounded; private correspondence and dataset-specific NSRR DUAs were not reviewed.",
+    "Code terms do not determine released-weight, training-cohort overlap, competition, clinical, or future commercial eligibility."
+  ],
+  "workspace_status": "Do not change research/blockers.json or the frozen registry based on this recheck."
+}

@@ -1,0 +1,104 @@
+{
+  "schema_version": "independent_development_score_extension_v1",
+  "status": "PASS",
+  "failures": [],
+  "checks": {
+    "result_sha": 1,
+    "plan_sha": 1,
+    "plan_id": 1,
+    "plan_content_id": 1,
+    "frozen_binding_sha": 501,
+    "frozen_method": 1,
+    "claim_scope": 1,
+    "no_missing_required": 1,
+    "original_61_40": 1,
+    "original_population": 1,
+    "charter_formula": 1,
+    "all_119_prediction_ids": 1,
+    "D_fold_count": 1,
+    "array_identity": 119,
+    "grid": 119,
+    "prediction_ancestry": 119,
+    "label_range": 119,
+    "reference_same": 61,
+    "eligible_full_window": 61,
+    "candidate_summary_from_labels": 61,
+    "full_confusion": 1,
+    "full_macro_f1": 1,
+    "no_dropped_candidate_or_control": 1,
+    "draw_population": 1,
+    "paired_rows_complete": 15,
+    "point_metrics": 15,
+    "summary_denominators": 15,
+    "frozen_control_same": 12,
+    "bootstrap_ci": 45,
+    "paired_mae_contrast": 12,
+    "shared_draws": 3,
+    "decoded_parent_prior_ancestry": 119,
+    "terminal_log_summary_identity": 1
+  },
+  "source_result_sha256": "252012af4897ae28a55b8e1bcfaccc2ef2222448478fed587b2d5ffa6dc538cd",
+  "frozen_plan_sha256": "7ecd159ebcd929313b68856293bc786d36d2427175a737d5083fe170ec1d63e4",
+  "bound_file_count": 501,
+  "actual_population": {
+    "development_recordings": 119,
+    "eligible_recordings": 61,
+    "eligible_participants": 40,
+    "all_epoch_staging_macro_f1": 0.7897786853985393
+  },
+  "draw_index_sha256": "edcd91a35fbe9c05088a6f06824792800f230dd49cd6befe0a195c99197ab034",
+  "metrics": {
+    "score": {
+      "transition_mae": 5.677071172034535,
+      "transition_bias": 0.7157019784497911,
+      "transition_p90": 12.475314100106075,
+      "vs_eeg_eog_ci95": [
+        -2.6157617795445796,
+        1.197774797259203
+      ]
+    },
+    "tst_minutes": {
+      "transition_mae": 24.331250000000004,
+      "transition_bias": 3.03125,
+      "transition_p90": 69.0,
+      "vs_eeg_eog_ci95": [
+        -1.6124999999999972,
+        0.9001562500000012
+      ]
+    },
+    "waso_minutes": {
+      "transition_mae": 63.08750000000001,
+      "transition_bias": -7.8,
+      "transition_p90": 219.0,
+      "vs_eeg_eog_ci95": [
+        -45.182343749999994,
+        21.436093749999973
+      ]
+    }
+  },
+  "scope": "Development saved arrays only; no training, raw EDF, audit A/B, device, clinical validation or external result confirmation",
+  "limits": [
+    "The original score charter uses complete PSG acquisition windows, not independent night/TIB boundaries.",
+    "The extension gives conditional descriptive intervals after model development, not post-selection confirmation.",
+    "Existing process exit 0 was reported by owner; reviewer checked structured attempt.log/result existence and hashes, but did not witness the original process exit."
+  ],
+  "attempt_log_sha256": "a80b6d0bc5d218a7c21d5d1d0d17c797736ccf44765c40cdbf58a10e97d71507",
+  "targets": {
+    "score_mae": {
+      "target": 5,
+      "observed": 5.677071172034535,
+      "pass": false
+    },
+    "tst_mae_minutes": {
+      "target": 15,
+      "observed": 24.331250000000004,
+      "pass": false
+    },
+    "waso_mae_minutes": {
+      "target": 10,
+      "observed": 63.08750000000001,
+      "pass": false
+    }
+  },
+  "vs_eeg_eog_all_three_intervals_include_zero": true
+}

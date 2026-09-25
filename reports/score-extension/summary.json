@@ -1,0 +1,706 @@
+{
+  "score_recordings": 61,
+  "score_participants": 40,
+  "models": {
+    "eog": {
+      "score": {
+        "approximate_limits_of_agreement": [
+          -22.5037541038759,
+          15.143857761257905
+        ],
+        "bias": -3.6799481713089968,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -6.459295519146112,
+            -1.1512433537820272
+          ],
+          "mae": [
+            4.973633479405503,
+            8.91424916436522
+          ],
+          "p90_absolute_error": [
+            11.85414057084833,
+            25.789866880803196
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 6.9016231895071,
+        "nights": 61,
+        "p90_absolute_error": 16.105388713802967,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "tst_minutes": {
+        "approximate_limits_of_agreement": [
+          -103.95277714533256,
+          134.81527714533257
+        ],
+        "bias": 15.431249999999999,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -3.3081249999999986,
+            33.94406249999997
+          ],
+          "mae": [
+            28.873593750000005,
+            56.4190625
+          ],
+          "p90_absolute_error": [
+            75.5,
+            162.0
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 41.69375000000001,
+        "nights": 61,
+        "p90_absolute_error": 89.0,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "waso_minutes": {
+        "approximate_limits_of_agreement": [
+          -238.22529218489842,
+          393.6877921848984
+        ],
+        "bias": 77.73124999999997,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            34.173593749999995,
+            120.51874999999993
+          ],
+          "mae": [
+            68.19734375,
+            144.02296875
+          ],
+          "p90_absolute_error": [
+            206.0,
+            466.5
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 104.85624999999999,
+        "nights": 61,
+        "p90_absolute_error": 347.0,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      }
+    },
+    "fpz_eeg": {
+      "score": {
+        "approximate_limits_of_agreement": [
+          -22.982873023925322,
+          19.740988043175875
+        ],
+        "bias": -1.6209424903747236,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -4.9644748495939695,
+            1.4109123374938008
+          ],
+          "mae": [
+            5.169598798494468,
+            9.751587388907692
+          ],
+          "p90_absolute_error": [
+            12.586678094802991,
+            29.31719015760119
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 7.248557159593094,
+        "nights": 61,
+        "p90_absolute_error": 19.09497035053316,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "tst_minutes": {
+        "approximate_limits_of_agreement": [
+          -65.38816918683737,
+          70.43816918683738
+        ],
+        "bias": 2.525,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -7.6065625,
+            11.98765625
+          ],
+          "mae": [
+            15.649062500000003,
+            30.400937499999998
+          ],
+          "p90_absolute_error": [
+            30.5,
+            85.0
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 22.650000000000002,
+        "nights": 61,
+        "p90_absolute_error": 71.5,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "waso_minutes": {
+        "approximate_limits_of_agreement": [
+          -304.7653742079318,
+          374.0153742079318
+        ],
+        "bias": 34.62500000000001,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -13.068906250000007,
+            88.47031249999996
+          ],
+          "mae": [
+            59.89734375,
+            147.0384375
+          ],
+          "p90_absolute_error": [
+            161.5,
+            512.0
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 98.84999999999998,
+        "nights": 61,
+        "p90_absolute_error": 246.5,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      }
+    },
+    "fpz_eeg_eog": {
+      "score": {
+        "approximate_limits_of_agreement": [
+          -20.51669476802028,
+          14.46694639807992
+        ],
+        "bias": -3.024874184970181,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -5.53935973381567,
+            -0.5885057631179892
+          ],
+          "mae": [
+            4.5751583582793165,
+            8.449298200849272
+          ],
+          "p90_absolute_error": [
+            11.125482071616958,
+            21.346064461765124
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 6.374389701146715,
+        "nights": 61,
+        "p90_absolute_error": 16.562797445255356,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "tst_minutes": {
+        "approximate_limits_of_agreement": [
+          -66.7538408369663,
+          73.1913408369663
+        ],
+        "bias": 3.2187500000000004,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -7.419843749999999,
+            13.59390625
+          ],
+          "mae": [
+            17.7428125,
+            32.75625
+          ],
+          "p90_absolute_error": [
+            47.5,
+            95.0
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 24.706249999999997,
+        "nights": 61,
+        "p90_absolute_error": 66.0,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "waso_minutes": {
+        "approximate_limits_of_agreement": [
+          -209.12512170851443,
+          313.2501217085144
+        ],
+        "bias": 52.062499999999986,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            18.38640625,
+            91.33999999999986
+          ],
+          "mae": [
+            42.71859375,
+            110.12765624999994
+          ],
+          "p90_absolute_error": [
+            108.0,
+            354.5
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 73.31250000000001,
+        "nights": 61,
+        "p90_absolute_error": 229.0,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      }
+    },
+    "train_only_constant": {
+      "score": {
+        "approximate_limits_of_agreement": [
+          -17.57169380045693,
+          20.68859623389645
+        ],
+        "bias": 1.5584512167197613,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -1.1770731082581551,
+            4.433657719689456
+          ],
+          "mae": [
+            6.310638340515033,
+            9.389618581680429
+          ],
+          "p90_absolute_error": [
+            10.940397661192932,
+            19.695556232272352
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 7.838805463137878,
+        "nights": 61,
+        "p90_absolute_error": 16.641427870457903,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "tst_minutes": {
+        "approximate_limits_of_agreement": [
+          -117.74958288918481,
+          120.36208288918482
+        ],
+        "bias": 1.3062500000000004,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -16.853281250000002,
+            18.50625
+          ],
+          "mae": [
+            35.93015625,
+            57.926249999999996
+          ],
+          "p90_absolute_error": [
+            76.0,
+            131.0
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 46.231249999999996,
+        "nights": 61,
+        "p90_absolute_error": 85.0,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "waso_minutes": {
+        "approximate_limits_of_agreement": [
+          -363.6472352650188,
+          237.8847352650188
+        ],
+        "bias": -62.88125,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -111.66421875,
+            -19.452812500000014
+          ],
+          "mae": [
+            64.5465625,
+            142.78484374999996
+          ],
+          "p90_absolute_error": [
+            134.5,
+            364.5
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 101.60625,
+        "nights": 61,
+        "p90_absolute_error": 349.5,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      }
+    },
+    "transition": {
+      "score": {
+        "approximate_limits_of_agreement": [
+          -15.336629372721832,
+          16.768033329621414
+        ],
+        "bias": 0.7157019784497911,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -1.578522767299175,
+            2.8924045438734276
+          ],
+          "mae": [
+            4.352794234397077,
+            7.113150508914853
+          ],
+          "p90_absolute_error": [
+            9.553579768201573,
+            17.041750853828944
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 5.677071172034535,
+        "nights": 61,
+        "p90_absolute_error": 12.475314100106075,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "tst_minutes": {
+        "approximate_limits_of_agreement": [
+          -67.22992223216177,
+          73.29242223216177
+        ],
+        "bias": 3.03125,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -7.937656249999996,
+            13.577812499999986
+          ],
+          "mae": [
+            17.11203125,
+            32.6628125
+          ],
+          "p90_absolute_error": [
+            46.0,
+            96.5
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 24.331250000000004,
+        "nights": 61,
+        "p90_absolute_error": 69.0,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      },
+      "waso_minutes": {
+        "approximate_limits_of_agreement": [
+          -231.3047651751524,
+          215.70476517515237
+        ],
+        "bias": -7.8,
+        "bootstrap": {
+          "draws": 2000,
+          "rng": "PCG64",
+          "scope": "conditional development only",
+          "seed": 2026092405,
+          "strata": [
+            "SC",
+            "ST"
+          ],
+          "unit": "participant_all_eligible_nights"
+        },
+        "cluster_ci95": {
+          "bias": [
+            -37.30125,
+            21.77296874999998
+          ],
+          "mae": [
+            42.3184375,
+            85.43312499999999
+          ],
+          "p90_absolute_error": [
+            128.5,
+            242.5
+          ]
+        },
+        "limits_assumption": "normal-error descriptive approximation; not clinical agreement limits",
+        "mae": 63.08750000000001,
+        "nights": 61,
+        "p90_absolute_error": 219.0,
+        "participants": 40,
+        "status": "DESCRIPTIVE_DEVELOPMENT"
+      }
+    }
+  },
+  "paired_mae": {
+    "score": {
+      "contrasts": {
+        "eog": {
+          "candidate_minus_control_mae": -1.224552017472564,
+          "pointwise_descriptive_ci95": [
+            -3.2799640795973017,
+            0.738582564724663
+          ]
+        },
+        "fpz_eeg": {
+          "candidate_minus_control_mae": -1.5714859875585603,
+          "pointwise_descriptive_ci95": [
+            -4.089797059597904,
+            0.3692940746557855
+          ]
+        },
+        "fpz_eeg_eog": {
+          "candidate_minus_control_mae": -0.6973185291121791,
+          "pointwise_descriptive_ci95": [
+            -2.6157617795445796,
+            1.197774797259203
+          ]
+        },
+        "train_only_constant": {
+          "candidate_minus_control_mae": -2.1617342911033433,
+          "pointwise_descriptive_ci95": [
+            -4.061563056813883,
+            -0.32637076171453294
+          ]
+        }
+      },
+      "draw_index_sha256": "edcd91a35fbe9c05088a6f06824792800f230dd49cd6befe0a195c99197ab034",
+      "draws": 2000,
+      "nights": 61,
+      "participants": 40,
+      "seed": 2026092405
+    },
+    "tst_minutes": {
+      "contrasts": {
+        "eog": {
+          "candidate_minus_control_mae": -17.3625,
+          "pointwise_descriptive_ci95": [
+            -28.829218749999995,
+            -7.379843750000009
+          ]
+        },
+        "fpz_eeg": {
+          "candidate_minus_control_mae": 1.6812500000000021,
+          "pointwise_descriptive_ci95": [
+            -3.056875000000002,
+            7.106874999999996
+          ]
+        },
+        "fpz_eeg_eog": {
+          "candidate_minus_control_mae": -0.375,
+          "pointwise_descriptive_ci95": [
+            -1.6124999999999972,
+            0.9001562500000012
+          ]
+        },
+        "train_only_constant": {
+          "candidate_minus_control_mae": -21.900000000000002,
+          "pointwise_descriptive_ci95": [
+            -32.97734375,
+            -10.730468750000004
+          ]
+        }
+      },
+      "draw_index_sha256": "edcd91a35fbe9c05088a6f06824792800f230dd49cd6befe0a195c99197ab034",
+      "draws": 2000,
+      "nights": 61,
+      "participants": 40,
+      "seed": 2026092405
+    },
+    "waso_minutes": {
+      "contrasts": {
+        "eog": {
+          "candidate_minus_control_mae": -41.768750000000004,
+          "pointwise_descriptive_ci95": [
+            -79.1296875,
+            -5.855000000000009
+          ]
+        },
+        "fpz_eeg": {
+          "candidate_minus_control_mae": -35.762499999999996,
+          "pointwise_descriptive_ci95": [
+            -78.40640625000002,
+            -3.128593750000016
+          ]
+        },
+        "fpz_eeg_eog": {
+          "candidate_minus_control_mae": -10.225000000000001,
+          "pointwise_descriptive_ci95": [
+            -45.182343749999994,
+            21.436093749999973
+          ]
+        },
+        "train_only_constant": {
+          "candidate_minus_control_mae": -38.518750000000004,
+          "pointwise_descriptive_ci95": [
+            -69.19453125,
+            -11.349687499999996
+          ]
+        }
+      },
+      "draw_index_sha256": "edcd91a35fbe9c05088a6f06824792800f230dd49cd6befe0a195c99197ab034",
+      "draws": 2000,
+      "nights": 61,
+      "participants": 40,
+      "seed": 2026092405
+    }
+  },
+  "scope": "descriptive_development",
+  "source_result_sha256": "252012af4897ae28a55b8e1bcfaccc2ef2222448478fed587b2d5ffa6dc538cd",
+  "independent_verification_sha256": "41235d18484b489ec799f134e255ff6e7cc9ac1b3c082c9e12023f61a6faba80",
+  "gate_A": "NOT_RUN",
+  "gate_B": "NOT_RUN",
+  "clinical_validation": false,
+  "note": "Aggregate errors only; conditional acquisition-window arithmetic after development selection."
+}

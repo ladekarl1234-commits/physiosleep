@@ -97,6 +97,22 @@ EEG+EOG descriptive 95% participant-bootstrap intervals are score MAE [4.58,8.45
 
 ![Score component errors and descriptive intervals](../reports/publication-figures/06_score_errors.png) All tested channel configurations fail the joint targets. Three separately trained models do not constitute the full sensor-subset study, nor proof of a minimum channel set. The future B charter also requires score absolute bias <=3, score P90 <=10, and SE MAE <=5 percentage points where TIB is independently valid.
 
+## Frozen candidate score extension
+
+The already-frozen three-seed transition pipeline was scored on the **same 61 eligible windows / 40 development participants**, with the original formula, eligibility and four controls unchanged. No further fitting or window selection occurred. Independent verification replayed all 119 staging grids, the 61 eligible summaries, 501 frozen input hashes, 45 error intervals and 12 paired contrasts. [Verification receipt](../evidence/score-extension-verification.json); [aggregate values](../reports/score-extension/summary.json).
+
+| Endpoint | Candidate MAE [descriptive 95% CI] | Candidate minus EEG+EOG MAE [paired 95% CI] | Planned maximum |
+|---|---:|---:|---:|
+| Score, points | 5.677 [4.353, 7.113] | −0.697 [−2.616, 1.198] | 5 |
+| TST, minutes | 24.331 [17.112, 32.663] | −0.375 [−1.612, 0.900] | 15 |
+| Within-SPT WASO, minutes | 63.088 [42.318, 85.433] | −10.225 [−45.182, 21.436] | 10 |
+
+All three MAEs fail their targets. Each paired interval versus EEG+EOG includes zero. Score bias is +0.716 points; score P90 absolute error is 12.475 points, exceeding the ten-point target. TST and WASO P90 errors are 69 and 219 minutes. The same cohort-stratified participant resamples were used for all systems: 2,000 PCG64 draws, seed 2026092405. Each participant's eligible nights share equal total weight. These pointwise intervals are conditional, descriptive development estimates after adaptive staging selection; they are not simultaneous confirmation intervals or clinical evidence.
+
+![Frozen candidate score fidelity and unchanged controls](../reports/score-extension/08_score_extension.png)
+
+The earlier four-model figures remain intact as the historical analysis. This extension changes neither the score charter nor the minimum-sensor conclusion. The model with the best staging result does not establish adequate score fidelity. Missing independent nightly boundaries and TIB still prevent whole-night/SE claims. Audit A and B remain reserved.
+
 ## Products, hardware and limitations
 
 The specialist HTML is a local review demonstration with synthetic example epochs and editing/undo/export. It does not itself establish real inference or clinical usability. Consumer work was removed from scope. Owner-supplied fonts and private application state are excluded from this repository.

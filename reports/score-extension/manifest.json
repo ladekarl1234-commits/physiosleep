@@ -1,0 +1,25 @@
+{
+  "scope": "public aggregate score extension; no private records",
+  "files": [
+    {
+      "path": "reports/score-extension/summary.json",
+      "sha256": "187fa7f59b8ec9acd82bfe1f4c4c08eb3f40554f72bde55e91854dd65c68f8d5"
+    },
+    {
+      "path": "reports/score-extension/08_score_extension.png",
+      "sha256": "c5882ae71d9aea08da6acebb05b9e610a37a14addd9db1e0fb0b61390db7008c"
+    },
+    {
+      "path": "reports/score-extension/08_score_extension.svg",
+      "sha256": "736318aaf7294dd3d9225f4c37b4a5f328a2f0ec01745a7753275d802eb960ca"
+    },
+    {
+      "path": "tools/plot_score_extension.py",
+      "sha256": "ae4d5323e537d46040d07f1941c5864fbeb80486b434489e0e1772ae45190c90"
+    },
+    {
+      "path": "evidence/score-extension-verification.json",
+      "sha256": "41235d18484b489ec799f134e255ff6e7cc9ac1b3c082c9e12023f61a6faba80"
+    }
+  ]
+}

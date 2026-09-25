@@ -40,6 +40,10 @@ def main():
         errors.append('Figure summary differs from bound manifest')
     if hashlib.sha256((ROOT/'tools/build_research_figures.py').read_bytes()).hexdigest()!=figure_manifest['script_sha256']:
         errors.append('Figure builder differs from bound manifest')
+    extension=json.loads((ROOT/'reports/score-extension/manifest.json').read_text(encoding='utf8'))
+    for item in extension['files']:
+        if hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()!=item['sha256']:
+            errors.append('Score extension artifact differs from manifest: '+item['path'])
     print(json.dumps({'status':'FAIL' if errors else 'PASS','tracked_files':len(names),
                       'scope':'staged/committed paths; pattern scan is not a formal privacy proof',
                       'errors':errors},indent=2))

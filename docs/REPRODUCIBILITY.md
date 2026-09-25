@@ -42,3 +42,5 @@ No public replay command opens an audit. The repository does not include release
 A fresh local clone passed **92 synthetic tests**, exact aggregate arithmetic, and the tracked-file/link/source-hash scan in a separately created minimal Python 3.11 environment. The initial clone exposed Windows line-ending conversion; repository attributes now preserve exact source bytes. The corrected fresh clone passed all checks. See [the receipt](../evidence/clean-clone-verification.json).
 
 This is same-host verification, not independent external full-training replay. A pinned GitHub Actions workflow repeats public checks on a hosted runner after publication; its live status remains separate from this local receipt.
+
+The eighth figure replays the aggregate score extension: `python tools/plot_score_extension.py reports/score-extension/summary.json reports/score-extension/08_score_extension`. Its independent private-artifact verification receipt is published, but aggregate replay cannot independently reconstruct participant bootstrap draws without protected participant-linked records.
