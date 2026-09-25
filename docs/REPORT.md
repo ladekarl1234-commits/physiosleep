@@ -1,5 +1,7 @@
 # PhysioSleep scientific report
 
+[Judge route](JUDGE_GUIDE.md) · [Pipeline](PIPELINE.md) · [Development/test jobs](EXPERIMENTS.md) · [Results index](RESULTS.md) · [Excel comparison](../literature/COMPARISON.md)
+
 ## Abstract and current decision
 
 PhysioSleep investigates participant-disjoint five-class staging, interpretable recording-window summaries and the requirements for a later acquisition device. On the original 60-person development set, the best completed system uses native YASA physiological features, locally fitted LightGBM classifiers, a three-seed probability ensemble and a train-only transition prior. Pooled Macro-F1 is **0.7897786854**, accuracy **0.9073799272**, and Cohen's kappa **0.8322544088**. The gain over the fixed seed-17 EEG+EOG control is **0.0035116988**, not the required 0.02. No mandatory multi-family superiority or independent confirmation is established.

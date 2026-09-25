@@ -18,7 +18,7 @@ def main():
         p=ROOT/name
         if p.suffix.lower() in forbidden or any(x in p.relative_to(ROOT).parts for x in ('vendor','runs','.venv','.venvs','local-data','__pycache__')):
             errors.append('Excluded payload: '+name)
-        if p.suffix.lower() in ('.py','.md','.json','.txt','.toml','.log','.yml','.yaml','.cjs'):
+        if p.suffix.lower() in ('.py','.md','.json','.csv','.txt','.toml','.log','.yml','.yaml','.cjs'):
             text=p.read_text(encoding='utf-8-sig')
             patterns=[r'ghp_[A-Za-z0-9]{30,}',r'github_pat_[A-Za-z0-9_]{30,}',r'-----BEGIN (?:RSA |EC )?PRIVATE KEY-----',r'C:\\Users\\',r'C:\\Program Files\\']
             if any(re.search(pattern,text) for pattern in patterns):
@@ -44,6 +44,16 @@ def main():
     for item in extension['files']:
         if hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()!=item['sha256']:
             errors.append('Score extension artifact differs from manifest: '+item['path'])
+    guide=json.loads((ROOT/'reports/judge-guide/manifest.json').read_text(encoding='utf8'))
+    for item in guide['files']:
+        if hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()!=item['sha256']:
+            errors.append('Judge guide artifact differs from manifest: '+item['path'])
+    workbook=json.loads((ROOT/'literature/workbook-comparison.json').read_text(encoding='utf8'))
+    if len(workbook['experiments'])!=56 or len(workbook['papers'])!=31:
+        errors.append('Workbook coverage count changed')
+    keys=[(row['source_sheet'],row['source_row']) for row in workbook['experiments']]
+    if len(set(keys))!=56 or any(row['comparable_to_local'] for row in workbook['experiments']):
+        errors.append('Literature row identity or comparison scope changed')
     print(json.dumps({'status':'FAIL' if errors else 'PASS','tracked_files':len(names),
                       'scope':'staged/committed paths; pattern scan is not a formal privacy proof',
                       'errors':errors},indent=2))

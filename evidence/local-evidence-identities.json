@@ -35,6 +35,27 @@
       "local_artifact": "runs/sleepyland-yasa-alias-v2/attempt-v1/result.json",
       "sha256": "9393e09a467b3f77287bab2ee5240a72c0e20c07f9ef01426c3a66c890df3349",
       "public_payload_included": false
+    },
+    {
+      "local_artifact": "reports/sleepyland-yasa-alias-v2-actual-verification.json",
+      "sha256": "8f7137bbffa3444e15bf32ee4b6d2d9210dce31689be0dcc71166f6abca29496",
+      "public_payload_included": false
+    },
+    {
+      "local_artifact": "reports/development-score-extension-v1-verification.json",
+      "sha256": "41235d18484b489ec799f134e255ff6e7cc9ac1b3c082c9e12023f61a6faba80",
+      "public_payload_included": true,
+      "public_path": "evidence/score-extension-verification.json"
+    },
+    {
+      "local_artifact": "reports/score-extension-publication-review.json",
+      "sha256": "fe4b194c22120a236a2ed61e09435c544e610c724555b296ef96ae48e80c8ba7",
+      "public_payload_included": false
+    },
+    {
+      "local_artifact": "runs/utime-recovery-qualification-v1/result.json",
+      "sha256": "d453f043f9b116f93409799f0ae67a593e653c24ea51a1b039d9c7d5808a39bf",
+      "public_payload_included": false
     }
   ]
 }

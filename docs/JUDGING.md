@@ -1,5 +1,7 @@
 # Independent simulated judging and revisions
 
+**[Judge walkthrough](JUDGE_GUIDE.md) · [Repository review and fixes](REVIEW_REVISION.md) · [Current development/test jobs](EXPERIMENTS.md)**
+
 Two separate reviewer agents examined the evidence from sleep-specialist and data/ML perspectives. They are simulated judges, not licensed clinician attestations or official competition judges. Rubrics were fixed before edits and retained for rescoring.
 
 | Perspective | Initial score | Latest reviewed score | Meaning |
@@ -21,3 +23,11 @@ The [initial specialist rubric](../evidence/judging/sleep-specialist-initial.jso
 - Separate concept art, generated engineering checks and physical device evidence; document unresolved EOG geometry and Cz access.
 
 The next substantial score gains require new evidence: adequate mandatory baselines, unchanged confirmation gates, actual external full-training replay, independent sleep-boundary/clinical validity and paired physical-device qualification. These cannot be earned by changing the rubric, hiding failures or polishing pictures.
+
+## Repository usability review, 25 September 2026
+
+The owner requested clearer documentation, visible jobs/grades, a pipeline, a judging route and numeric Excel comparisons. A specialist methodologist and data/ML verifier independently identified the gaps, then reviewed the revised package. The [finding-to-fix record](REVIEW_REVISION.md) documents their feedback and the changes. This is a separate review of discoverability and evidence traceability, with no automatic numerical scientific regrade.
+
+- [Data/ML second review](../evidence/judging/repository-ml-review.md): all seven initial navigation/traceability findings resolved; original workbook and exported values checked.
+- [Data/ML machine-readable receipt](../evidence/judging/repository-ml-review.json): counts, missingness, scope and release conditions at review time.
+- [Specialist review record](../evidence/judging/repository-specialist-review.md): U01–U07 accepted; final nonblocking layout note corrected by the editor.

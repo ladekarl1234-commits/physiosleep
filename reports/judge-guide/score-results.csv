@@ -1,0 +1,16 @@
+system,endpoint,mae,bias,p90_absolute_error,ci95_mae_lower,ci95_mae_upper,participants,windows,scope
+EOG,score,6.9016231895071,-3.6799481713089968,16.105388713802967,4.973633479405503,8.91424916436522,40,61,conditional_development_acquisition_windows
+EOG,tst_minutes,41.69375000000001,15.431249999999999,89.0,28.873593750000005,56.4190625,40,61,conditional_development_acquisition_windows
+EOG,waso_minutes,104.85624999999999,77.73124999999997,347.0,68.19734375,144.02296875,40,61,conditional_development_acquisition_windows
+EEG,score,7.248557159593094,-1.6209424903747236,19.09497035053316,5.169598798494468,9.751587388907692,40,61,conditional_development_acquisition_windows
+EEG,tst_minutes,22.650000000000002,2.525,71.5,15.649062500000003,30.400937499999998,40,61,conditional_development_acquisition_windows
+EEG,waso_minutes,98.84999999999998,34.62500000000001,246.5,59.89734375,147.0384375,40,61,conditional_development_acquisition_windows
+EEG+EOG fixed control,score,6.374389701146715,-3.024874184970181,16.562797445255356,4.5751583582793165,8.449298200849272,40,61,conditional_development_acquisition_windows
+EEG+EOG fixed control,tst_minutes,24.706249999999997,3.2187500000000004,66.0,17.7428125,32.75625,40,61,conditional_development_acquisition_windows
+EEG+EOG fixed control,waso_minutes,73.31250000000001,52.062499999999986,229.0,42.71859375,110.12765624999994,40,61,conditional_development_acquisition_windows
+Train-only constant,score,7.838805463137878,1.5584512167197613,16.641427870457903,6.310638340515033,9.389618581680429,40,61,conditional_development_acquisition_windows
+Train-only constant,tst_minutes,46.231249999999996,1.3062500000000004,85.0,35.93015625,57.926249999999996,40,61,conditional_development_acquisition_windows
+Train-only constant,waso_minutes,101.60625,-62.88125,349.5,64.5465625,142.78484374999996,40,61,conditional_development_acquisition_windows
+Three-seed + transition,score,5.677071172034535,0.7157019784497911,12.475314100106075,4.352794234397077,7.113150508914853,40,61,conditional_development_acquisition_windows
+Three-seed + transition,tst_minutes,24.331250000000004,3.03125,69.0,17.11203125,32.6628125,40,61,conditional_development_acquisition_windows
+Three-seed + transition,waso_minutes,63.08750000000001,-7.8,219.0,42.3184375,85.43312499999999,40,61,conditional_development_acquisition_windows

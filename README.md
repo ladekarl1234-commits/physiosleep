@@ -1,43 +1,82 @@
 # PhysioSleep
 
-**Reproducible sleep-staging research, with explicit evidence boundaries.**
+**From EEG and eye movement signals to sleep stages, inspectable results and an experimental sleep summary.**
 
-The best completed development pipeline achieves **0.789779 pooled five-class Macro-F1** and **90.738% accuracy** on 119 recordings from 60 development participants. Its improvement over the fixed EEG+EOG control is **+0.003512 absolute**, below the required +0.02. **Audit A and Audit B are NOT_RUN. The mandatory benchmark is incomplete.**
+PhysioSleep is an offline sleep-research pipeline for specialist review. It checks Sleep-EDF recordings, predicts **Wake, N1, N2, N3 and REM** for each complete 30-second epoch, and evaluates every prediction on a fixed participant-disjoint protocol. The current strongest system combines native physiological features, locally trained LightGBM models, three-seed averaging and a train-only transition prior. A specialist HTML demonstration and hardware acquisition concept accompany the research.
 
-![Actual development results](reports/publication-figures/01_night_overview.png)
+**For judges: [start the five-minute review](docs/JUDGE_GUIDE.md). For developers: [setup and source map](docs/DEVELOPER_GUIDE.md).**
 
-These figures come from saved predictions. They are not generated performance illustrations. Development selection, full-record Wake prevalence and uncertainty limitations are explained in the [scientific report](docs/REPORT.md).
+[![Public software checks](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml/badge.svg)](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml)
 
-| Evidence | Current result |
+| Measured development result | Research status | Latest simulated scientific reviews |
+|---|---|---|
+| **0.789779 Macro-F1** · **90.738% accuracy** | 119 recordings / 60 development participants | Sleep specialist **69 → 71 / 100** |
+| **+0.003512** over the fixed EEG+EOG control | Required margin **+0.02** remains unmet | Data/ML **53 → 59 / 100** |
+| Five participant-disjoint development folds | Audit A **NOT_RUN** · Audit B **NOT_RUN** | [Rubrics, dates and findings](docs/JUDGING.md) |
+
+The review grades assess scientific evidence, not official competition approval. Documentation changes do not automatically increase them. The mandatory eleven-slot benchmark is incomplete; development results are not confirmation.
+
+## What to open
+
+| Your question | Read this |
 |---|---|
-| Data | 197 recording pairs / 100 participants; fixed development / A / B allocation of 60 / 20 / 20 |
-| Development | Five participant-disjoint folds; 274,271 reference-valid epochs; all complete epochs retained |
-| Required superiority | Not established; all 11 mandatory audit execution slots remain incomplete |
-| Confirmation | A and B preserved; baselines → readiness → A → reduced-model freeze → B |
-| Experimental score | Three-seed + transition: MAE 5.68 points, TST MAE 24.33 min, WASO MAE 63.09 min; planned targets unmet |
-| Hardware | Acquisition concept and synthetic engineering checks; no built or validated device |
-| Specialist interface | Local standalone review demonstration; no consumer workflow in current scope |
+| What was built, and how should I judge it? | [Judge guide](docs/JUDGE_GUIDE.md) and [documentation index](docs/README.md) |
+| How do signals become stages, scores and evidence? | [Pipeline and architecture](docs/PIPELINE.md) |
+| Which training jobs, tests and audits actually ran? | [Development / test job ledger](docs/EXPERIMENTS.md) |
+| How do our models compare on the same people? | [Local results and ablations](docs/RESULTS.md) |
+| What do the models in the supplied Excel report? | [56-row literature comparison](literature/COMPARISON.md) · [31 papers](literature/PAPERS.md) · [CSV](literature/experiments.csv) |
+| Why these decisions? What is still missing? | [15 architecture decisions](docs/adr/README.md) · [reviewer roadmap](docs/ROAD_TO_90.md) |
 
-A newly completed, independently verified Sleepyland/YASA clean development route scored **0.783662 Macro-F1** on the same 119 recordings. Its compatibility and scope are documented in the [report](docs/REPORT.md#newly-completed-sleepylandyasa-development-route); it does not complete the mandatory benchmark.
+## Pipeline
 
-The frozen staging candidate has now been evaluated under the unchanged provisional score charter: **5.68 points score MAE, 24.33 minutes TST MAE and 63.09 minutes WASO MAE**. All three remain above their planned targets, and their paired differences versus EEG+EOG have intervals crossing zero. See the [new verified analysis](docs/REPORT.md#frozen-candidate-score-extension) and [evidence required for reviewer scores of 90](docs/ROAD_TO_90.md).
+![PhysioSleep scientific pipeline: data, participant partitioning, train-only fitting, signal-only inference and separate evaluation](reports/judge-guide/pipeline.png)
 
-## Read and reproduce
+The detailed [pipeline guide](docs/PIPELINE.md) maps each step to source modules, artifacts, assumptions and tests. Reference annotations never enter the prediction interface. Every night from a person stays in the same partition. Audit A and B remain reserved.
 
-- [Full scientific report](docs/REPORT.md): methods, actual results, adverse findings and limits.
-- [Reproduction guide](docs/REPRODUCIBILITY.md): synthetic checks and aggregate replay; requirements for protected-data research.
-- [Baseline registry and readiness](docs/BASELINES.md): all mandatory slots, source pins, rights and runtime gaps.
-- [Architecture decisions](docs/adr/README.md): data, evaluation, experiments, products, hardware and publication.
-- [Judge questions](docs/JUDGE_QUESTIONS.md) and [independent simulated reviews](docs/JUDGING.md).
-- [Hardware design](docs/HARDWARE.md), [claim-to-evidence ledger](docs/CLAIMS.md), [rights and exclusions](RIGHTS.md).
-- [Literature context](literature/README.md): published scores are not matched local comparisons.
+## Actual local model comparison
+
+![Nine completed local development systems, including Sleepyland/YASA](reports/judge-guide/local_comparison.png)
+
+The nine systems share development participants, folds and the reference-valid epoch denominator; their channel inputs differ. The best system exceeds the clean local Sleepyland/YASA route (**0.783662**) by **0.006117**. Neither this nor its **0.003512** gain over the fixed control meets +0.02. These are adaptive development comparisons. [Exact results, channel counts, failure cases and uncertainty](docs/RESULTS.md).
+
+## Comparison with published models
+
+The supplied Excel contains **31 papers and 56 experimental settings**, including DeepSleepNet, U-Time, TinySleepNet, AttnSleep, XSleepNet, SleepTransformer, SleePyCo, YASA and SLEEPYLAND. We publish the numeric rows, source URLs, sheet/row identifiers and caveats rather than reducing them to a list of names.
+
+![Literature Macro-F1 values from the supplied workbook; protocols are unmatched](reports/judge-guide/literature_context.png)
+
+These are **workbook-reported literature values** with different cohorts, cropping, pretraining and aggregation. They are not a local leaderboard or verified superiority claims. Read [all 56 comparison rows](literature/COMPARISON.md) or download [experiments.csv](literature/experiments.csv) and [papers.csv](literature/papers.csv).
+
+## Development, tests and confirmation
+
+| Work | Evidence available | What remains |
+|---|---|---|
+| Local feature models, ensembles and transition decoder | Complete five-fold development outputs and aggregate replay | Adequacy, broader native comparators and confirmation |
+| Sleepyland/YASA compatibility route | Clean five-fold fit; five-fold numerical parity; Macro-F1 0.783662 | Full mandatory-route adequacy and native-container equivalence |
+| AttnSleep | Native 100-epoch training in progress at the dated [job snapshot](docs/EXPERIMENTS.md) | All folds, seed evaluations and saved validation predictions |
+| U-Time | Numerical epoch preserved after state-commit failure; synthetic recovery qualification | Verified actual recovery and adequate native fitting |
+| Public software checks | **92 synthetic tests**, exact aggregate replay and publication checks in [hosted CI](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml) | CI does not retrain models or open audits |
+| Audit A / B | Fixed procedural holdouts of 20 people each | Baselines → readiness → A → reduced-model freeze → B |
+
+## Experimental score and hardware
+
+The frozen staging candidate has **score MAE 5.68 points, TST MAE 24.33 minutes and within-SPT WASO MAE 63.09 minutes** on 61 eligible recording windows from 40 people. All three exceed the planned maxima of 5, 15 and 10. There is no clinical sleep-quality validation. [Score results and definitions](docs/RESULTS.md#experimental-score).
+
+![Score errors, confidence intervals and failed targets](reports/score-extension/08_score_extension.png)
+
+Hardware artifacts specify acquisition, timing, filtering and packet requirements and include synthetic fault checks. **No device has been built or validated.** Images are labeled concepts; physical bench and paired-reference tests remain required. [Hardware guide](docs/HARDWARE.md).
+
+![Acquisition concept; not a built or validated device](assets/hardware/acquisition-concept.png)
+
+## Run the public checks
 
 ```bash
 python -m pip install numpy==1.26.4 pyedflib==0.1.42 xlrd==2.0.2 PyYAML==6.0.3
 python tools/verify_public_metrics.py
 python -m unittest discover -s tests -v
+python tools/check_publication.py
 ```
 
-The public package contains source, synthetic tests and aggregate figures. It excludes original signals, epoch labels, participant-linked predictions, private checkpoints, third-party model weights, credentials and owner-supplied font files. It is a research snapshot, not a pretrained clinical product or a claim that all registered baselines have been reproduced.
+Run from a clone of this repository. These commands require no EDFs, GPU or private models. For figure rebuilding, environments, source ownership and the additional requirements for exact training, read the [developer guide](docs/DEVELOPER_GUIDE.md) and [reproduction guide](docs/REPRODUCIBILITY.md).
 
-![Acquisition concept, not built or validated](assets/hardware/acquisition-concept.png)
+The public package contains source, synthetic tests and aggregate evidence. Original signals, participant-linked labels/predictions, private checkpoints, vendor weights, credentials and commercial font files remain excluded. [Rights and exclusions](RIGHTS.md) · [claim-to-evidence ledger](docs/CLAIMS.md) · [full scientific report](docs/REPORT.md).

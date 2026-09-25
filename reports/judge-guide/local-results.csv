@@ -1,0 +1,10 @@
+accuracy,macro_f1,name,run_id,inputs,participants,recordings,valid_epochs,pretrained_weights,scope,delta_vs_control
+0.8717910387901018,0.7232929593995073,EOG,provisional-eog/2174694681ab0041,EOG (1),60,119,274271,False,adaptive_development,-0.0629740272367445
+0.8899118025602415,0.7516956637757647,EEG,yasa-eeg-s17-lr1-016e83b2f3,Fpz−Cz EEG (1),60,119,274271,False,adaptive_development,-0.03457132286048714
+0.9049443798287096,0.7862669866362518,EEG + EOG · seed 17,yasa-eeg_eog-s17-lr1-493ef41680,Fpz−Cz EEG + EOG (2),60,119,274271,False,adaptive_development,0.0
+0.9047438482376919,0.7857691260231338,EEG + EOG · seed 43,yasa-eeg_eog-s43-lr1-44993977b7,Fpz−Cz EEG + EOG (2),60,119,274271,False,adaptive_development,-0.000497860613118073
+0.9040839170017975,0.7847269455052233,EEG + EOG · seed 101,yasa-eeg_eog-s101-lr1-d8a9381b60,Fpz−Cz EEG + EOG (2),60,119,274271,False,adaptive_development,-0.0015400411310285689
+0.9052980446346861,0.7839200308197646,Two-view ensemble,development-equal-probability-b5b1e708bd1e,Fpz−Cz EEG + EOG (2),60,119,274271,False,adaptive_development,-0.0023469558164872506
+0.9058996394077391,0.7879892753330179,Three-seed ensemble,development-equal-probability-4a6932b4182c,Fpz−Cz EEG + EOG (2),60,119,274271,False,adaptive_development,0.00172228869676605
+0.9073799271523421,0.7897786853985393,Transition decoder,temporal-transition-d60-153801fcc3,Fpz−Cz EEG + EOG (2),60,119,274271,False,adaptive_development,0.0035116987622875184
+0.9046052991384433,0.7836621840961124,Sleepyland/YASA pooled groups,sleepyland-yasa-pool-s17-b95d886cc9,Fpz−Cz + Pz−Oz EEG + EOG (3),60,119,274271,False,adaptive_development,-0.002604802540139395

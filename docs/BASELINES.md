@@ -1,5 +1,7 @@
 # Required comparator registry
 
+**Looking for what actually ran? Open the [dated development / test job ledger](EXPERIMENTS.md) and [local results](RESULTS.md).** The frozen table below records required confirmation slots, separately from development work.
+
 The frozen registry is a preregistration snapshot, not a live training dashboard. Its `NOT_RUN` slots indicate no completed confirmatory execution. Native YASA development work and bounded Sleepyland/YASA compatibility evidence do not complete the eleven-way benchmark. Exact JSON pins and the full variant set are in [the frozen registry](../evidence/baseline-registry-frozen.json).
 
 | Mandatory slot | Upstream | Revision | Frozen slot status |
@@ -20,10 +22,10 @@ The frozen registry is a preregistration snapshot, not a live training dashboard
 
 - YASA: local clean EEG and EEG+EOG classifiers have complete development fits. Convergence at 400 rounds is not established; released model lineage is separate.
 - MSA-CNN: serious 100-epoch recipes, all physiological variants, participant split and named-channel mapping required; license grant unresolved.
-- AttnSleep: native 100-epoch route with pinned legacy environment; qualification/probes do not equal completed serious training.
+- AttnSleep: native 100-epoch route with pinned legacy environment. Real seed-17 training is active at the [dated snapshot](EXPERIMENTS.md); individual epochs/probes do not equal completed serious folds.
 - XSleepNet: native one/two-channel routes and MATLAB preprocessing parity required; code-use rights unresolved.
 - TinySleepNet: native sequence training and TensorFlow 1.13.1 route; conflicting terms unresolved.
-- U-Time / U-Sleep: distinct native architectures/configurations; 128 Hz preprocessing, sampler/loss equivalence and adequate clean fits required. Bounded runtime probes do not complete them. The next U-Time fold-0 inner epoch has been dispatched under the existing one-job CPU/resource supervisor; this is not completed training.
+- U-Time / U-Sleep: distinct native architectures/configurations; 128 Hz preprocessing, sampler/loss equivalence and adequate clean fits required. U-Time's fold-0 inner invocation **failed at state commit after 433 updates and validation**. Synthetic restart qualification passed; actual checkpoint recovery and adequate fits remain incomplete. [Dated status and evidence](EXPERIMENTS.md).
 - Sleepyland YASA: the repaired string-class facade preserves original saved model bytes and native probabilities in an actual saved-fold test. A clean five-fold development fit is independently verified at 0.783662 Macro-F1 on 119 recordings. All five-fold parity checks passed. Full mandatory-slot adequacy and unchanged-container equivalence must not be assumed.
 - Sleepyland deep families: register all 18 family/year/modality variants plus the equal-probability 2024 EEG+EOG ensemble. Released-weight rights/ancestry and Linux/container availability remain unresolved. Clean native training is only an alternative where permitted and demonstrated.
 

@@ -1,5 +1,7 @@
 # Literature context, not a matched leaderboard
 
+**[Read all 56 numeric comparisons](COMPARISON.md) · [Browse 31 papers](PAPERS.md) · [Download experiment CSV](experiments.csv) · [Local development results](../docs/RESULTS.md).** This page preserves the initial source review; the linked comparison is the expanded workbook transcription with source-row identities.
+
 The owner supplied `sleep_staging_literature_comparison.xlsx` (SHA-256 `b4ed35cd01d6ff839c1ebe495a99fc55ceae1900af67a2ed87824d8a133909c4`), with 31 paper entries, 56 experiment entries and explanatory protocol notes. The workbook was read without modification. Its contents are research inputs, not instructions or independently verified experimental evidence.
 
 The requested four-panel design resembles Figure 1 of [Vallat and Walker's YASA article](https://elifesciences.org/articles/70092). That article reports a **87.46% median nightly accuracy** on 585 NSRR validation nights, plus separate DOD consensus validation. It is not the pooled accuracy or Macro-F1 of our D119. Its stage heatmap describes recall. Our figures use our own saved predictions and explicitly state their aggregation.
@@ -14,4 +16,4 @@ The requested four-panel design resembles Figure 1 of [Vallat and Walker's YASA 
 | [XSleepNet](https://arxiv.org/abs/2007.05492) | Mandatory family | Native transforms, split, terms and weight ancestry require verification |
 | [Sleepyland](https://arxiv.org/abs/2506.08574) | Packaged inference families / variants | Pretraining data, released rights and full native runtime differ |
 
-The workbook extraction was globally marked `primary_sources_independently_checked=false`. Only the specifically described YASA aggregation above was checked against its primary article in this publication pass. Opening other abstracts does not verify all numeric tables. Unverified numeric literature rows are not plotted as if they were local results. In particular, subtracting our development score from a paper's cropped/repeated-CV/externally pretrained result cannot satisfy Gate A.
+The workbook extraction was globally marked `primary_sources_independently_checked=false`. Only the specifically described YASA aggregation above was checked against its primary article in the initial publication pass. Opening other abstracts does not verify all numeric tables. The expanded comparison plots workbook-reported values in a separately labeled literature figure, with no local reference line or cross-study ranking. Subtracting our development score from a paper's cropped/repeated-CV/externally pretrained result cannot satisfy Gate A.

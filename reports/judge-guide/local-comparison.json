@@ -1,0 +1,64 @@
+{
+  "scope": "adaptive_development_only",
+  "participants": 60,
+  "recordings": 119,
+  "models": [
+    {
+      "accuracy": 0.8717910387901018,
+      "macro_f1": 0.7232929593995073,
+      "name": "EOG",
+      "run_id": "provisional-eog/2174694681ab0041"
+    },
+    {
+      "accuracy": 0.8899118025602415,
+      "macro_f1": 0.7516956637757647,
+      "name": "EEG",
+      "run_id": "yasa-eeg-s17-lr1-016e83b2f3"
+    },
+    {
+      "accuracy": 0.9049443798287096,
+      "macro_f1": 0.7862669866362518,
+      "name": "EEG + EOG · seed 17",
+      "run_id": "yasa-eeg_eog-s17-lr1-493ef41680"
+    },
+    {
+      "accuracy": 0.9047438482376919,
+      "macro_f1": 0.7857691260231338,
+      "name": "EEG + EOG · seed 43",
+      "run_id": "yasa-eeg_eog-s43-lr1-44993977b7"
+    },
+    {
+      "accuracy": 0.9040839170017975,
+      "macro_f1": 0.7847269455052233,
+      "name": "EEG + EOG · seed 101",
+      "run_id": "yasa-eeg_eog-s101-lr1-d8a9381b60"
+    },
+    {
+      "accuracy": 0.9052980446346861,
+      "macro_f1": 0.7839200308197646,
+      "name": "Two-view ensemble",
+      "run_id": "development-equal-probability-b5b1e708bd1e"
+    },
+    {
+      "accuracy": 0.9058996394077391,
+      "macro_f1": 0.7879892753330179,
+      "name": "Three-seed ensemble",
+      "run_id": "development-equal-probability-4a6932b4182c"
+    },
+    {
+      "accuracy": 0.9073799271523421,
+      "macro_f1": 0.7897786853985393,
+      "name": "Transition decoder",
+      "run_id": "temporal-transition-d60-153801fcc3"
+    },
+    {
+      "name": "Sleepyland/YASA pooled groups",
+      "macro_f1": 0.7836621840961124,
+      "accuracy": 0.9046052991384433,
+      "run_id": "sleepyland-yasa-pool-s17-b95d886cc9"
+    }
+  ],
+  "macro_f1_unit": "fraction",
+  "source_summary_sha256": "a614419ca3755065473341e615f23ce38e030f99e3cb998e02b0805ede43f459",
+  "sleepyland_source_sha256": "ac19c3c757f7abc8fe8d9462d61b1426c6c14161b8bc2bcfe58b27007d54f692"
+}

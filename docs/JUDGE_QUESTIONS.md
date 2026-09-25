@@ -1,5 +1,7 @@
 # Questions a critical judge should ask
 
+[Guided evidence tour](JUDGE_GUIDE.md) · [Current results](RESULTS.md) · [Dated jobs](EXPERIMENTS.md)
+
 **Have you beaten every mandatory baseline by two Macro-F1 points?** No. Best development gain is +0.003512 over one fixed control; the matched mandatory benchmark and both audits are incomplete.
 
 **Why report 90.7% accuracy if N1 is weak?** We also report fixed-class Macro-F1 and the full confusion matrix. Wake accounts for 63.27% of valid epochs. Best-system N1 F1 is 0.4722; accuracy is not a substitute.
@@ -14,7 +16,7 @@
 
 **Does the sleep score measure health or restorative sleep?** No. It is a two-component unvalidated recording-window index. Agreement with the same formula on reference stages is not clinical construct validation. Only 61/119 nights and 40/60 people are score-eligible; all tested sensor models miss the planned joint error targets.
 
-**Are two channels or two electrodes sufficient?** Not established. The tested EEG+EOG model is best among three candidates, but the full subset study and B are incomplete. Two bipolar measurements conditionally need four sensing contacts plus a bias contact. Fpz−Cz requires Cz access; EOG geometry/polarity are still unresolved.
+**Are two channels or two electrodes sufficient?** Not established. Among the original three sensor configurations (EOG, Fpz−Cz EEG and EEG+EOG), the EEG+EOG control had the highest staging Macro-F1. The full subset study and B remain incomplete. Two bipolar measurements conditionally need four sensing contacts plus a bias contact. Fpz−Cz requires Cz access; EOG geometry/polarity are still unresolved.
 
 **Is the device built or ready for human use?** No. Illustrations are concept art, budgets are calculations, and fault checks use generated signals. Physical bench, safety and paired reference validation are pending.
 

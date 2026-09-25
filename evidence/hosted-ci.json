@@ -1,0 +1,12 @@
+{
+  "conclusion": "success",
+  "createdAt": "2026-09-25T00:49:39Z",
+  "databaseId": 36079311981,
+  "headSha": "e824bc84dba4aed3cc552d9ca1e31e0dd043ca47",
+  "status": "completed",
+  "updatedAt": "2026-09-25T00:49:55Z",
+  "url": "https://github.com/ladekarl1234-commits/physiosleep/actions/runs/36079311981",
+  "public_synthetic_tests": 92,
+  "reported_test_duration_seconds": 4.348,
+  "scope": "Observed GitHub Actions execution for headSha; software/aggregate/publication checks only, no model training or audit"
+}

@@ -1,0 +1,57 @@
+{
+  "scope": "Public guide figures and numeric inputs; source workbook transcriptions are not primary paper verification",
+  "files": [
+    {
+      "path": "tools/build_judge_figures.py",
+      "sha256": "48c2939f183097f0b1a4658fd207c67eacf102c947bfe0a92ec2205d8b18afe1"
+    },
+    {
+      "path": "literature/workbook-comparison.json",
+      "sha256": "1e2012c0eaabe0d5bf89233f29327f4a6ca910bb39df1640d69a06bd433a13cf"
+    },
+    {
+      "path": "literature/experiments.csv",
+      "sha256": "0695fdde34880ebd0edfe755ac7d91b634f35e342dae2316a6d32bafb94daa68"
+    },
+    {
+      "path": "literature/papers.csv",
+      "sha256": "ee2e728d705279898e708b2065ff533339f2852eb13a3c34c658d7d397ce6e49"
+    },
+    {
+      "path": "reports/judge-guide/literature_context.png",
+      "sha256": "2f3aa44f1ae9cf91f4d413430b19499f2d354ecf5e8c499b6a0a8ecb75f969e1"
+    },
+    {
+      "path": "reports/judge-guide/literature_context.svg",
+      "sha256": "1779486eab2bc22b2db0bcfffe64ec0195a5d13a579c16ac03dd44e1d4d517e0"
+    },
+    {
+      "path": "reports/judge-guide/local-comparison.json",
+      "sha256": "6d162761b1d7b8a7900f64ec1c7f5151416a85346ef346ccc8a24cc360629b8b"
+    },
+    {
+      "path": "reports/judge-guide/local-results.csv",
+      "sha256": "55de378abd728d563eeeecc6ee2a1b10c9794d7bb37b5cc5401d30ca978167fd"
+    },
+    {
+      "path": "reports/judge-guide/local_comparison.png",
+      "sha256": "14ba1a862c14ce8f88d46f732249119fa7d0c353902427fb955da68fb4bd74bc"
+    },
+    {
+      "path": "reports/judge-guide/local_comparison.svg",
+      "sha256": "6c995bd32fe00431033678c0496cd75877c1977cfa78052a7b553035d07c2354"
+    },
+    {
+      "path": "reports/judge-guide/pipeline.png",
+      "sha256": "11f078e432eef9e2c9de0bc8b823c50a95d89eee022e7de311afd4c7ff6e9351"
+    },
+    {
+      "path": "reports/judge-guide/pipeline.svg",
+      "sha256": "75e03d30a1d6751121c3335a16b8d48ad184b5704ee46ecbd8f0af1529d1322e"
+    },
+    {
+      "path": "reports/judge-guide/score-results.csv",
+      "sha256": "2a9c29819a95f8c597897f1748c16f0be8fa69f5297cf32e1d95de886afed70d"
+    }
+  ]
+}

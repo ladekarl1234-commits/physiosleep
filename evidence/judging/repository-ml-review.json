@@ -1,0 +1,85 @@
+{
+  "schema_version": "1.0",
+  "scope": "public_repo_usability_data_ml_second_review",
+  "status": "PASS_PRESENTATION_PENDING_FINAL_STAGING_SCANNER",
+  "scientific_scores_unchanged": {
+    "data_ml": 59,
+    "specialist": 71
+  },
+  "findings": [
+    {
+      "id": 1,
+      "status": "resolved_for_navigation"
+    },
+    {
+      "id": 2,
+      "status": "resolved_for_navigation"
+    },
+    {
+      "id": 3,
+      "status": "resolved_for_navigation"
+    },
+    {
+      "id": 4,
+      "status": "resolved_for_navigation"
+    },
+    {
+      "id": 5,
+      "status": "resolved_for_navigation"
+    },
+    {
+      "id": 6,
+      "status": "resolved_for_navigation"
+    },
+    {
+      "id": 7,
+      "status": "resolved_for_navigation"
+    }
+  ],
+  "workbook": {
+    "sha256": "b4ed35cd01d6ff839c1ebe495a99fc55ceae1900af67a2ed87824d8a133909c4",
+    "paper_rows": 31,
+    "experiment_rows": 56,
+    "experiment_sheet_counts": {
+      "EDF_small": 18,
+      "EDF_large": 13,
+      "other": 25
+    },
+    "blank_accuracy": 7,
+    "blank_macro_f1": 11,
+    "blank_kappa": 8,
+    "source_cell_mismatches": 0,
+    "markdown_mismatches": 0,
+    "filename": "sleep_staging_literature_comparison.xlsx"
+  },
+  "public_aggregate_checks": {
+    "local_models": 9,
+    "score_systems": 5,
+    "score_endpoints": 3,
+    "score_rows": 15,
+    "numeric_mismatches": 0,
+    "judge_figure_manifest_files": 13,
+    "manifest_hash_mismatches": 0,
+    "missing_local_links": 0
+  },
+  "hosted_ci_receipt": {
+    "observed_from_public_json_only": true,
+    "tested_commit": "e824bc84dba4aed3cc552d9ca1e31e0dd043ca47",
+    "current_tree_covered": false
+  },
+  "release_dependency": "Stage final changed bytes and rerun owner publication scanner before publication.",
+  "not_performed": [
+    "raw_data_or_prediction_access",
+    "model_training",
+    "audit_A_or_B",
+    "fresh_full_test_suite",
+    "live_hosted_CI_invocation",
+    "primary_numeric_paper_table_verification"
+  ],
+  "markdown_sha256": "a84859c634ee3e16e0338d41fd030006a44991919fb865c614ca36ab1e7112cc",
+  "public_derivative": {
+    "original_json_sha256": "1805cd2bce83284097d395108d3c9f9741e2ae65efd8462df1c5a3df9c65931b",
+    "change": "Removed machine-specific workbook path only",
+    "public_markdown_sha256": "738dacf0d8629eb61498b786662b71244cc2451f16f10c7af5f4600a2f3ee7d1"
+  }
+}

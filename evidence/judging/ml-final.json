@@ -284,7 +284,7 @@
     "clean_clone_terminal_log_sha256": "0fd909d6e5ecbd9f3ed5ae9bfeb0a20385309cb47bbd144c3fa4ce1e574aa2ca",
     "clean_clone_tests": 92,
     "current_publication_scanner": {
-      "command": "C:\\Program Files\\develop\\hachaton\\sleep\\.venvs\\research\\Scripts\\python.exe tools/check_publication.py",
+      "command": "python tools/check_publication.py",
       "cwd": "publication/physiosleep",
       "exit_code": 0,
       "status": "PASS",
@@ -292,5 +292,9 @@
       "errors": []
     },
     "staged_diff_check": "git diff --cached --check reports trailing whitespace on new CRLF text lines; no source-hash or scanner failure. Formatting warning remains for publication owner."
+  },
+  "public_sanitization": {
+    "removed": "Machine-specific interpreter path in observed command; scoring and rubric unchanged",
+    "original_public_receipt_sha256": "b107b06b93c2cfe327e0db48ee93584cc7d86485c5835bf0258a5c5374c68456"
   }
 }
