@@ -23,7 +23,7 @@ Actual reference scoring of all 78 recordings is complete. The tested system is 
 
 | Measured development result | Research status | Latest simulated scientific reviews |
 |---|---|---|
-| **0.789779 Macro-F1**; **90.738% accuracy** | 119 recordings / 60 development participants | Sleep specialist **73 / 100** |
+| **0.789779 Macro-F1**; **90.738% accuracy** | 119 recordings / 60 development participants | Sleep specialist **74 / 100** |
 | **+0.003512** over the fixed EEG+EOG control | Required margin **+0.02** remains unmet | Data/ML **58 / 100** |
 | Five participant-disjoint development folds | Audit A/B **EXPLORATORY_EVALUATED** | [Rubrics, dates and findings](docs/JUDGING.md) |
 
@@ -38,7 +38,7 @@ The review grades are simulated scientific assessments, not official competition
 | Which training jobs, tests and audits actually ran? | [Development / test job ledger](docs/EXPERIMENTS.md) |
 | How do our models compare on the same people? | [Local results and ablations](docs/RESULTS.md) |
 | What do the models in the supplied Excel report? | [56-row literature comparison](literature/COMPARISON.md), [31 papers](literature/PAPERS.md), [CSV](literature/experiments.csv) |
-| Why these decisions? What is still missing? | [17 architecture decisions](docs/adr/README.md), [historical reviewer roadmap](docs/ROAD_TO_90.md) |
+| Why these decisions? Can the reviewer score exceed 90? | [17 architecture decisions](docs/adr/README.md), [fixed-rubric feasibility](docs/ROAD_TO_90.md) |
 
 ## Pipeline
 

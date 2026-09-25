@@ -85,6 +85,19 @@ Integrity requires identical participant/record/epoch/mask identities, all manda
 
 The exploratory formula is Q=100*sqrt(min(TST/420 minutes,1)*TST/SPT). It combines duration adequacy and within-sleep-period continuity. It is insensitive to redistribution among sleep stages when TST/SPT remain fixed. It cannot demonstrate restorative sleep, normal architecture, subjective sleep quality or absence of disease.
 
+The following **synthetic sensitivity cases** are already checked by [the public score tests](../tests/test_sleep_summary.py). They explain the formula; they are not patient outcomes or a revised score charter.
+
+| Fixed input or one controlled change | Formula consequence |
+|---|---|
+| Eight-hour window: 60 minutes Wake, 360 minutes N2, 60 minutes Wake | TST 360 minutes; SPT 360 minutes; Q **92.582** |
+| Change only the first 30 seconds of Wake to N2 | TST rises to 360.5 minutes, but SPT expands to 420 minutes; Q **falls to 85.833** |
+| Keep 420 minutes of sleep but replace every N1 epoch with REM | Q is identical; stage composition is absent from the formula |
+| Split one internal Wake bout into two, preserving TST and SPT | Q is identical; awakening count is absent from the formula |
+| Keep only one 30-second sleep epoch in an eight-hour covered window | Geometric Q **3.450**; arithmetic-composition sensitivity **50.060** |
+| All Wake or incomplete stage/timeline coverage | Q is unavailable, with an explicit reason |
+
+Below the 420-minute duration cap, writing T=TST and S=SPT gives Q=100*T/sqrt(420*S). A small boundary-label change can therefore reduce Q even as TST rises. This is a recording-window index with a strong boundary dependency, not a validated measure of sleep architecture or restorative quality.
+
 TST is valid sleep minutes. SPT extends from the first sleep epoch start through the final sleep epoch end. WASO counts Wake only within SPT, excluding terminal Wake. The frozen score domain requires a declared observation window of at least seven hours, complete coverage and some sleep. All-Wake TST is zero, but continuity and Q are unavailable.
 
 Score agreement uses the same formula on predicted and reference stages, with participant-balanced weighting among **61 eligible recordings / 40 people**, drawn from 119 / 60. Fifty-eight recordings were ineligible. No recording had independently established complete nightly boundaries. This is conditional recording-window arithmetic, not validated whole-night SQI. Missing LightsOn leaves TIB-dependent SE unavailable; SOL needs an independent attempt-to-sleep anchor. Missing intervals remain in coverage denominators.

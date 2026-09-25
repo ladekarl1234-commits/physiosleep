@@ -17,11 +17,12 @@ Activate on Windows PowerShell with `.venv\Scripts\Activate.ps1`, or Linux/macOS
 ```bash
 python -m pip install numpy==1.26.4 pyedflib==0.1.42 xlrd==2.0.2 PyYAML==6.0.3
 python tools/verify_public_metrics.py
+python tools/verify_exploratory_metrics.py
 python -m unittest discover -s tests -v
 python tools/check_publication.py
 ```
 
-Expected: metric replay reports PASS for best-development and Sleepyland/YASA confusion matrices; the current public suite contains 92 tests; publication validation checks tracked paths, source hashes and links. No GPU, EDF, authentication or private model is needed. The [hosted workflow](../.github/workflows/verify.yml) runs these checks; [recorded CI evidence](../evidence/hosted-ci.json) distinguishes observed execution from configuration.
+Expected: both metric replays report PASS for the development, Sleepyland/YASA and exploratory A/B pooled confusion matrices; the current public suite contains **99 synthetic tests**. Publication validation checks tracked paths, source hashes and links. No GPU, EDF, authentication or private model is needed. The [hosted workflow](../.github/workflows/verify.yml) ran these commands successfully on [commit 76b4452](https://github.com/ladekarl1234-commits/physiosleep/actions/runs/36096920665). The [older dated CI receipt](../evidence/hosted-ci.json) covers an earlier 92-test commit; do not treat it as a receipt for the current tree. Public checks do not reproduce protected training or participant-level bootstrap intervals.
 
 ## Rebuild the pictures
 

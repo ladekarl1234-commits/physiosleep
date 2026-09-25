@@ -1,0 +1,47 @@
+{
+  "artifact_type": "simulated_independent_sleep_specialist_sensitivity_regrade",
+  "status": "REVIEW_COMPLETE",
+  "review_date": "2026-09-25",
+  "rubric_id": "sleep-specialist-rubric-v1",
+  "rubric_changed": false,
+  "previous_score": 73,
+  "score": 74,
+  "maximum": 100,
+  "only_change": {
+    "criterion_id": "sensitivity_failure_cases",
+    "previous_earned": 4,
+    "earned": 5,
+    "maximum": 5,
+    "reason": "The public technical report now exposes test-linked quantitative boundary sensitivity, stage and awakening-bout invariances, arithmetic compensation, and unavailable-value cases under the unchanged experimental score formula."
+  },
+  "category_totals": {
+    "understanding": 18,
+    "staging": 23,
+    "score": 12,
+    "device": 7,
+    "communication": 14
+  },
+  "evidence_sha256": {
+    "previous_review": "b4e33cca63cb7533e0d6374e9517a868380f60ff61ce353277de2a17e2a43acc",
+    "docs/REPORT.md": "6e6cec35fc552a041b6a0a43de4386fc9c189967c3e793931d5b4f55ec204516",
+    "tests/test_sleep_summary.py": "f786f19996d74eb44e65a74390e683fdc464f92080499cbeddf3ae0cafc58237"
+  },
+  "focused_public_tests": {
+    "command": "python -B -m unittest discover -s tests -p test_sleep_summary.py -q",
+    "result": "PASS",
+    "tests": 16
+  },
+  "independently_recalculated_examples": {
+    "original_boundary_score": 92.5820099773,
+    "changed_boundary_score": 85.8333333333,
+    "one_epoch_geometric_score": 3.4503277967,
+    "one_epoch_arithmetic_alternative": 50.0595238095
+  },
+  "no_new_credit": [
+    "component_accuracy",
+    "clinical_or_subjective_validity",
+    "matched_comparator_or_confirmation",
+    "physical_device_qualification"
+  ],
+  "scope": "Simulated read-only specialist review of public score interpretation; no model run, private prediction array, clinical endpoint or physical device measurement was added."
+}

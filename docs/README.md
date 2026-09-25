@@ -13,7 +13,7 @@
 | Inspect methodology | [Scientific report](REPORT.md) | [Mandatory baselines](BASELINES.md), [claims](CLAIMS.md) |
 | Reproduce public outputs | [Developer guide](DEVELOPER_GUIDE.md) | [Reproducibility](REPRODUCIBILITY.md), source/tests/tools |
 | Understand decisions | [ADR index](adr/README.md) | 17 accepted, provisional or superseded decisions |
-| Judge the evidence | [Questions and answers](JUDGE_QUESTIONS.md) | [Grades and reviews](JUDGING.md), [historical roadmap](ROAD_TO_90.md) |
+| Judge the evidence | [Questions and answers](JUDGE_QUESTIONS.md) | [Grades and reviews](JUDGING.md), [fixed-rubric feasibility](ROAD_TO_90.md) |
 | Assess hardware | [Hardware guide](HARDWARE.md) | Concepts, calculated budgets and physical prerequisites |
 | Check permissions | [Rights](../RIGHTS.md) | [Primary-source recheck](../evidence/rights-recheck-20260925.md) |
 

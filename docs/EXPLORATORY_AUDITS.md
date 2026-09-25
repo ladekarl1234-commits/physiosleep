@@ -35,7 +35,7 @@ The formal criteria remain unchanged, but the original A and B cohorts are retir
 
 ## Independent verification and reviewer grades
 
-[The saved-array verification receipt](../evidence/exploratory-audits-verification.json) records PASS for all 78 executions, full grids, metrics and 10,000-draw intervals. The verifier recomputed results independently rather than calling the project scoring function. The separate simulated reviews are **sleep specialist 73/100** and **data/ML 58/100** under unchanged rubrics; see [the grading rationale](JUDGING.md). These are project-evidence grades, not accuracy percentages.
+[The saved-array verification receipt](../evidence/exploratory-audits-verification.json) records PASS for all 78 executions, full grids, metrics and 10,000-draw intervals. The verifier recomputed results independently rather than calling the project scoring function. At the exploratory-audit review cutoff, the simulated scores were **sleep specialist 73/100** and **data/ML 58/100** under unchanged rubrics. A later test-linked sensitivity review raised only the specialist grade to 74/100; see [the current grading rationale](JUDGING.md). These are project-evidence grades, not accuracy percentages.
 
 ## Inspect and reproduce
 

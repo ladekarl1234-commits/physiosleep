@@ -1,23 +1,20 @@
 # Evidence required for reviewer scores of 90
 
-**Historical roadmap, superseded for the current delivery by [ADR 0017](adr/0017-final-exploratory-delivery.md).** The owner ended further baseline experiments after the exploratory A/B evaluation. The steps below describe evidence that would have been required under the earlier review goal; they are not active instructions or achieved results. The [final report](FINAL_REPORT.md) is the current conclusion.
+**Current feasibility check, 25 September 2026.** The owner renewed the goal of a review score above 90 while explicitly retaining the stop on U-Sleep, Sleepyland and other mandatory-baseline experiments. The [final report](FINAL_REPORT.md) remains the measured conclusion. The former experiment queue below is historical, not permission to restart it.
 
-The earlier owner goal was to earn 90 from the existing reviewers, as far as the
+The owner goal is to earn more than 90 from the existing reviewers, as far as the
 evidence allows. Rubrics, the eleven mandatory baseline slots and both audit
 criteria stay unchanged. Current independently reviewed grades are 58/100 for
-data/ML and 73/100 for the sleep-specialist perspective. Agent grades are not
+data/ML and 74/100 for the sleep-specialist perspective. Agent grades are not
 clinical or competition approval.
 
 ## Feasibility under current constraints
 
-The specialist rubric reserves five points for clinical/subjective validity and
-five for measured paired-device qualification. With those absent, 90 requires
-every other criterion to receive full credit, including matched confirmation.
-The ML rubric reserves ten points for A/B confirmation. With that absent, 90
-requires full credit everywhere else, including complete permitted comparators.
-Unresolved mandatory rights and unfinished experiments prevent either condition
-today. The optimistic whole-point upper bound is therefore below 90 under the
-current exclusions; it is not a promised achievable score.
+The fixed [data/ML rubric](../evidence/judging/ml-exploratory.json) scores 58/100 today. Mandatory comparators are 2/12, leaving 10 unavailable points under the stop; formal confirmation is 0/10, and both original holdouts are consumed, leaving the untouched-holdout/official-rules criterion at 0/3. Even **granting every other criterion full credit** gives an optimistic ceiling of **100 - 10 - 10 - 3 = 77/100**. If independent fresh-host full-training replay also remains absent (0/4), the ceiling is **73/100**. These are mathematical bounds, not predicted scores.
+
+The fixed [sleep-specialist rubric](../evidence/judging/sleep-specialist-exploratory.json) now scores [74/100](../evidence/judging/sleep-specialist-sensitivity-regrade.json) after one independently reviewed point for test-linked sensitivity interpretation. Matched comparison/confirmation remains 1/8, clinical/subjective validity 0/5 and paired physical-device qualification 0/5. Holding those at their current evidence-backed values gives an optimistic ceiling of **100 - 7 - 5 - 5 = 83/100**. Failed score-component targets, uncertain whole-night boundaries and same-source population limit the realistic result further.
+
+No amount of prose, figures, synthetic checks or regrading can legitimately supply the missing comparison, fresh confirmation, clinical or physical measurements. The sections below are retained so a future authorized program can see what evidence was missing; current work may improve traceability and correct defects without claiming the >90 target has been achieved.
 
 ## Former proposed work, in evidence order
 
@@ -70,5 +67,6 @@ below remain requirements for broader benchmark and scientific evidence.
 
 No reviewer is asked to change a rubric or award missing evidence. Regrade only
 after completed, independently checked milestones. Record adverse results and
-unchanged scores alongside improvements. This roadmap is closed for the current
-delivery by the owner's later decision; no new baseline runs are requested.
+unchanged scores alongside improvements. The former baseline queue remains
+stopped by the owner's explicit answer; current work is limited to evidence
+checks, corrections and reproducibility improvements that do not reopen it.

@@ -26,7 +26,7 @@ For a deeper technical review, inspect the [17 ADRs](adr/README.md), run the [pu
 
 | Perspective | Latest | Review cutoff | Interpretation |
 |---|---:|---|---|
-| Sleep specialist | **73 / 100** | 25 September 2026 | Simulated scientific/aggregate review; no clinical certification |
+| Sleep specialist | **74 / 100** | 25 September 2026 | Simulated review with one sensitivity-interpretation point; no clinical certification |
 | Data / ML | **58 / 100** | 25 September 2026 | Simulated scientific/reproducibility review; no official competition grade |
 
 The [frozen criteria and original records](JUDGING.md) retain individual scores. The documentation review that produced this guide is separate and does not automatically rescore the science. Missing confirmation, external validity, adequate mandatory baselines and physical-device measurements remain substantive gaps.
@@ -51,4 +51,4 @@ The [frozen criteria and original records](JUDGING.md) retain individual scores.
 3. Open one literature row's source and compare its cohort/window/metric to ours before making a performance claim.
 4. Read the failed score endpoints and U-Time terminal-state entry, then check whether the headline text preserves those limitations.
 
-Judge the measured evidence and inspectability now; reserve confirmation, clinical and device credit for measurements absent from this delivery. The [historical roadmap](ROAD_TO_90.md) describes work that the owner has now stopped.
+Judge the measured evidence and inspectability now; reserve confirmation, clinical and device credit for measurements absent from this delivery. The [fixed-rubric feasibility check](ROAD_TO_90.md) shows why the requested score above 90 cannot be earned while the stopped comparator experiments and missing confirmation evidence remain excluded.
