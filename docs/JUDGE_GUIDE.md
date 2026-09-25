@@ -1,6 +1,8 @@
 # Start here: a judge's review guide
 
-[Documentation index](README.md) Â· [Repository home](../README.md)
+The [final English report](FINAL_REPORT.md) contains the completed exploratory A/B results, exact Macro-F1 calculation and current evidence limits. The owner has ended additional baseline testing for this delivery; the historical +0.02 formal gate remains NOT_RUN.
+
+[Documentation index](README.md) | [Repository home](../README.md)
 
 ## The project in one minute
 
@@ -12,20 +14,20 @@ The best completed system is an integration of existing physiological features a
 
 | Time | Open | Decision to make |
 |---|---|---|
-| 0â€“1 min | [Pipeline](PIPELINE.md) | Can I trace signals to stages without reference-label leakage? |
-| 1â€“2 min | [Job ledger](EXPERIMENTS.md) | Which fits completed, which tests passed, which jobs failed and which exploratory tests completed and which formal criteria remain unmet? |
-| 2â€“3 min | [Local results](RESULTS.md) | Do Macro-F1, N1, denominators and failed score targets support the claims? |
-| 3â€“4 min | [Excel comparison](../literature/COMPARISON.md) | Are published results attributed with their different protocols rather than treated as matched wins? |
-| 4â€“5 min | [Grades](JUDGING.md) and [claims](CLAIMS.md) | What credit is supported, what is missing and what would change the decision? |
+| 0-1 min | [Pipeline](PIPELINE.md) | Can I trace signals to stages without reference-label leakage? |
+| 1-2 min | [Job ledger](EXPERIMENTS.md) | Which fits completed, which tests passed, which jobs failed and which exploratory tests completed and which formal criteria remain unmet? |
+| 2-3 min | [Local results](RESULTS.md) | Do Macro-F1, N1, denominators and failed score targets support the claims? |
+| 3-4 min | [Excel comparison](../literature/COMPARISON.md) | Are published results attributed with their different protocols rather than treated as matched wins? |
+| 4-5 min | [Grades](JUDGING.md) and [claims](CLAIMS.md) | What credit is supported, what is missing and what would change the decision? |
 
-For a deeper technical review, inspect the [16 ADRs](adr/README.md), run the [public checks](DEVELOPER_GUIDE.md), inspect the [fixed audit criteria](REPORT.md#mandatory-benchmark-and-audit-protocol), and follow the claim links to aggregate evidence. Hardware is a separate [optional review branch](HARDWARE.md).
+For a deeper technical review, inspect the [17 ADRs](adr/README.md), run the [public checks](DEVELOPER_GUIDE.md), inspect the [historical fixed audit criteria](REPORT.md#historical-mandatory-benchmark-and-audit-protocol), and follow the claim links to aggregate evidence. Hardware is a separate [optional review branch](HARDWARE.md).
 
 ## Current scorecard
 
-| Perspective | Initial â†’ latest | Review cutoff | Interpretation |
+| Perspective | Latest | Review cutoff | Interpretation |
 |---|---:|---|---|
-| Sleep specialist | **69 â†’ 71 / 100** | 25 September 2026 | Simulated scientific/aggregate review; no clinical certification |
-| Data / ML | **53 â†’ 59 / 100** | 25 September 2026 | Simulated scientific/reproducibility review; no official competition grade |
+| Sleep specialist | **73 / 100** | 25 September 2026 | Simulated scientific/aggregate review; no clinical certification |
+| Data / ML | **58 / 100** | 25 September 2026 | Simulated scientific/reproducibility review; no official competition grade |
 
 The [frozen criteria and original records](JUDGING.md) retain individual scores. The documentation review that produced this guide is separate and does not automatically rescore the science. Missing confirmation, external validity, adequate mandatory baselines and physical-device measurements remain substantive gaps.
 
@@ -49,4 +51,4 @@ The [frozen criteria and original records](JUDGING.md) retain individual scores.
 3. Open one literature row's source and compare its cohort/window/metric to ours before making a performance claim.
 4. Read the failed score endpoints and U-Time terminal-state entry, then check whether the headline text preserves those limitations.
 
-Judge the measured evidence and inspectability now; reserve confirmation, clinical and device credit for the required future measurements. See the [roadmap](ROAD_TO_90.md) for evidence needed to improve the existing scientific grades.
+Judge the measured evidence and inspectability now; reserve confirmation, clinical and device credit for measurements absent from this delivery. The [historical roadmap](ROAD_TO_90.md) describes work that the owner has now stopped.

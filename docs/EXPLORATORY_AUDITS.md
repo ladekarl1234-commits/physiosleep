@@ -1,6 +1,6 @@
 # Audit A and B: exploratory evaluation guide
 
-[Measured results and class table](../reports/exploratory-audits-v1/report.md) Ãƒâ€šÃ‚Â· [Numeric aggregate](../reports/exploratory-audits-v1/aggregate.json) Ãƒâ€šÃ‚Â· [Owner decision](adr/0016-exploratory-audits.md)
+[Measured results and class table](../reports/exploratory-audits-v1/report.md) | [Numeric aggregate](../reports/exploratory-audits-v1/aggregate.json) | [Owner decision](adr/0016-exploratory-audits.md)
 
 ## What was tested
 
@@ -17,7 +17,7 @@ The two test cohorts each contain 39 recordings from 20 previously held-out part
 5. Apply the original reference-valid mask in the evaluator. Invalid epochs remain counted at their original timeline positions; models cannot improve their score by dropping difficult epochs.
 6. Recompute fixed-five-class pooled Macro-F1, accuracy, kappa and class metrics. An independent verifier checks the saved prediction/reference artifacts and reproduces the calculations.
 
-All class metrics use W, N1, N2, N3, REM in that order. Macro-F1 is the mean of five class F1 scores calculated after pooling confusion counts; a zero-denominator class contributes zero. This is not the average of per-night accuracies or F1 scores.
+All class metrics use W, N1, N2, N3, REM in that order. For a stage, `F1 = 2TP / (2TP + FP + FN)`; Macro-F1 is the unweighted mean of the five class F1 scores **after** pooling confusion counts across reference-valid epochs. A zero-denominator class contributes zero. The score ranges from 0 to 1 and gives each stage equal weight, revealing weak N1 recognition despite Wake-dominated accuracy. This is not an average of per-night or per-person F1 scores. The [final report](FINAL_REPORT.md#how-macro-f1-is-calculated-and-why-it-is-primary) has the complete equation and a worked Audit A example.
 
 ## Uncertainty and interpretation
 

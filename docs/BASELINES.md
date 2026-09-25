@@ -1,6 +1,6 @@
 # Required comparator registry
 
-**Looking for what actually ran? Open the [dated development / test job ledger](EXPERIMENTS.md) and [local results](RESULTS.md).** The frozen table below records required confirmation slots, separately from development work.
+**Historical formal-comparison registry.** The owner ended further baseline testing for this final delivery; see [ADR 0017](adr/0017-final-exploratory-delivery.md) and the [final A/B report](FINAL_REPORT.md). The table preserves the original requirement and observed execution status without presenting unfinished routes as active jobs. For actual runs, open the [dated development / test job ledger](EXPERIMENTS.md) and [local results](RESULTS.md).
 
 The frozen registry is a preregistration snapshot, not a live training dashboard. Its `NOT_RUN` slots indicate no completed confirmatory execution. Native YASA development work and bounded Sleepyland/YASA compatibility evidence do not complete the eleven-way benchmark. Exact JSON pins and the full variant set are in [the frozen registry](../evidence/baseline-registry-frozen.json).
 
@@ -18,11 +18,11 @@ The frozen registry is a preregistration snapshot, not a live training dashboard
 | `sleepyland_deepresnet` | [biomedical-signal-processing/sleepyland](https://github.com/biomedical-signal-processing/sleepyland/tree/db420a5c1d3329304907d14f9b3b314fa6605aa9) | `db420a5c` | NOT_RUN |
 | `sleepyland_sleeptransformer` | [biomedical-signal-processing/sleepyland](https://github.com/biomedical-signal-processing/sleepyland/tree/db420a5c1d3329304907d14f9b3b314fa6605aa9) | `db420a5c` | NOT_RUN |
 
-## Adequacy and remaining work
+## Adequacy conditions under the historical formal protocol
 
 - YASA: local clean EEG and EEG+EOG classifiers have complete development fits. Convergence at 400 rounds is not established; released model lineage is separate.
 - MSA-CNN: serious 100-epoch recipes, all physiological variants, participant split and named-channel mapping required; license grant unresolved.
-- AttnSleep: native 100-epoch route with pinned legacy environment. Real seed-17 training is active at the [dated snapshot](EXPERIMENTS.md); individual epochs/probes do not equal completed serious folds.
+- AttnSleep: native 100-epoch route with pinned legacy environment. Real seed-17 training reached epoch 65 and stopped with a resumable checkpoint at the [dated snapshot](EXPERIMENTS.md); individual epochs/probes do not equal completed serious folds. Further training is outside this delivery.
 - XSleepNet: native one/two-channel routes and MATLAB preprocessing parity required; code-use rights unresolved.
 - TinySleepNet: native sequence training and TensorFlow 1.13.1 route; conflicting terms unresolved.
 - U-Time / U-Sleep: distinct native architectures/configurations; 128 Hz preprocessing, sampler/loss equivalence and adequate clean fits required. U-Time's fold-0 inner invocation **failed at state commit after 433 updates and validation**. Synthetic restart qualification passed; actual checkpoint recovery and adequate fits remain incomplete. [Dated status and evidence](EXPERIMENTS.md).

@@ -1,6 +1,8 @@
 # Evidence required for reviewer scores of 90
 
-The active owner goal is to earn 90 from the existing reviewers, as far as the
+**Historical roadmap, superseded for the current delivery by [ADR 0017](adr/0017-final-exploratory-delivery.md).** The owner ended further baseline experiments after the exploratory A/B evaluation. The steps below describe evidence that would have been required under the earlier review goal; they are not active instructions or achieved results. The [final report](FINAL_REPORT.md) is the current conclusion.
+
+The earlier owner goal was to earn 90 from the existing reviewers, as far as the
 evidence allows. Rubrics, the eleven mandatory baseline slots and both audit
 criteria stay unchanged. Current independently reviewed grades are 58/100 for
 data/ML and 73/100 for the sleep-specialist perspective. Agent grades are not
@@ -17,7 +19,7 @@ Unresolved mandatory rights and unfinished experiments prevent either condition
 today. The optimistic whole-point upper bound is therefore below 90 under the
 current exclusions; it is not a promised achievable score.
 
-## Current work, in evidence order
+## Former proposed work, in evidence order
 
 The owner has since authorized exploratory evaluation of the original A/B cohorts;
 see [the audit guide](EXPLORATORY_AUDITS.md). Those cohorts are retired from
@@ -68,5 +70,5 @@ below remain requirements for broader benchmark and scientific evidence.
 
 No reviewer is asked to change a rubric or award missing evidence. Regrade only
 after completed, independently checked milestones. Record adverse results and
-unchanged scores alongside improvements. The goal remains active while meaningful
-authorized work remains.
+unchanged scores alongside improvements. This roadmap is closed for the current
+delivery by the owner's later decision; no new baseline runs are requested.

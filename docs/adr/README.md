@@ -18,3 +18,4 @@ These records cover project-level choices, their status, alternatives and verifi
 - [ADR 0014: Independent simulated judging under frozen rubrics](0014-judging.md) — Accepted
 - [ADR 0015: Preserve confirmation after explicit owner clarification](0015-audit-order.md) — Historical; superseded by ADR 0016
 - [ADR 0016: Owner-authorized exploratory evaluation of both audits](0016-exploratory-audits.md) — Accepted; formal benchmark criteria unchanged
+- [ADR 0017: Final delivery from completed exploratory audits](0017-final-exploratory-delivery.md) — Accepted; further baseline tests stopped by owner, formal criteria unmet

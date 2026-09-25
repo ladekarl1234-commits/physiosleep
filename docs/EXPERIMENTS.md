@@ -2,7 +2,7 @@
 
 [Judge guide](JUDGE_GUIDE.md) · [Results](RESULTS.md) · [Mandatory registry](BASELINES.md)
 
-**Snapshot: 25 September 2026, after exploratory A/B evaluation and U-Sleep signal preparation.** This is a dated observation, not a live job dashboard. A development fit, a software test and a confirmatory audit are different jobs. [Machine-readable snapshot](../evidence/job-status.json).
+**Snapshot: 25 September 2026, after exploratory A/B evaluation and U-Sleep signal preparation.** This is a dated observation, not a live job dashboard. The owner has since ended further U-Sleep, Sleepyland and other baseline testing for this delivery; unfinished rows below are preserved as evidence, **not an active queue**. A development fit, a software test and a confirmatory audit are different jobs. [Final decision](adr/0017-final-exploratory-delivery.md) | [Machine-readable snapshot](../evidence/job-status.json).
 
 ## Completed development work
 
@@ -16,7 +16,7 @@
 | Sleepyland/YASA clean route | Five folds; seed17; 400 rounds; two feature groups / three distinct channels | 0.783662 Macro-F1; all five native parity checks pass | [Verified aggregate receipt](../evidence/sleepyland-yasa-development.json) |
 | Frozen candidate score extension | Same 61 eligible windows / 40 people; unchanged formula and 2,000 draws | All three MAEs fail targets; paired bands versus EEG+EOG include zero | [Independent verification](../evidence/score-extension-verification.json) |
 
-## Active and failed native training
+## Stopped and failed native training at the recorded snapshot
 
 | Job | Observed status | Next completion requirement |
 |---|---|---|
