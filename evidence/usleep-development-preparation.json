@@ -1,0 +1,54 @@
+{
+  "artifact_type": "public_safe_usleep_development_preparation_summary",
+  "observed_at_utc": "2026-09-25T04:50:15+00:00",
+  "scope": "Original 60 development participants only; signal preparation and frozen inner-fold input binding; no model fit or audit access",
+  "signal_preparation": {
+    "status": "COMPLETE_DEVELOPMENT_SIGNALS_ONLY",
+    "recordings": 119,
+    "complete_epochs": 276133,
+    "expected_signal_payload_bytes": 12724208640,
+    "uncommitted_staging_entries": 0,
+    "worker_exit_code": 0,
+    "elapsed_seconds": 741.375,
+    "peak_combined_rss_bytes": 1652420608,
+    "truth_exported": false,
+    "protected_receipt_sha256": "a635e72d136ae20c669fd21d198dcbe703822a763fd360bd8302e586d3eaed49"
+  },
+  "inner_fold_binding": {
+    "fold": 0,
+    "seed": 17,
+    "fit_participants": 40,
+    "validation_participants": 8,
+    "fit_recordings": 79,
+    "validation_recordings": 16,
+    "total_recordings": 95,
+    "steps_per_epoch": 82,
+    "validation_total_epochs": 36167,
+    "validation_valid_epochs": 35876,
+    "binding_id": "sha256:8d07007efd581a3453a4e30b1689e5716c227a868afd16e8780d5cb2754d8d85",
+    "protected_binding_sha256": "956e670210341776fa331e65c8315af2cd0d7dfd15ce8d27d88211488415b368"
+  },
+  "independent_saved_artifact_check": {
+    "status": "PASS_WITH_SCOPED_LIMITS",
+    "report": "evidence/usleep-preparation-independent-verification.json",
+    "report_sha256": "11c3aba481666fb0376b4df05f478ffcde8ef5d28ab3990d688db94c4f4a9c21",
+    "hashed_signal_payload_files": 119,
+    "hashed_signal_payload_bytes": 12724223872,
+    "original_edf_rehashed": false
+  },
+  "renewed_native_engine_preflights": {
+    "status": "PASS_SYNTHETIC_ENGINE_SCOPE_ONLY",
+    "verification_id": "sha256:8a7f45a3a2d6eeaa29490ecda279bc2291dcad5e5bed8efb35e06d0a5a481c33",
+    "numerical_receipt_sha256": "acb91a4f35d80d6986bfd5252d337f73d951d630be46637ec2c1cd988577d37b",
+    "batch64_receipt_sha256": "547fc12f5f8133dc8ffb54819593bd6f99b2937a99825a5a1da4270be883e5cb",
+    "one_shot_receipt_sha256": "f941da023fafb1bbddba85e342436ef2f3366b6eb1e82141434246dde95e8db5",
+    "batch64_peak_combined_rss_bytes": 6765850624,
+    "profiled_full_block_epochs": 2880,
+    "production_training_validation_lifecycle_qualified": false
+  },
+  "model_qualification": "NOT_GRANTED",
+  "model_training": "NOT_RUN",
+  "formal_gate_A": "NOT_RUN",
+  "formal_gate_B": "NOT_RUN",
+  "reviewer_grades_changed": false
+}

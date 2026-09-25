@@ -2,7 +2,7 @@
 
 [Judge guide](JUDGE_GUIDE.md) · [Results](RESULTS.md) · [Mandatory registry](BASELINES.md)
 
-**Snapshot: 25 September 2026, after completed exploratory A/B evaluation.** This is a dated observation, not a live job dashboard. A development fit, a software test and a confirmatory audit are different jobs. [Machine-readable snapshot](../evidence/job-status.json).
+**Snapshot: 25 September 2026, after exploratory A/B evaluation and U-Sleep signal preparation.** This is a dated observation, not a live job dashboard. A development fit, a software test and a confirmatory audit are different jobs. [Machine-readable snapshot](../evidence/job-status.json).
 
 ## Completed development work
 
@@ -22,7 +22,7 @@
 |---|---|---|
 | AttnSleep seed17, fold0 | **STOPPED_WITH_VERIFIED_RESUMABLE_CHECKPOINT**, completed **65/100 epochs**; batch128, 1,702 updates/epoch | Complete serious native folds, seed evaluations and prediction verification. Training loss is not held-out F1. |
 | U-Time fold0, inner seed17 | **FAILED** after 433 training updates and validation; final state commit rejected tuple/list JSON representation | Read-only actual restoration and all 119 prepared-record hashes verified. Pointer fix passed 27 tests. Fresh original-seed replacement selected; renew source-bound qualifications before fitting. Old failed run remains preserved. |
-| Original U-Sleep preprocessing | Six synthetic tests and full-record numerical parity on two preexposed development recordings passed; independent real-output check pending at snapshot | Full development preparation, renewed model preflight and native fitting remain. |
+| Original U-Sleep preprocessing and engine | **119/119 development recordings prepared**, 276,133 complete signal epochs; fold-0 seed-17 inputs bound to 40 fit and eight inner-validation people across 95 recordings. Current-source numerical, batch-64 and 2,880-epoch inference preflights passed. [Aggregate execution receipt](../evidence/usleep-development-preparation.json) · [Independent saved-artifact check](../evidence/usleep-preparation-independent-verification.json) | No model fit. Integrated production-epoch qualification, complete folds and prediction verification remain. |
 | Remaining mandatory native families/variants | Incomplete; some code rights, weights/lineage and runtime prerequisites unresolved | [Family-by-family registry](BASELINES.md) and [rights recheck](../evidence/rights-recheck-20260925.md) |
 
 Observed protected-workspace commands were `python -B -m sleepedf.attnsleep_cuda run-development --seed 17` and `python -B -m sleepedf.tf_experiment epoch --root . --manifest runs/utime/fits/fold-0/seed-17/inner/manifest.json`, each under its separately pinned environment and resource supervisor. **They require private protocol/data/runtime artifacts absent from a plain public clone.** No command here authorizes bypassing a source hash or resuming the failed U-Time identity as if it succeeded.

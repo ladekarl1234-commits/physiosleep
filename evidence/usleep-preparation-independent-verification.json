@@ -1,0 +1,55 @@
+{
+  "artifact_sha256": {
+    "attempt_receipt": "a635e72d136ae20c669fd21d198dcbe703822a763fd360bd8302e586d3eaed49",
+    "current_pointer": "5b20d337215305a8fd11db5a9f3145917ad420a5a14ffd4fdd956bd1c470bece",
+    "input_binding": "956e670210341776fa331e65c8315af2cd0d7dfd15ce8d27d88211488415b368",
+    "input_plan": "d63ebc6a43b96c67e7050dc54d16c9eacff770560f7cc629a88134af9e3fc5ef",
+    "invocation": "5c9f1ac8948e8519a26ec9aa8a65602396ac44c6dff327f0b300e064f1ede4cd",
+    "request": "146037179051e053b3129086aae653a3e81647c84d6f2eac002dbd3dd45e9ba5",
+    "worker_log": "886e78c1c971b0bca7f887cbc0532fed90464a4b5fcdb08db186c94bc8f736b9",
+    "worker_result": "5643e9f4396ba8e5dff73cc09a7e6f3527675b18eed5143f14ee273470be7132"
+  },
+  "artifact_type": "usleep_preparation_independent_verification",
+  "method": [
+    "Recomputed pointer, request, log, result-marker, plan, and binding SHA-256/content-ID links.",
+    "Recomputed participant partition and selected-record counts from saved plan and binding.",
+    "Stream-hashed all 119 cached signal payloads once and compared each with receipt and cache metadata.",
+    "Stream-hashed metadata, truth NPZ, and truth sidecars for all 95 selected records; recomputed signed label hashes, class support, and validation mask ID.",
+    "Memory-mapped the 95 selected signal arrays to check shape and dtype without loading signal contents."
+  ],
+  "not_checked": [
+    "Original EDF content was not reread or rehashed; saved PSG hashes were treated as provenance links.",
+    "Preprocessing and model fit were not rerun, and model invocation was not checked.",
+    "Truth outside the 95 selected records was not reopened.",
+    "Operating-system immutability and later changes to artifacts were not established."
+  ],
+  "observed_at_utc": "2026-09-25T04:46:14.610229+00:00",
+  "outcome": {
+    "development_complete_epochs": 276133,
+    "development_recordings": 119,
+    "fit_complete_epochs": 181653,
+    "fit_participants": 40,
+    "fit_recordings": 79,
+    "inner_validation_complete_epochs": 36167,
+    "inner_validation_participants": 8,
+    "inner_validation_recordings": 16,
+    "model_qualification": "NOT_GRANTED",
+    "participant_overlap": 0,
+    "payload_bytes_hashed": 12724223872,
+    "payload_files_hashed": 119,
+    "payload_sha256_mismatches": 0,
+    "plan_scope": "METADATA_ONLY_NOT_FIT_QUALIFICATION",
+    "preparation_status": "COMPLETE_DEVELOPMENT_SIGNALS_ONLY",
+    "selected_array_shape": "(n_epochs, 3840, 3), float32",
+    "selected_label_binding_mismatches": 0,
+    "selected_recordings": 95,
+    "selected_truth_payload_bytes_hashed": 902749,
+    "selected_truth_payload_files_hashed": 95,
+    "selected_truth_sha256_mismatches": 0,
+    "selected_truth_sidecar_bytes_hashed": 78008,
+    "selected_truth_sidecar_files_hashed": 95,
+    "structural_mismatches": 0
+  },
+  "schema_version": "1.0",
+  "scope": "read_only_bounded_post_run_verification"
+}

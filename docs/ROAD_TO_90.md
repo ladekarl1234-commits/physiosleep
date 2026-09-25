@@ -44,6 +44,10 @@ below remain requirements for broader benchmark and scientific evidence.
 5. Complete the remaining permitted native families and source-qualified variants.
    Resolve genuine external rights/lineage gaps through actual applicable evidence.
    The 25 September public-source recheck resolved none of the existing blockers.
+   U-Sleep's 119 development signal records are now prepared and the first inner
+   fold's 95 inputs are bound; this is [data readiness](../evidence/usleep-development-preparation.json),
+   not a trained comparator or a grade increase. The integrated epoch lifecycle
+   still needs actual qualification before training can start.
 6. Meet development adequacy, finalist robustness and precision readiness. Obtain
    fresh confirmation participants, freeze a prospective protocol and exact
    systems, then apply the unchanged superiority criteria. The consumed original
