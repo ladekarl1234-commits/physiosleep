@@ -33,8 +33,8 @@ Actual reference scoring of all 78 recordings is complete. The tested system is 
 
 | Measured development result | Research status | Latest simulated scientific reviews |
 |---|---|---|
-| **0.789779 Macro-F1**; **90.738% accuracy** | 119 recordings / 60 development participants | Sleep specialist **74 / 100** |
-| **+0.003512** over the fixed EEG+EOG control | Required margin **+0.02** remains unmet | Data/ML **59 / 100** |
+| **0.789779 Macro-F1**; **90.738% accuracy** | 119 recordings / 60 development participants | Sleep specialist **75 / 100** |
+| **+0.003512** over the fixed EEG+EOG control | Required margin **+0.02** remains unmet | Data/ML **60 / 100** |
 | Five participant-disjoint development folds | Audit A/B **EXPLORATORY_EVALUATED** | [Rubrics, dates and findings](docs/JUDGING.md) |
 
 The review grades are simulated scientific assessments, not official competition approval. Documentation changes do not automatically increase them. The mandatory eleven-slot benchmark is incomplete; the owner has ended further baseline testing for this delivery. The original +0.02 gate remains NOT_RUN.

@@ -25,6 +25,8 @@ Native acquisition is proposed at 250 Hz; a derived 100 Hz model route needs an 
 
 The delivered software qualification covers 15 filter, 21 clock and 21 packet test groups plus six generated integration cases. A 62-second fixture whose counter ends at 12 hours does not establish a 12-hour continuous recording. Persistent nonce management, secure capture-container implementation and physical B01â€“B10 bench work remain unqualified or NOT_RUN.
 
+The [public generated-case receipt](../evidence/hardware-desk-replay.json) binds historical result and independent-review hashes. With Python 3.11, NumPy 1.26.4, SciPy 1.13.1 and Node 24.16.0/OpenSSL 3.5.6, run `python -B -m tools.verify_hardware_desk` from the repository root. It regenerates all six packet-to-clock cases in a disposable directory and checks fixture identities, valid-sample counts, epoch masks, transport failures and waveform error. The separate 15/21/21 filter, clock and packet test groups remain identified by historical private receipts; this public command does not rerun them.
+
 ## Required physical evidence
 
 Acquire a specified board revision and calibrated signal source; measure input noise, gain/units, saturation, bandwidth/aliasing, common-mode behavior, contact/artifact response, sample-clock drift and loss recovery. Record real battery/storage endurance. Verify packet integrity, monotonic epoch alignment, interrupted-write recovery and offline export. Human-connected testing requires a separate safety and study authorization process.

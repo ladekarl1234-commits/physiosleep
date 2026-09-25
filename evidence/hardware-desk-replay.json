@@ -1,0 +1,107 @@
+{
+  "schema_version": "physiosleep-public-hardware-desk-replay-v1",
+  "scope": "Generated signals and packets only; this is historical 24 September 2026 desk evidence, not a device or model qualification.",
+  "private_evidence_sha256": {
+    "filter_result": "03095551762382a95347f60897891097d3af1ea5517d9988f6bc1e09276a09e9",
+    "clock_result": "64124d0f1d6278792aa072ec1868e8b0d2fff5dc15b8f25ddd3f0a251484a29c",
+    "packet_result": "b5ff5c0d78c5d368317261be3fc54b2944d21b7f9f04701ee7a9923c26906da6",
+    "integration_result": "565dc254c04b3511ab8d44675c72baa181d7168ecd3cd813244ebd2c1b8a4376",
+    "independent_integration_review": "884ef9e3c6aa4a86ad6d766dfaf94d1a9a49f60dc933c3caba1fd677c4b56874",
+    "extracted_handover_verification": "dcfd6aab081e8a164efa74fe19a1927383b6e8f9d74fcc617738abba870fc77d"
+  },
+  "runtime": {
+    "python": "3.11",
+    "numpy": "1.26.4",
+    "scipy": "1.13.1",
+    "node": "v24.16.0",
+    "openssl": "3.5.6"
+  },
+  "source_sha256": {
+    "sleepedf/contracts.py": "d4bd3f8ca4821ec076d088641eea9d11752d5b420bb144dcc1b68be37dd1c132",
+    "tools/hardware_clock_design.py": "5fc49791627eb9f6549584bc1a9c405448bde2bb05995573f7a492309936d5f0",
+    "tools/hardware_integration_design.py": "30f1ead0da45c0b26e232800453f48fd2482cf5911dcd9d0694c3f98ecbc0647",
+    "tools/hardware_packet_design.cjs": "c5a82293d19082428c3532328221c7194307372e6b2d8965da5c5e86ecdb0818",
+    "tools/hardware_packet_fixture.cjs": "bee6c8ca3b2d3135897de5f256c6206ea3a0ec42b37f81b435f30f68639bb08c"
+  },
+  "nominal_coefficient_sha256": "8d43ab94d2d734bc45e465cf9cb8926c583faa98a572dc95d33a71630a6e0951",
+  "historical_checks": {
+    "filter_groups": 15,
+    "clock_groups": 21,
+    "packet_groups": 21,
+    "integration_cases": 6,
+    "note": "This public command replays all six integration cases. The 15/21/21 counts are bound to the private historical receipts above; they are not all rerun by this command."
+  },
+  "cases": [
+    {
+      "name": "clean_plus",
+      "fixture_sha256": "21d9ceb1acda37034196474ca4b0897e2641af2eb594689126fbb0af3716be8e",
+      "authenticated_assembly_sha256": "97625adce77a1f092806e5426133351127839bbb77b022a1209eb6e415650c7b",
+      "transport_status": "AUTHENTICATED_TIMELINE_COMPLETE",
+      "engineering_full_epochs_supported": true,
+      "valid_samples_per_channel": [6001, 6001, 0, 0],
+      "epoch_support": [true, true, false],
+      "max_tone_error_uv": 0.010102956642004113
+    },
+    {
+      "name": "clean_minus",
+      "fixture_sha256": "23f76ad38593bece3bab03157365d6bdf06a98b6f7ce1d8fb57369ab34ebc4d9",
+      "authenticated_assembly_sha256": "3b9b605d34f144282b7135409e2778543f54f31b497287bb72d247432ea8a776",
+      "transport_status": "AUTHENTICATED_TIMELINE_COMPLETE",
+      "engineering_full_epochs_supported": true,
+      "valid_samples_per_channel": [6001, 6001, 0, 0],
+      "epoch_support": [true, true, false],
+      "max_tone_error_uv": 0.011008084131489682
+    },
+    {
+      "name": "faults",
+      "fixture_sha256": "92a1cfbfeaac2f119e04fbc4f405d9b4952efa297ba5b843bf4c16f7231da682",
+      "authenticated_assembly_sha256": "5a010499617689ce4ca70e1c4a684101b3110df7029b0907f7a19594ec474b49",
+      "transport_status": "INCOMPLETE_CAPTURE",
+      "engineering_full_epochs_supported": false,
+      "valid_samples_per_channel": [5787, 5827, 0, 0],
+      "epoch_support": [false, false, false],
+      "max_tone_error_uv": null
+    },
+    {
+      "name": "signal_faults",
+      "fixture_sha256": "97345ae7c9e23219ffdd9db019899e54bd2219ea93a0ebd13a4932d71a93207d",
+      "authenticated_assembly_sha256": "c437b617d1b94c1096a070bfa5606eebd5106c1f4365882edeebc7cac3993182",
+      "transport_status": "AUTHENTICATED_TIMELINE_COMPLETE",
+      "engineering_full_epochs_supported": false,
+      "valid_samples_per_channel": [5881, 5921, 0, 0],
+      "epoch_support": [false, false, false],
+      "max_tone_error_uv": null
+    },
+    {
+      "name": "missing_guard",
+      "fixture_sha256": "9e1e501cc39d1e91960f10760f6b00c6309374145df888d07f91397e1291887c",
+      "authenticated_assembly_sha256": "6099437c2b6bc47fc03ee453da8b10aa54f5fea05987c1a67ed3a629f82c3a52",
+      "transport_status": "INCOMPLETE_CAPTURE",
+      "engineering_full_epochs_supported": false,
+      "valid_samples_per_channel": [5977, 5977, 0, 0],
+      "epoch_support": [true, false, false],
+      "max_tone_error_uv": null
+    },
+    {
+      "name": "missing_footer",
+      "fixture_sha256": "e7ee948a187cbc81e133c2c244ab767a8f21e2df58898c1346288284934e3fe7",
+      "authenticated_assembly_sha256": "5de8f4630eb16eb1ef168c8caf0ea949b8a1a9521a77eab23df1d3014f897d85",
+      "transport_status": "INCOMPLETE_CAPTURE",
+      "engineering_full_epochs_supported": false,
+      "valid_samples_per_channel": [6001, 6001, 0, 0],
+      "epoch_support": [true, true, false],
+      "max_tone_error_uv": null
+    }
+  ],
+  "fixed_grid": {
+    "output_samples": 6001,
+    "subcell_tail_ns": 7000000,
+    "epoch_indices": [0, 1, 2],
+    "complete_epochs": [true, true, false]
+  },
+  "limitations": [
+    "Historical private manifests recorded audits_reserved:true before the owner-authorized exploratory A/B evaluation; the current A/B cohorts are consumed and formal gates remain NOT_RUN.",
+    "The public replay replaces the private archival-manifest presence check with explicit source/coefficient hashes; the numerical six-case implementation is otherwise the copied source.",
+    "No physical board, front-end, clock, battery, recorder or paired device/reference signal was tested. No model predictions were created."
+  ]
+}

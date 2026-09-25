@@ -1,0 +1,45 @@
+{
+  "artifact_type": "simulated_independent_data_ml_reader_annotation_regrade",
+  "status": "REVIEW_COMPLETE",
+  "review_date": "2026-09-25",
+  "source_rubric_sha256": "0c5ce135406242295a459f532b5e7d0ef8fe45d825f6c804e06c11980b10083e",
+  "rubric_changed": false,
+  "previous_score": 59,
+  "score": 60,
+  "maximum": 100,
+  "only_change": {
+    "criterion_id": "data_reader_annotation_timing",
+    "previous_earned": 6,
+    "earned": 7,
+    "maximum": 7,
+    "reason": "A separate bounded EDF+ TAL decoder inspected all 197 original Hypnograms, including seven established-reader compatibility cases, and an independent boundary-partition projector matched every frozen 30-second truth grid, onset, label and validity mask. Timing exceptions remained explicit. A separate read-only verifier inspected the implementation, reproduced the exact receipt and rejected a malformed TAL fixture. Earlier full PSG signal-calibration/source-byte receipts remain part of this criterion's evidence."
+  },
+  "category_totals": {
+    "data": 26,
+    "ml": 16,
+    "reproducibility": 18
+  },
+  "evidence_sha256": {
+    "previous_review": "39537d053b81cb654ea813967fa9879ac2a643195a671bcd4262ca1e3ec3f130",
+    "public_aggregate": "d194a63fe9ef56e563e92f7f34580ff49e96530dfb10cc95b99bfbf0e669503e",
+    "access_controlled_script": "960f2c00beaa3123f9c839a44e68cb6b3d4f8d6135a2c5b7ac8f38d9a0df7542",
+    "access_controlled_receipt": "d29644f54af5ac9d97c73b5bf296dc94fd1e7441434adeb1d4a537fd40343bb2"
+  },
+  "independent_check": {
+    "result": "PASS",
+    "checked_pairs": 197,
+    "independently_decoded_tal_intervals": 28529,
+    "reader_grid_and_timing_differences": 0,
+    "malformed_tal_negative_probe": "REJECTED",
+    "psg_waveform_samples_read": 0
+  },
+  "no_new_credit": [
+    "participant_holdout_protection",
+    "candidate_or_comparator_performance",
+    "mandatory_baselines",
+    "fresh_host_full_training_replay",
+    "formal_audit_confirmation",
+    "clinical_scoring_or_whole_night_boundaries"
+  ],
+  "scope": "Simulated evidence-quality review of data-reader correctness only. Original data and protected arrays remain local; no model, score-formula or physical-device experiment was run."
+}

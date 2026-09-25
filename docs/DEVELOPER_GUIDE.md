@@ -37,6 +37,16 @@ python tools/build_comparison_figures.py
 
 Use one OpenMP/BLAS thread for plots. `build_judge_figures.py` builds the pipeline, all-nine-system local comparison and literature context. `build_evaluation_overview.py` builds the Dev/train → Audit 1 → Audit 2 chart from sanitized public aggregates. `build_comparison_figures.py` builds the control-relative and stage-recall comparisons from sanitized public aggregates and records input/output hashes. Output is PNG and SVG. Numeric data are authoritative if platform fonts change image bytes; changes to hash-bound artifacts need review and deliberate manifest updates.
 
+## Replay the generated hardware cases
+
+The [desk evidence receipt](../evidence/hardware-desk-replay.json) identifies historical private outputs and a public numeric coefficient file. Install NumPy 1.26.4 and SciPy 1.13.1 in a separate Python 3.11 environment; use Node 24.16.0 with OpenSSL 3.5.6. From the repository root run:
+
+```bash
+python -B -m tools.verify_hardware_desk
+```
+
+The command checks source, runtime and coefficient hashes, generates six packet/clock fixtures, executes the original numerical integration in a disposable directory and compares the resulting masks, counts, transport states and waveform errors with the historical aggregate. The original private archival-manifest presence check is replaced by explicit public source/coefficient checks; the numerical qualification function itself is unchanged. This is generated-data replay, not physical hardware, recorder security, EDF inference or clinical validation. The historical 15/21/21 individual filter, clock and packet groups are identified by hash but are not all rerun by this command.
+
 ## Repository map
 
 | Directory | Ownership |

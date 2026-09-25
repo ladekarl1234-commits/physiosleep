@@ -1,0 +1,46 @@
+{
+  "artifact_type": "public_safe_independent_reader_annotation_grid_crosscheck",
+  "status": "PASS",
+  "performed_utc_date": "2026-09-25",
+  "scope": {
+    "checked_recording_pairs": 197,
+    "hypnograms_with_pyedflib_comparison": 190,
+    "compatibility_hypnograms_with_mne_comparison": 7,
+    "independently_decoded_tal_intervals": 28529,
+    "hypnogram_bytes_hashed_and_parsed": 855892,
+    "frozen_truth_npz_bytes_hashed_and_compared": 1909147,
+    "psg_fixed_header_bytes_read": 50432,
+    "psg_waveform_samples_read": 0
+  },
+  "checks": [
+    "Independent narrow EDF+ TAL decoding versus the established reader path, including the seven compatibility cases",
+    "PSG/Hypnogram fixed-header and Recordingfield pair-date equality without rewriting the seven differing within-file date interpretations",
+    "Independent 30-second boundary-partition projection versus every frozen truth grid's epoch indices, onsets, labels and validity masks",
+    "Frozen readiness source hashes and timing-exception summaries matched"
+  ],
+  "differences": {
+    "reader_content": 0,
+    "grid_label_mask_onset": 0,
+    "timing_summary": 0,
+    "read_or_structure_failures": 0
+  },
+  "inherited_warning_counts": {
+    "recordings_with_timing_masks_or_boundaries": 195,
+    "nonphysiological_channels_with_missing_units": 374
+  },
+  "execution": {
+    "cpu_threads": 1,
+    "python_environment": "isolated research Python 3.11 with pyEDFlib 0.1.42 and MNE 1.8.0; the smaller public audit environment does not include MNE",
+    "private_script_sha256": "960f2c00beaa3123f9c839a44e68cb6b3d4f8d6135a2c5b7ac8f38d9a0df7542",
+    "private_receipt_sha256": "d29644f54af5ac9d97c73b5bf296dc94fd1e7441434adeb1d4a537fd40343bb2",
+    "frozen_readiness_sha256": "09f2db2fc6fe8384d9bc4fdecea8a18bb6cde8e7f9ac56931747a45c551bda9c",
+    "publisher_manifest_sha256": "1bc88e19e2e921f7851d7cf61e31ceb8f6d670211ca546a323e9db5a77525edf",
+    "independent_verifier": "A separate read-only verifier reran the same bounded command in a temporary output directory, reproduced the private receipt hash, inspected the decoder and rejected a malformed synthetic TAL."
+  },
+  "privacy": "Aggregate counts and content hashes only; no recording IDs, source paths, EDF headers, annotations, raw signal values, truth arrays or participant assignments are published.",
+  "limitations": [
+    "This verifies reader interpretation and frozen epoch accounting; it does not establish independent clinical scoring or whole-night observation boundaries.",
+    "PSG waveform calibration and full PSG source-byte verification are inherited from earlier readiness and publisher-content checks, not repeated here.",
+    "A public clone cannot rerun this crosscheck without authorized original EDFs and the protected frozen truth arrays."
+  ]
+}

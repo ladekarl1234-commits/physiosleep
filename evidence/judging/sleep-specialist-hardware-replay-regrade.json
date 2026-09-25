@@ -1,0 +1,46 @@
+{
+  "artifact_type": "simulated_independent_sleep_specialist_hardware_replay_regrade",
+  "status": "REVIEW_COMPLETE",
+  "review_date": "2026-09-25",
+  "rubric_id": "sleep-specialist-rubric-v1",
+  "rubric_changed": false,
+  "previous_score": 74,
+  "score": 75,
+  "maximum": 100,
+  "only_change": {
+    "criterion_id": "accessible_traceable_provenance",
+    "previous_earned": 4,
+    "earned": 5,
+    "maximum": 5,
+    "reason": "The public checkout now includes a hash-bound generated hardware evidence summary, the numeric coefficient input and a runnable six-case packet/clock replay. A separate read-only specialist reviewer matched the published aggregates and six private historical result/review hashes to retained originals, reran all six generated cases, and verified that a changed expected valid-sample count is rejected."
+  },
+  "category_totals": {
+    "understanding": 18,
+    "staging": 23,
+    "score": 12,
+    "device": 7,
+    "communication": 15
+  },
+  "evidence_sha256": {
+    "previous_review": "10f99740cd0511f53b32147be918975da1d1ac4ff1bf1e731b8095eb39f25fa9",
+    "public_generated_evidence": "f30455acf9821f434a8654f38305f4f12be2b633080d3b53cc711365d8726bcd",
+    "public_replay_source": "fa5588686522ac48e4667ec8666dd5b09822cda6c4a56dea1268a47a35292b69",
+    "public_nominal_coefficients": "8d43ab94d2d734bc45e465cf9cb8926c583faa98a572dc95d33a71630a6e0951"
+  },
+  "independent_checks": {
+    "generated_integration_cases_replayed": 6,
+    "result": "PASS",
+    "historical_filter_clock_packet_group_counts_verified_against_private_receipts": [15, 21, 21],
+    "negative_valid_count_probe": "PASS_REJECTED_CHANGED_CLEAN_PLUS_COUNT",
+    "maximum_historical_generated_waveform_error_uv": 0.011008084131489682
+  },
+  "no_new_credit": [
+    "acquisition_conversion",
+    "montage_contacts",
+    "physical_device_qualification",
+    "component_fidelity",
+    "clinical_subjective_validity",
+    "mandatory_comparators_or_confirmation"
+  ],
+  "scope": "Same-host independent simulated evidence-access review. This does not attest a real board, physical bench, overnight recorder, device-to-model transfer or clinical result. The six-case public replay does not rerun all historical 15/21/21 test groups."
+}
