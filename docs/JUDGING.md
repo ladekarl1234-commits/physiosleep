@@ -4,14 +4,14 @@
 
 Two separate reviewer agents examined the evidence from sleep-specialist and data/ML perspectives. They are simulated judges, not licensed clinician attestations or official competition judges. Rubrics were fixed before edits and retained for rescoring.
 
-The owner has renewed the request for a score above 90 while keeping mandatory-baseline testing stopped. The [criterion-by-criterion feasibility check](ROAD_TO_90.md) shows an optimistic ceiling of 77/100 for data/ML and 83/100 for the sleep specialist under those evidence constraints. The specialist score increased by one point only after an independent review of the test-linked sensitivity cases; the ML score did not change.
+The owner has renewed the request for a score above 90 while keeping mandatory-baseline testing stopped. The [criterion-by-criterion feasibility check](ROAD_TO_90.md) shows an optimistic ceiling of 77/100 for data/ML and 83/100 for the sleep specialist under those evidence constraints. The specialist score increased by one point after an independent review of test-linked sensitivity cases; the data/ML score increased by one point after a fresh, complete publisher-byte crosswalk. Neither change supplies comparator or confirmation evidence.
 
 | Perspective | Initial score | Latest reviewed score | Meaning |
 |---|---:|---:|---|
 | Sleep specialist | 69/100 | **74/100** | Held-person evidence, scoped uncertainty and independently reviewed sensitivity examples; no clinical/device/confirmation credit |
-| Data / ML / reproducibility | 53/100 | **58/100** | Actual A/B independently verified; one point lost because untouched holdouts were consumed |
+| Data / ML / reproducibility | 53/100 | **59/100** | Exploratory A/B verified; consumed holdouts remain; complete source-byte crosswalk independently reviewed |
 
-The [initial specialist rubric](../evidence/judging/sleep-specialist-initial.json), [exploratory specialist review](../evidence/judging/sleep-specialist-exploratory.json), [sensitivity regrade](../evidence/judging/sleep-specialist-sensitivity-regrade.json), [initial ML rubric](../evidence/judging/ml-initial.json) and [exploratory ML review](../evidence/judging/ml-exploratory.json) preserve the criteria and dated changes. Scores grade the available evidence, not a claim that this project meets its benchmark.
+The [initial specialist rubric](../evidence/judging/sleep-specialist-initial.json), [exploratory specialist review](../evidence/judging/sleep-specialist-exploratory.json), [sensitivity regrade](../evidence/judging/sleep-specialist-sensitivity-regrade.json), [initial ML rubric](../evidence/judging/ml-initial.json), [exploratory ML review](../evidence/judging/ml-exploratory.json) and [publisher-provenance regrade](../evidence/judging/ml-publisher-provenance-regrade.json) preserve the criteria and dated changes. Scores grade the available evidence, not a claim that this project meets its benchmark.
 
 ## Regrade after completed exploratory A/B tests
 
@@ -22,6 +22,10 @@ Both A/B results passed [independent local saved-array verification](../evidence
 ## Regrade after score sensitivity review
 
 The [specialist review receipt](../evidence/judging/sleep-specialist-sensitivity-regrade.json) records **73 to 74** under the same rubric, changing only `sensitivity_failure_cases` from 4/5 to 5/5. The reviewer independently checked the boundary and invariance examples against the public synthetic tests, source and timing contract. This adds interpretability credit, not clinical, score-accuracy, comparator, confirmation or device credit. The data/ML reviewer rechecked the documentation diff and retained **58/100** because no ML criterion gained new experimental evidence.
+
+## Regrade after complete source-byte crosswalk
+
+The [data/ML review receipt](../evidence/judging/ml-publisher-provenance-regrade.json) records **58 to 59** under the same rubric, changing only `data_content_provenance` from 6/7 to 7/7. A separate data engineer freshly hashed all 398 manifest files (8,715,189,781 bytes), matched the publisher manifest and cross-checked all 394 evaluated EDFs against the protected readiness record. The reviewer inspected the public summary, private execution receipt and source, but did not independently repeat the full byte scan or HTTPS fetch. The [public crosswalk](../evidence/publisher-content-crosswalk-20260925.json) contains counts and hashes only. This adds source-identity credit, not model, annotation, comparator, confirmation or clinical credit.
 
 ## Improvements made after the earlier review
 
@@ -40,6 +44,6 @@ The next substantial score gains require new evidence: adequate mandatory baseli
 
 The owner requested clearer documentation, visible jobs/grades, a pipeline, a judging route and numeric Excel comparisons. A specialist methodologist and data/ML verifier independently identified the gaps, then reviewed the revised package. The [finding-to-fix record](REVIEW_REVISION.md) documents their feedback and the changes. This is a separate review of discoverability and evidence traceability, with no automatic numerical scientific regrade.
 
-- [Historical data/ML repository review](../evidence/judging/repository-ml-review.md): all seven initial navigation/traceability findings resolved at its **pre-audit cutoff**. Its 59/100 ML, 71/100 specialist and Audit A/B `NOT_RUN` statements describe that earlier date, not the current 58/73 exploratory status above.
+- [Historical data/ML repository review](../evidence/judging/repository-ml-review.md): all seven initial navigation/traceability findings resolved at its **pre-audit cutoff**. Its 59/100 ML, 71/100 specialist and Audit A/B `NOT_RUN` statements describe that earlier date, not the current 59/74 grades above; the matching ML number comes from a different dated review state.
 - [Data/ML machine-readable receipt](../evidence/judging/repository-ml-review.json): counts, missingness, scope and release conditions at review time.
 - [Specialist review record](../evidence/judging/repository-specialist-review.md): U01â€“U07 accepted; final nonblocking layout note corrected by the editor.

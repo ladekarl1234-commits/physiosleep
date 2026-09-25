@@ -1,0 +1,37 @@
+{
+  "artifact_type": "simulated_independent_data_ml_publisher_provenance_regrade",
+  "status": "REVIEW_COMPLETE",
+  "review_date": "2026-09-25",
+  "source_rubric_sha256": "0c5ce135406242295a459f532b5e7d0ef8fe45d825f6c804e06c11980b10083e",
+  "rubric_changed": false,
+  "previous_score": 58,
+  "score": 59,
+  "maximum": 100,
+  "only_change": {
+    "criterion_id": "data_content_provenance",
+    "previous_earned": 6,
+    "earned": 7,
+    "maximum": 7,
+    "reason": "A fresh complete-file SHA-256 pass matched all 398 local files to a newly fetched publisher manifest, and all 394 evaluated EDF source hashes to the access-controlled readiness receipt for 197 pairs. A public-safe aggregate, executable source identity and private receipt identity make the complete input-byte crosswalk inspectable without publishing participant-linked data."
+  },
+  "category_totals": {
+    "data": 25,
+    "ml": 16,
+    "reproducibility": 18
+  },
+  "evidence_sha256": {
+    "previous_review": "afde5de590c385fd58d7295762531c5541ec5647722776e9185653e142a9a8ac",
+    "public_summary": "bf90e3703fea8f7cd0b091d888767fb311c303e9296f01eda6ac45f27407fcfa",
+    "access_controlled_rehash_script": "dc7c8ca5fde77d1b9d2bb5716a84909c94a54a9cc7c42cb64f9e7d50bb1fe891",
+    "access_controlled_run_receipt": "ea5f6f2784b41e62ffe2d842ee8b6e7eeec039adeba2a7ab8bd7d88550e44fac"
+  },
+  "review_method": "A separate read-only data/ML reviewer inspected the public aggregate, private executed-argument/result receipt, source hashes and fixed rubric. It did not repeat the 8.7 GB rehash or publisher HTTPS fetch.",
+  "no_new_credit": [
+    "annotation_timing_or_label_correctness",
+    "mandatory_comparators",
+    "untouched_confirmation",
+    "fresh_host_full_training_replay",
+    "clinical_or_physical_device_validity"
+  ],
+  "scope": "Simulated evidence-quality grade, not an official competition, clinical, or model-performance result. The publisher HTTPS manifest was not independently signed."
+}

@@ -4,13 +4,13 @@
 
 The owner goal is to earn more than 90 from the existing reviewers, as far as the
 evidence allows. Rubrics, the eleven mandatory baseline slots and both audit
-criteria stay unchanged. Current independently reviewed grades are 58/100 for
+criteria stay unchanged. Current independently reviewed grades are 59/100 for
 data/ML and 74/100 for the sleep-specialist perspective. Agent grades are not
 clinical or competition approval.
 
 ## Feasibility under current constraints
 
-The fixed [data/ML rubric](../evidence/judging/ml-exploratory.json) scores 58/100 today. Mandatory comparators are 2/12, leaving 10 unavailable points under the stop; formal confirmation is 0/10, and both original holdouts are consumed, leaving the untouched-holdout/official-rules criterion at 0/3. Even **granting every other criterion full credit** gives an optimistic ceiling of **100 - 10 - 10 - 3 = 77/100**. If independent fresh-host full-training replay also remains absent (0/4), the ceiling is **73/100**. These are mathematical bounds, not predicted scores.
+The fixed [data/ML rubric](../evidence/judging/ml-exploratory.json) now scores [59/100](../evidence/judging/ml-publisher-provenance-regrade.json) after one independently reviewed point for complete source-byte provenance. Mandatory comparators are 2/12, leaving 10 unavailable points under the stop; formal confirmation is 0/10, and both original holdouts are consumed, leaving the untouched-holdout/official-rules criterion at 0/3. Even **granting every other criterion full credit** gives an optimistic ceiling of **100 - 10 - 10 - 3 = 77/100**. If independent fresh-host full-training replay also remains absent (0/4), the ceiling is **73/100**. These are mathematical bounds, not predicted scores.
 
 The fixed [sleep-specialist rubric](../evidence/judging/sleep-specialist-exploratory.json) now scores [74/100](../evidence/judging/sleep-specialist-sensitivity-regrade.json) after one independently reviewed point for test-linked sensitivity interpretation. Matched comparison/confirmation remains 1/8, clinical/subjective validity 0/5 and paired physical-device qualification 0/5. Holding those at their current evidence-backed values gives an optimistic ceiling of **100 - 7 - 5 - 5 = 83/100**. Failed score-component targets, uncertain whole-night boundaries and same-source population limit the realistic result further.
 

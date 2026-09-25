@@ -1,0 +1,39 @@
+{
+  "artifact_type": "public_safe_publisher_content_crosswalk",
+  "status": "PASS",
+  "performed_utc": "2026-09-25T05:25:50+00:00",
+  "performed_by": "separate read-only data-engineer agent on the same local host",
+  "source_url": "https://physionet.org/files/sleep-edfx/1.0.0/SHA256SUMS.txt",
+  "source_http_status": 200,
+  "publisher_manifest_bytes": 39799,
+  "local_and_publisher_manifest_byte_identical": true,
+  "publisher_manifest_sha256": "1bc88e19e2e921f7851d7cf61e31ceb8f6d670211ca546a323e9db5a77525edf",
+  "method": "Parse the 398-entry manifest, reject duplicates and unsafe paths, sequentially SHA-256 hash every complete local file, compare all 398 hashes with the freshly fetched publisher manifest, and compare all 394 EDF hashes with the access-controlled 197-pair readiness receipt.",
+  "counts": {
+    "manifest_entries": 398,
+    "present": 398,
+    "complete_file_hashes_computed": 398,
+    "publisher_hash_matches": 398,
+    "edf_files": 394,
+    "edf_readiness_hash_matches": 394,
+    "recording_pairs": 197,
+    "other_manifest_files": 4,
+    "bytes_hashed": 8715189781,
+    "missing": 0,
+    "read_errors": 0,
+    "mismatches": 0
+  },
+  "execution": {
+    "reader_threads": 1,
+    "elapsed_seconds": 17.203,
+    "exit_code": 0,
+    "private_script_sha256": "dc7c8ca5fde77d1b9d2bb5716a84909c94a54a9cc7c42cb64f9e7d50bb1fe891",
+    "private_receipt_sha256": "ea5f6f2784b41e62ffe2d842ee8b6e7eeec039adeba2a7ab8bd7d88550e44fac"
+  },
+  "privacy": "Public summary contains no per-file paths, participant IDs, EDF headers, signals or labels. Executed arguments, exit status and aggregate results are retained in the access-controlled receipt identified by hash.",
+  "limitations": [
+    "The publisher HTTPS manifest was not verified against a digital signature.",
+    "Byte agreement does not establish correct annotation timing, scoring, model performance or clinical validity.",
+    "A public clone cannot reconstruct the protected readiness crosswalk without the original dataset and access-controlled receipt."
+  ]
+}
