@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="972pt" height="417.6pt" viewBox="0 0 972 417.6" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>PhysioSleep public aggregate comparison</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 417.6
+L 972 417.6
+L 972 0
+L 0 0
+z
+" style="fill: #f7f9fb"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 63.18 288.144
+L 478.778131 288.144
+L 478.778131 75.168
+L 63.18 75.168
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path id="mfdd0c28e73" d="M 0 0
+L 0 3.5
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="111.141315" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="111.141315" y="302.741656" transform="rotate(-0 111.141315 302.741656)">W</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="191.06019" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="191.06019" y="302.741656" transform="rotate(-0 191.06019 302.741656)">N1</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="270.979065" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="270.979065" y="302.741656" transform="rotate(-0 270.979065 302.741656)">N2</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="350.897941" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="350.897941" y="302.741656" transform="rotate(-0 350.897941 302.741656)">N3</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="430.816816" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="430.816816" y="302.741656" transform="rotate(-0 430.816816 302.741656)">REM</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <path d="M 63.18 288.144
+L 478.778131 288.144
+" clip-path="url(#pb43579df14)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_7">
+      <defs>
+       <path id="m24b7a999c5" d="M 0 0
+L -3.5 0
+" style="stroke: #000000; stroke-width: 0.8"/>
+      </defs>
+      <g>
+       <use xlink:href="#m24b7a999c5" x="63.18" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end" x="56.18" y="291.942828" transform="rotate(-0 56.18 291.942828)">0</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_8">
+      <path d="M 63.18 245.5488
+L 478.778131 245.5488
+" clip-path="url(#pb43579df14)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="63.18" y="245.5488" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end" x="56.18" y="249.347628" transform="rotate(-0 56.18 249.347628)">20</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_10">
+      <path d="M 63.18 202.9536
+L 478.778131 202.9536
+" clip-path="url(#pb43579df14)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_11">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="63.18" y="202.9536" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end" x="56.18" y="206.752428" transform="rotate(-0 56.18 206.752428)">40</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_12">
+      <path d="M 63.18 160.3584
+L 478.778131 160.3584
+" clip-path="url(#pb43579df14)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_13">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="63.18" y="160.3584" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end" x="56.18" y="164.157228" transform="rotate(-0 56.18 164.157228)">60</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_14">
+      <path d="M 63.18 117.7632
+L 478.778131 117.7632
+" clip-path="url(#pb43579df14)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_15">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="63.18" y="117.7632" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end" x="56.18" y="121.562028" transform="rotate(-0 56.18 121.562028)">80</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <path d="M 63.18 75.168
+L 478.778131 75.168
+" clip-path="url(#pb43579df14)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_17">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="63.18" y="75.168" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_11">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: end" x="56.18" y="78.966828" transform="rotate(-0 56.18 78.966828)">100</text>
+     </g>
+    </g>
+    <g id="text_12">
+     <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="30.690156" y="181.656" transform="rotate(-90 30.690156 181.656)">Recall (% of reference epochs in each stage)</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 82.070824 288.144
+L 100.252368 288.144
+L 100.252368 79.716247
+L 82.070824 79.716247
+z
+" clip-path="url(#pb43579df14)" style="fill: #176b9a"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 161.989699 288.144
+L 180.171243 288.144
+L 180.171243 185.964163
+L 161.989699 185.964163
+z
+" clip-path="url(#pb43579df14)" style="fill: #176b9a"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 241.908575 288.144
+L 260.090119 288.144
+L 260.090119 106.504654
+L 241.908575 106.504654
+z
+" clip-path="url(#pb43579df14)" style="fill: #176b9a"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 321.82745 288.144
+L 340.008994 288.144
+L 340.008994 117.631406
+L 321.82745 117.631406
+z
+" clip-path="url(#pb43579df14)" style="fill: #176b9a"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 401.746325 288.144
+L 419.927869 288.144
+L 419.927869 114.786073
+L 401.746325 114.786073
+z
+" clip-path="url(#pb43579df14)" style="fill: #176b9a"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 102.050543 288.144
+L 120.232087 288.144
+L 120.232087 83.200488
+L 102.050543 83.200488
+z
+" clip-path="url(#pb43579df14)" style="fill: #bd7542"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 181.969418 288.144
+L 200.150962 288.144
+L 200.150962 193.889341
+L 181.969418 193.889341
+z
+" clip-path="url(#pb43579df14)" style="fill: #bd7542"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 261.888293 288.144
+L 280.069837 288.144
+L 280.069837 111.3228
+L 261.888293 111.3228
+z
+" clip-path="url(#pb43579df14)" style="fill: #bd7542"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 341.807169 288.144
+L 359.988713 288.144
+L 359.988713 111.708
+L 341.807169 111.708
+z
+" clip-path="url(#pb43579df14)" style="fill: #bd7542"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 421.726044 288.144
+L 439.907588 288.144
+L 439.907588 111.364541
+L 421.726044 111.364541
+z
+" clip-path="url(#pb43579df14)" style="fill: #bd7542"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 122.030262 288.144
+L 140.211806 288.144
+L 140.211806 81.552067
+L 122.030262 81.552067
+z
+" clip-path="url(#pb43579df14)" style="fill: #814e7a"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 201.949137 288.144
+L 220.130681 288.144
+L 220.130681 164.110212
+L 201.949137 164.110212
+z
+" clip-path="url(#pb43579df14)" style="fill: #814e7a"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 281.868012 288.144
+L 300.049556 288.144
+L 300.049556 104.052856
+L 281.868012 104.052856
+z
+" clip-path="url(#pb43579df14)" style="fill: #814e7a"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 361.786887 288.144
+L 379.968431 288.144
+L 379.968431 130.591393
+L 361.786887 130.591393
+z
+" clip-path="url(#pb43579df14)" style="fill: #814e7a"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 441.705763 288.144
+L 459.887307 288.144
+L 459.887307 105.081235
+L 441.705763 105.081235
+z
+" clip-path="url(#pb43579df14)" style="fill: #814e7a"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 63.18 288.144
+L 63.18 75.168
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 63.18 288.144
+L 478.778131 288.144
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_13">
+    <text style="font-weight: 700; font-size: 11.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17334a" x="270.979065" y="62.168" transform="rotate(-0 270.979065 62.168)">A  PhysioSleep: separate local evaluation stages</text>
+   </g>
+   <g id="legend_1">
+    <g id="patch_20">
+     <path d="M 196.326269 313.885642
+L 213.726269 313.885642
+L 213.726269 307.795642
+L 196.326269 307.795642
+z
+" style="fill: #176b9a"/>
+    </g>
+    <g id="text_14">
+     <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start" x="220.686269" y="313.885642" transform="rotate(-0 220.686269 313.885642)">DEV OOF · ensemble + prior</text>
+    </g>
+    <g id="patch_21">
+     <path d="M 196.326269 326.936321
+L 213.726269 326.936321
+L 213.726269 320.846321
+L 196.326269 320.846321
+z
+" style="fill: #bd7542"/>
+    </g>
+    <g id="text_15">
+     <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start" x="220.686269" y="326.936321" transform="rotate(-0 220.686269 326.936321)">Audit A · frozen D60 seed 17</text>
+    </g>
+    <g id="patch_22">
+     <path d="M 196.326269 339.987001
+L 213.726269 339.987001
+L 213.726269 333.897001
+L 196.326269 333.897001
+z
+" style="fill: #814e7a"/>
+    </g>
+    <g id="text_16">
+     <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start" x="220.686269" y="339.987001" transform="rotate(-0 220.686269 339.987001)">Audit B · frozen D60 seed 17</text>
+    </g>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_23">
+    <path d="M 536.961869 288.144
+L 952.56 288.144
+L 952.56 75.168
+L 536.961869 75.168
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_3">
+    <g id="xtick_6">
+     <g id="line2d_18">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="582.238251" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="582.238251" y="302.741656" transform="rotate(-0 582.238251 302.741656)">W</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_19">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="663.499593" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="663.499593" y="302.741656" transform="rotate(-0 663.499593 302.741656)">N1</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_20">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="744.760935" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="744.760935" y="302.741656" transform="rotate(-0 744.760935 302.741656)">N2</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_21">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="826.022276" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="826.022276" y="302.741656" transform="rotate(-0 826.022276 302.741656)">N3</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_22">
+      <g>
+       <use xlink:href="#mfdd0c28e73" x="907.283618" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-size: 10px; font-family: 'DejaVu Sans'; text-anchor: middle" x="907.283618" y="302.741656" transform="rotate(-0 907.283618 302.741656)">REM</text>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_4">
+    <g id="ytick_7">
+     <g id="line2d_23">
+      <path d="M 536.961869 288.144
+L 952.56 288.144
+" clip-path="url(#pe5ecf622ec)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_24">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="536.961869" y="288.144" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_25">
+      <path d="M 536.961869 245.5488
+L 952.56 245.5488
+" clip-path="url(#pe5ecf622ec)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_26">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="536.961869" y="245.5488" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_27">
+      <path d="M 536.961869 202.9536
+L 952.56 202.9536
+" clip-path="url(#pe5ecf622ec)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_28">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="536.961869" y="202.9536" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_29">
+      <path d="M 536.961869 160.3584
+L 952.56 160.3584
+" clip-path="url(#pe5ecf622ec)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_30">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="536.961869" y="160.3584" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_11">
+     <g id="line2d_31">
+      <path d="M 536.961869 117.7632
+L 952.56 117.7632
+" clip-path="url(#pe5ecf622ec)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_32">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="536.961869" y="117.7632" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_12">
+     <g id="line2d_33">
+      <path d="M 536.961869 75.168
+L 952.56 75.168
+" clip-path="url(#pe5ecf622ec)" style="fill: none; stroke: #e2e9ee; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_34">
+      <g>
+       <use xlink:href="#m24b7a999c5" x="536.961869" y="75.168" style="stroke: #000000; stroke-width: 0.8"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_24">
+    <path d="M 555.852693 288.144
+L 580.994952 288.144
+L 580.994952 90.07632
+L 555.852693 90.07632
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #65938f"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 637.114035 288.144
+L 662.256294 288.144
+L 662.256294 191.452896
+L 637.114035 191.452896
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #65938f"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 718.375377 288.144
+L 743.517636 288.144
+L 743.517636 105.623568
+L 718.375377 105.623568
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #65938f"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 799.636719 288.144
+L 824.778978 288.144
+L 824.778978 110.947968
+L 799.636719 110.947968
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #65938f"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 880.898061 288.144
+L 906.04032 288.144
+L 906.04032 103.280832
+L 880.898061 103.280832
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #65938f"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 583.48155 288.144
+L 608.623809 288.144
+L 608.623809 90.07632
+L 583.48155 90.07632
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #a97b4b"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 664.742891 288.144
+L 689.88515 288.144
+L 689.88515 190.388016
+L 664.742891 190.388016
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #a97b4b"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 746.004233 288.144
+L 771.146492 288.144
+L 771.146492 96.4656
+L 746.004233 96.4656
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #a97b4b"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 827.265575 288.144
+L 852.407834 288.144
+L 852.407834 125.004384
+L 827.265575 125.004384
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #a97b4b"/>
+   </g>
+   <g id="patch_33">
+    <path d="M 908.526917 288.144
+L 933.669176 288.144
+L 933.669176 108.17928
+L 908.526917 108.17928
+z
+" clip-path="url(#pe5ecf622ec)" style="fill: #a97b4b"/>
+   </g>
+   <g id="patch_34">
+    <path d="M 536.961869 288.144
+L 536.961869 75.168
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="patch_35">
+    <path d="M 536.961869 288.144
+L 952.56 288.144
+" style="fill: none; stroke: #000000; stroke-width: 0.8; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_22">
+    <text style="font-weight: 700; font-size: 11.2px; font-family: 'DejaVu Sans'; text-anchor: middle; fill: #17334a" x="744.760935" y="62.168" transform="rotate(-0 744.760935 62.168)">B  Published models: different cohorts/protocols</text>
+   </g>
+   <g id="legend_2">
+    <g id="patch_36">
+     <path d="M 674.892458 326.936321
+L 692.292458 326.936321
+L 692.292458 320.846321
+L 674.892458 320.846321
+z
+" style="fill: #65938f"/>
+    </g>
+    <g id="text_23">
+     <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start" x="699.252458" y="326.936321" transform="rotate(-0 699.252458 326.936321)">YASA released classifier</text>
+    </g>
+    <g id="patch_37">
+     <path d="M 674.892458 339.987001
+L 692.292458 339.987001
+L 692.292458 333.897001
+L 674.892458 333.897001
+z
+" style="fill: #a97b4b"/>
+    </g>
+    <g id="text_24">
+     <text style="font-size: 8.7px; font-family: 'DejaVu Sans'; text-anchor: start" x="699.252458" y="339.987001" transform="rotate(-0 699.252458 339.987001)">SleePyCo published model</text>
+    </g>
+   </g>
+  </g>
+  <g id="text_25">
+   <text style="font-weight: 700; font-size: 16px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #17334a" x="63.18" y="20.5095" transform="rotate(-0 63.18 20.5095)">Which sleep stages are recognized?</text>
+  </g>
+  <g id="text_26">
+   <text style="font-size: 8.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #405467" x="63.18" y="386.28" transform="rotate(-0 63.18 386.28)">DEV: selected three-seed transition pipeline, 60 people / 119 nights. Audits: one D60 seed-17 model, 20 people / 39 nights each.</text>
+  </g>
+  <g id="text_27">
+   <text style="font-size: 8.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #405467" x="63.18" y="397.9728" transform="rotate(-0 63.18 397.9728)">YASA: NSRR, workbook Figure 1C transcription. SleePyCo: Sleep-EDF Figure 3. Published recall aggregation is unverified.</text>
+  </g>
+  <g id="text_28">
+   <text style="font-size: 8.3px; font-family: 'DejaVu Sans'; text-anchor: start; fill: #405467" x="63.18" y="409.6656" transform="rotate(-0 63.18 409.6656)">Cross-panel gaps are not matched model effects.</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pb43579df14">
+   <rect x="63.18" y="75.168" width="415.598131" height="212.976"/>
+  </clipPath>
+  <clipPath id="pe5ecf622ec">
+   <rect x="536.961869" y="75.168" width="415.598131" height="212.976"/>
+  </clipPath>
+ </defs>
+</svg>

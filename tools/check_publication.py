@@ -48,12 +48,19 @@ def main():
     for item in guide['files']:
         if hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()!=item['sha256']:
             errors.append('Judge guide artifact differs from manifest: '+item['path'])
+    comparison=json.loads((ROOT/'reports/comparison-extensions/manifest.json').read_text(encoding='utf8'))
+    for item in comparison['files']:
+        if hashlib.sha256((ROOT/item['path']).read_bytes()).hexdigest()!=item['sha256']:
+            errors.append('Comparison figure input/output differs from manifest: '+item['path'])
     workbook=json.loads((ROOT/'literature/workbook-comparison.json').read_text(encoding='utf8'))
     if len(workbook['experiments'])!=56 or len(workbook['papers'])!=31:
         errors.append('Workbook coverage count changed')
     keys=[(row['source_sheet'],row['source_row']) for row in workbook['experiments']]
     if len(set(keys))!=56 or any(row['comparable_to_local'] for row in workbook['experiments']):
         errors.append('Literature row identity or comparison scope changed')
+    recall=json.loads((ROOT/'literature/stage-recall-context.json').read_text(encoding='utf8'))
+    if recall['source_sha256']!=workbook['source_sha256'] or recall['comparable_to_local']:
+        errors.append('Stage-recall workbook identity or comparison scope changed')
     print(json.dumps({'status':'FAIL' if errors else 'PASS','tracked_files':len(names),
                       'scope':'staged/committed paths; pattern scan is not a formal privacy proof',
                       'errors':errors},indent=2))

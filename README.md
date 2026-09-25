@@ -64,6 +64,10 @@ The detailed [pipeline guide](docs/PIPELINE.md) maps each step to source modules
 
 The nine systems share development participants, folds and the reference-valid epoch denominator; their channel inputs differ. The best system exceeds the clean local Sleepyland/YASA route (**0.783662**) by **0.006117**. Neither this nor its **0.003512** gain over the fixed control meets +0.02. These are adaptive development comparisons. [Exact results, channel counts, failure cases and uncertainty](docs/RESULTS.md).
 
+![Difference from the fixed EEG+EOG seed-17 control for each completed local development configuration](reports/comparison-extensions/local_ablation_gap.png)
+
+The new difference view makes the signal-input losses and small ensemble/transition gains visible in **Macro-F1 percentage points**. It also marks the pooled SLEEPYLAND/YASA feature route's additional EEG input. [Read the comparison and its limits](docs/REPOSITORY_COMPARISON.md#completed-local-contrasts).
+
 ## Comparison with published models
 
 The supplied Excel contains **31 papers and 56 experimental settings**, including DeepSleepNet, U-Time, TinySleepNet, AttnSleep, XSleepNet, SleepTransformer, SleePyCo, YASA and SLEEPYLAND. We publish the numeric rows, source URLs, sheet/row identifiers and caveats rather than reducing them to a list of names.
@@ -71,6 +75,10 @@ The supplied Excel contains **31 papers and 56 experimental settings**, includin
 ![Literature Macro-F1 values from the supplied workbook; protocols are unmatched](reports/judge-guide/literature_context.png)
 
 These are **workbook-reported literature values** with different cohorts, cropping, pretraining and aggregation. They are not a local leaderboard or verified superiority claims. Read [all 56 comparison rows](literature/COMPARISON.md) or download [experiments.csv](literature/experiments.csv) and [papers.csv](literature/papers.csv).
+
+![Stage recall for local DEV and separate exploratory audits, alongside a separate panel of unmatched published YASA and SleePyCo values](reports/comparison-extensions/stage_recall_context.png)
+
+This second comparison view shows **which stages are difficult**, especially N1, while keeping local and published evaluations in separate panels. The published values come from the supplied workbook and use different people, model inputs and protocols; their recall aggregation is not fully verified. [Representative algorithm and protocol comparison](docs/REPOSITORY_COMPARISON.md#published-algorithm-context) · [Cell-level source record](literature/stage-recall-context.json).
 
 ## Development, tests and evidence status
 

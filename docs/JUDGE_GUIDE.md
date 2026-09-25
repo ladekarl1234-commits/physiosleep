@@ -17,7 +17,7 @@ The best completed system is an integration of existing physiological features a
 | 0-1 min | [Pipeline](PIPELINE.md) | Can I trace signals to stages without reference-label leakage? |
 | 1-2 min | [Three-stage overview](EVALUATION_STAGES.md) and [job ledger](EXPERIMENTS.md) | Which model and people produced each score, and which jobs remain incomplete? |
 | 2-3 min | [Local results](RESULTS.md) | Do Macro-F1, N1, denominators and failed score targets support the claims? |
-| 3-4 min | [Upstream code comparison](REPOSITORY_COMPARISON.md) and [Excel rows](../literature/COMPARISON.md) | Are measured local runs separated from available code and unmatched paper scores? |
+| 3-4 min | [Local difference and published stage figures](REPOSITORY_COMPARISON.md), then [Excel rows](../literature/COMPARISON.md) | Are measured local runs separated from available code and unmatched paper scores? |
 | 4-5 min | [Grades](JUDGING.md) and [claims](CLAIMS.md) | What credit is supported, what is missing and what would change the decision? |
 
 For a deeper technical review, inspect the [17 ADRs](adr/README.md), run the [public checks](DEVELOPER_GUIDE.md), inspect the [historical fixed audit criteria](REPORT.md#historical-mandatory-benchmark-and-audit-protocol), and follow the claim links to aggregate evidence. Hardware is a separate [optional review branch](HARDWARE.md).

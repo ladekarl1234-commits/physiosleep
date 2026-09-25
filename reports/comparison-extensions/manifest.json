@@ -1,0 +1,41 @@
+{
+  "purpose": "Public aggregate comparison-figure provenance",
+  "files": [
+    {
+      "path": "reports/judge-guide/local-comparison.json",
+      "sha256": "6d162761b1d7b8a7900f64ec1c7f5151416a85346ef346ccc8a24cc360629b8b"
+    },
+    {
+      "path": "evidence/development-metrics.json",
+      "sha256": "c15c08d0275d06a40e48ef76c65aa41409bbcf865465cf688a91c9cdbe217e31"
+    },
+    {
+      "path": "reports/exploratory-audits-v1/aggregate.json",
+      "sha256": "726a46d68cb682b0ec3a0d9d564cf2dec0f105a4012b1d93fcb061f0f2da9945"
+    },
+    {
+      "path": "literature/stage-recall-context.json",
+      "sha256": "9f5139a64a74698de4eb40ce77a732fdc3da4d779ef43ea5f52f643658592b39"
+    },
+    {
+      "path": "tools/build_comparison_figures.py",
+      "sha256": "4b14c41566e243041b18398f3dac5abb1906dc41fb5b8598d38d04d60b449b8e"
+    },
+    {
+      "path": "reports/comparison-extensions/local_ablation_gap.png",
+      "sha256": "e69faf3a0f3857a609765951e51eef6b946df5447eca73b2eb1fa6c1afd05261"
+    },
+    {
+      "path": "reports/comparison-extensions/local_ablation_gap.svg",
+      "sha256": "a800cc655b9d68e83bddc96f1db20bf864e0dbf734aa885890f6b8b39c481200"
+    },
+    {
+      "path": "reports/comparison-extensions/stage_recall_context.png",
+      "sha256": "8d8c52e0323841a43d163514ce8be8a6b9115f40d6181d7ef9b8d0e11dfc26e1"
+    },
+    {
+      "path": "reports/comparison-extensions/stage_recall_context.svg",
+      "sha256": "10f54be6d84f4574deb75b7e69bcef5e4f4123b7ef48e33f78cfa2d25a238123"
+    }
+  ]
+}

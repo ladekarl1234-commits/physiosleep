@@ -32,9 +32,10 @@ python tools/build_research_figures.py --from-summary reports/publication-figure
 python tools/plot_score_extension.py reports/score-extension/summary.json reports/score-extension/08_score_extension
 python tools/build_judge_figures.py
 python tools/build_evaluation_overview.py
+python tools/build_comparison_figures.py
 ```
 
-Use one OpenMP/BLAS thread for plots. `build_judge_figures.py` builds the pipeline, all-nine-system local comparison and literature context. `build_evaluation_overview.py` builds the Dev/train → Audit 1 → Audit 2 chart from sanitized public aggregates. Output is PNG and SVG. Numeric data are authoritative if platform fonts change image bytes; changes to hash-bound artifacts need review and deliberate manifest updates.
+Use one OpenMP/BLAS thread for plots. `build_judge_figures.py` builds the pipeline, all-nine-system local comparison and literature context. `build_evaluation_overview.py` builds the Dev/train → Audit 1 → Audit 2 chart from sanitized public aggregates. `build_comparison_figures.py` builds the control-relative and stage-recall comparisons from sanitized public aggregates and records input/output hashes. Output is PNG and SVG. Numeric data are authoritative if platform fonts change image bytes; changes to hash-bound artifacts need review and deliberate manifest updates.
 
 ## Repository map
 

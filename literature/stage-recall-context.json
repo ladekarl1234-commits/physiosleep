@@ -1,0 +1,35 @@
+{
+  "purpose": "Unmatched stage-recall context; not a head-to-head comparison",
+  "source_workbook": "sleep_staging_literature_comparison.xlsx",
+  "source_sha256": "b4ed35cd01d6ff839c1ebe495a99fc55ceae1900af67a2ed87824d8a133909c4",
+  "source_sheet": "بازیابی_مراحل",
+  "source_rows": [5, 6, 7, 8, 9],
+  "source_order": ["N1", "N2", "N3", "REM", "W"],
+  "source_cells": {
+    "YASA released classifier": "C5:C9",
+    "SleePyCo published model": "D5:D9"
+  },
+  "class_order": ["W", "N1", "N2", "N3", "REM"],
+  "unit": "recall_percent",
+  "external_series": [
+    {
+      "name": "YASA released classifier",
+      "cohort": "NSRR validation; article reports 585 nights",
+      "inputs": "Article's multichannel validation configuration; exact channel mapping not checked for these values",
+      "aggregation": "Figure 1C class-recall aggregation not independently verified",
+      "values": [93.0, 45.4, 85.7, 83.2, 86.8],
+      "source_url": "https://elifesciences.org/articles/70092",
+      "verification": "Workbook Figure 1C transcription; article text independently confirms N1 and N3 only"
+    },
+    {
+      "name": "SleePyCo published model",
+      "cohort": "Sleep-EDF expanded cohort; paper Figure 3",
+      "inputs": "Single EEG channel in the paper's Sleep-EDF setting",
+      "aggregation": "Paper Figure 3 class-recall aggregation not independently verified",
+      "values": [93.0, 45.9, 90.0, 76.6, 84.5],
+      "source_url": "https://arxiv.org/pdf/2209.09452",
+      "verification": "Workbook transcription; all five values independently checked against paper Figure 3"
+    }
+  ],
+  "comparable_to_local": false
+}
