@@ -2,7 +2,7 @@
 
 Date: 2026-09-24
 
-Status: **Accepted; latest owner decision**
+Status: **Historical; superseded on 25 September 2026 by [ADR 0016](0016-exploratory-audits.md)**
 
 ## Context
 

@@ -1,22 +1,24 @@
 {
   "attnsleep": {
-    "completed_epoch": 38,
-    "epoch_log_sha256_at_snapshot": "cadff80f794910236792137c6ae861ac7b8ac57a6331c5b79110aa513972ae4a",
+    "completed_epoch": 65,
+    "epoch_log_sha256_at_snapshot": "89cc53e9fd1c9823a99fd66a393cbbc365ad06ae3d627a06d66f0be87bd8d22b",
     "fold": 0,
-    "last_train_loss": 0.3264043498455988,
+    "last_train_loss": 0.3125168112151491,
     "native_batch_size": 128,
     "required_epochs_per_fold": 100,
     "seed": 17,
-    "status": "RUNNING_AT_SNAPSHOT",
+    "status": "STOPPED_WITH_VERIFIED_RESUMABLE_CHECKPOINT",
     "training_loss_is_not_validation": true,
-    "updates_per_epoch": 1702
+    "updates_per_epoch": 1702,
+    "reason": "Owner requested priority for exploratory A/B evaluation",
+    "checkpoint_sha256": "e28258bee5df3bbcc1494800715f5c6c87f642ed7f62977b60a186a042587e2d"
   },
-  "audit_A": "NOT_RUN",
-  "audit_B": "NOT_RUN",
-  "heldout_truth_exposed": false,
-  "observed_at_utc": "2026-09-25T02:11:00.624500+00:00",
+  "audit_A": "EXPLORATORY_EVALUATED",
+  "audit_B": "EXPLORATORY_EVALUATED",
+  "heldout_truth_exposed": true,
+  "observed_at_utc": "2026-09-25T04:21:59.143006+00:00",
   "public_tests": {
-    "count": 92,
+    "count": 99,
     "scope": "synthetic software/contract tests; no accuracy or audit evaluation"
   },
   "scope": "Static observation; not a live scheduler or confirmation result",
@@ -46,5 +48,13 @@
     "replacement_strategy": "FRESH_ORIGINAL_SEED_FIT_PENDING_CURRENT_SOURCE_QUALIFICATIONS",
     "status": "FAILED_STATE_COMMIT_AFTER_NUMERICAL_EPOCH",
     "synthetic_recovery_qualification": "PASS"
+  },
+  "confirmation_cohorts_retired": true,
+  "formal_gate_A": "NOT_RUN",
+  "formal_gate_B": "NOT_RUN",
+  "exploratory_results": {
+    "A": 0.7590217019647509,
+    "B": 0.7988746635413793,
+    "model_sha256": "abdc64d3cd736f0a2e6c89fb5843eee06a3af26f64f0abb80120ade794d83860"
   }
 }

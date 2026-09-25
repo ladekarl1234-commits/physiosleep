@@ -8,7 +8,7 @@
 
 **Did people or nights leak across folds?** All nights follow their participant, and learned components use only fold-training people. Recipe selection uses development results, so D performance remains conditional on selection. Audits are procedural on a shared host; strong external access isolation is not claimed.
 
-**Why not score A and B now?** Their intended value is untouched confirmation. The owner explicitly chose baseline completion and readiness before A, and reduced-model freezing before B. Consuming them now would not repair missing comparator evidence.
+**What changed about A and B?** The owner explicitly authorized immediate exploratory evaluation of both cohorts on 25 September 2026. Their original confirmation reservation was retired. [ADR 0016](adr/0016-exploratory-audits.md) records that decision; a measured single-model score still cannot repair missing matched comparators or establish the required +0.02 margin.
 
 **Are confidence and decoded-stage probabilities the same?** No. The transition decoder changes hard stages while saved probabilities remain classifier emissions. Confidence plots label their source and do not call them decoder posterior probabilities or calibrated clinical confidence.
 

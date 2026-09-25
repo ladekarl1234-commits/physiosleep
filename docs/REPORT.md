@@ -1,12 +1,12 @@
 # PhysioSleep scientific report
 
-[Judge route](JUDGE_GUIDE.md) · [Pipeline](PIPELINE.md) · [Development/test jobs](EXPERIMENTS.md) · [Results index](RESULTS.md) · [Excel comparison](../literature/COMPARISON.md)
+[Judge route](JUDGE_GUIDE.md) Â· [Pipeline](PIPELINE.md) Â· [Development/test jobs](EXPERIMENTS.md) Â· [Results index](RESULTS.md) Â· [Excel comparison](../literature/COMPARISON.md)
 
 ## Abstract and current decision
 
 PhysioSleep investigates participant-disjoint five-class staging, interpretable recording-window summaries and the requirements for a later acquisition device. On the original 60-person development set, the best completed system uses native YASA physiological features, locally fitted LightGBM classifiers, a three-seed probability ensemble and a train-only transition prior. Pooled Macro-F1 is **0.7897786854**, accuracy **0.9073799272**, and Cohen's kappa **0.8322544088**. The gain over the fixed seed-17 EEG+EOG control is **0.0035116988**, not the required 0.02. No mandatory multi-family superiority or independent confirmation is established.
 
-Audit A/B remain untouched and NOT_RUN. The owner explicitly chose to finish required baselines before opening A and to preserve B for the subsequent reduced model. Earlier provisional specialist and hardware work was authorized as a scope exception, without changing the benchmark criteria. This report supersedes historical deadline prose as a status description; retained evidence hashes preserve those earlier snapshots.
+Both original audit cohorts have now been evaluated exploratorily following the ownerâ€™s explicit 25 September authorization. The D60 seed-17 EEG+EOG single-model control achieved Macro-F1 **0.759022 on A** and **0.798875 on B**, with accuracy **88.76% / 91.24%**. See the [complete audit report](../reports/exploratory-audits-v1/report.md) and [evaluation guide](EXPLORATORY_AUDITS.md). These results are distinct from the development ensemble above and do not pass the mandatory-comparator gates. Both cohorts are consumed; future confirmation requires fresh people. Earlier provisional specialist and hardware work was authorized as a scope exception, without changing the benchmark criteria. This report supersedes historical deadline prose as a status description; retained evidence hashes preserve those earlier snapshots.
 
 ## Data and preprocessing
 
@@ -47,7 +47,7 @@ The best result's participant-average Macro-F1 is 0.756066, distinct from pooled
 
 ![Stage performance](../reports/publication-figures/03_class_metrics.png)
 
-The transition prior is fitted only on each fold's training people. It improves its undecoded ensemble parent by 0.001789. In Figure 01D, stage-fraction error uses all reference-valid recording epochs as the denominator, not sleep-only epochs. Its saved probabilities are original emissions, **not posterior probabilities of the decoded path**. Confidence plots label this distinction. The separate all-development refit checkpoint is the single seed-17 control; its own independent generalization accuracy has not been measured. A 2,266-epoch signal-only demonstration on a training recording proves functional inference, not accuracy.
+The transition prior is fitted only on each fold's training people. It improves its undecoded ensemble parent by 0.001789. In Figure 01D, stage-fraction error uses all reference-valid recording epochs as the denominator, not sleep-only epochs. Its saved probabilities are original emissions, **not posterior probabilities of the decoded path**. Confidence plots label this distinction. The separate all-development refit checkpoint is the single seed-17 control; its participant-disjoint exploratory A/B results are now available in the [audit report](../reports/exploratory-audits-v1/report.md), with accuracy 88.757% and 91.239%. This is same-dataset generalization evidence, not external clinical validation. A 2,266-epoch signal-only demonstration on a training recording proves functional inference, not accuracy.
 
 Round-prefix sensitivity increased from 0.782354 at 100 rounds to 0.786267 at 400; the best prefix sits at the endpoint, so convergence remains unresolved. Two-view averaging worsened the fixed control. Historical duration-only and combined-prior experiments did not replace the selected system. Missing ablations, longer training and other native families remain work, not successful experiments.
 
@@ -69,13 +69,15 @@ These are approximate descriptive bands conditional on frozen development predic
 
 ## Mandatory benchmark and audit protocol
 
+The following criteria remain unchanged. The owner-authorized exploratory tests did not meet this launch/readiness contract and do not constitute either formal gate. The original cohorts are retired; future confirmation must use fresh participants under a prospective protocol.
+
 All eleven slots remain mandatory; the [registry](BASELINES.md) distinguishes implementations from completed executions. Unknown released-weight training overlap or rights produces descriptive-only evidence. An executed duplicate requires both routes and verified equality. Omission, family resemblance, published scores or a two-epoch toy fit cannot complete a slot.
 
 Before Audit A, require adequate native routes, complete clean predictions, frozen selected checkpoints, seed robustness and a development planning simulation meeting the 80% target. Current development gain and baseline completeness do not satisfy readiness. Do not redraw A/B or use B to retry a failed A.
 
-For each distinct frozen comparator b, require delta(b) = pooled F1(candidate) − pooled F1(b) >= **1/50**. A value of 0.0199 fails; values above 0.04 pass. Use 10,000 paired participant draws stratified by cohort, all nights retained, q=0.05/(2m), linear percentile intervals, and fixed PCG64 seeds 2026092301 (A), 2026092302 (B). Every lower bound must exceed zero. Report exact point-margin pass, positive-superiority support, and lower-bound >=0.02 support separately. Positive superiority does not establish that the true margin is at least 0.02.
+For each distinct frozen comparator b, require delta(b) = pooled F1(candidate) âˆ’ pooled F1(b) >= **1/50**. A value of 0.0199 fails; values above 0.04 pass. Use 10,000 paired participant draws stratified by cohort, all nights retained, q=0.05/(2m), linear percentile intervals, and fixed PCG64 seeds 2026092301 (A), 2026092302 (B). Every lower bound must exceed zero. Report exact point-margin pass, positive-superiority support, and lower-bound >=0.02 support separately. Positive superiority does not establish that the true margin is at least 0.02.
 
-Integrity requires identical participant/record/epoch/mask identities, all mandatory executions, clean fitted ancestry, frozen choices and independent artifact recomputation. Hand-written status files cannot authorize downstream commands. A failed A stays failed. B is reserved for a genuinely frozen reduced model after A passes; its teacher's A result cannot certify it.
+Integrity requires identical participant/record/epoch/mask identities, all mandatory executions, clean fitted ancestry, frozen choices and independent artifact recomputation. Hand-written status files cannot authorize downstream commands. A failed A stays failed. Under the original design, B was reserved for a genuinely frozen reduced model after A passed; its teacherâ€™s A result could not certify it. The consumed original B cannot fulfill that future confirmation role.
 
 ## Provisional score and sensors: adverse results
 
@@ -93,7 +95,7 @@ Score agreement uses the same formula on predicted and reference stages, with pa
 | Train-only constant | 7.84 | 46.23 | 101.61 |
 | Planned maximum | **5** | **15** | **10** |
 
-EEG+EOG descriptive 95% participant-bootstrap intervals are score MAE [4.58,8.45], TST MAE [17.74,32.76] and WASO MAE [42.72,110.13], using 2,000 cohort-stratified participant draws with participant-balanced errors. Score bias is −3.02 points and score P90 absolute error 16.56 points; these also miss their proposed B thresholds. EEG+EOG WASO P90 absolute error is 229 minutes. The 18-configuration sensitivity study preserved the frozen 420-minute/equal-weight geometric formula. Lower arithmetic-composition MAE is a sensitivity result, not selection or clinical validation.
+EEG+EOG descriptive 95% participant-bootstrap intervals are score MAE [4.58,8.45], TST MAE [17.74,32.76] and WASO MAE [42.72,110.13], using 2,000 cohort-stratified participant draws with participant-balanced errors. Score bias is âˆ’3.02 points and score P90 absolute error 16.56 points; these also miss their proposed B thresholds. EEG+EOG WASO P90 absolute error is 229 minutes. The 18-configuration sensitivity study preserved the frozen 420-minute/equal-weight geometric formula. Lower arithmetic-composition MAE is a sensitivity result, not selection or clinical validation.
 
 ![Score agreement among eligible windows](../reports/publication-figures/05_score_agreement.png)
 
@@ -105,15 +107,15 @@ The already-frozen three-seed transition pipeline was scored on the **same 61 el
 
 | Endpoint | Candidate MAE [descriptive 95% CI] | Candidate minus EEG+EOG MAE [paired 95% CI] | Planned maximum |
 |---|---:|---:|---:|
-| Score, points | 5.677 [4.353, 7.113] | −0.697 [−2.616, 1.198] | 5 |
-| TST, minutes | 24.331 [17.112, 32.663] | −0.375 [−1.612, 0.900] | 15 |
-| Within-SPT WASO, minutes | 63.088 [42.318, 85.433] | −10.225 [−45.182, 21.436] | 10 |
+| Score, points | 5.677 [4.353, 7.113] | âˆ’0.697 [âˆ’2.616, 1.198] | 5 |
+| TST, minutes | 24.331 [17.112, 32.663] | âˆ’0.375 [âˆ’1.612, 0.900] | 15 |
+| Within-SPT WASO, minutes | 63.088 [42.318, 85.433] | âˆ’10.225 [âˆ’45.182, 21.436] | 10 |
 
 All three MAEs fail their targets. Each paired interval versus EEG+EOG includes zero. Score bias is +0.716 points; score P90 absolute error is 12.475 points, exceeding the ten-point target. TST and WASO P90 errors are 69 and 219 minutes. The same cohort-stratified participant resamples were used for all systems: 2,000 PCG64 draws, seed 2026092405. Each participant's eligible nights share equal total weight. These pointwise intervals are conditional, descriptive development estimates after adaptive staging selection; they are not simultaneous confirmation intervals or clinical evidence.
 
 ![Frozen candidate score fidelity and unchanged controls](../reports/score-extension/08_score_extension.png)
 
-The earlier four-model figures remain intact as the historical analysis. This extension changes neither the score charter nor the minimum-sensor conclusion. The model with the best staging result does not establish adequate score fidelity. Missing independent nightly boundaries and TIB still prevent whole-night/SE claims. Audit A and B remain reserved.
+The earlier four-model figures remain intact as the historical analysis. This extension changes neither the score charter nor the minimum-sensor conclusion. The model with the best staging result does not establish adequate score fidelity. Missing independent nightly boundaries and TIB still prevent whole-night/SE claims. Original A/B have since been consumed for exploratory staging evaluation; they are retired from confirmation.
 
 ## Products, hardware and limitations
 

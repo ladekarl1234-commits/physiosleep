@@ -2,8 +2,8 @@
 
 The active owner goal is to earn 90 from the existing reviewers, as far as the
 evidence allows. Rubrics, the eleven mandatory baseline slots and both audit
-criteria stay unchanged. Current independently reviewed grades are 59/100 for
-data/ML and 71/100 for the sleep-specialist perspective. Agent grades are not
+criteria stay unchanged. Current independently reviewed grades are 58/100 for
+data/ML and 73/100 for the sleep-specialist perspective. Agent grades are not
 clinical or competition approval.
 
 ## Feasibility under current constraints
@@ -19,13 +19,18 @@ current exclusions; it is not a promised achievable score.
 
 ## Current work, in evidence order
 
-1. Continue the native AttnSleep recipe from its independently verified epoch-17
+The owner has since authorized exploratory evaluation of the original A/B cohorts;
+see [the audit guide](EXPLORATORY_AUDITS.md). Those cohorts are retired from
+confirmation. The audit scores describe the frozen D60 control, while the steps
+below remain requirements for broader benchmark and scientific evidence.
+
+1. Continue the native AttnSleep recipe from its verified epoch-65
    checkpoint. Keep its 100-epoch folds, full grids and fitted ancestry. Checkpoint
    progress or training loss alone cannot earn complete-comparator credit.
-2. Recover U-Time's completed numerical epoch through a separately qualified
-   continuation identity. Preserve its failed execution and all sealed bytes.
-   The tuple/list repair candidate passes regression tests but is not activated.
-   Restoration and continuation equivalence need independent verification.
+2. Preserve U-Time's failed execution and all sealed bytes. Read-only restoration
+   and prepared-data checks passed. The corrected pointer implementation passed
+   focused tests; the selected replacement is a fresh original-seed fit, pending
+   renewed source-bound qualification. No successful continuation fit is claimed.
 3. Assess U-Time throughput before extensive continuation. The first invocation
    consumed 12,493.5 seconds. Repeating that wall cost for 80 further epochs would
    be about 278 hours for one inner fold, assuming no improvement after epoch 1.
@@ -39,16 +44,17 @@ current exclusions; it is not a promised achievable score.
 5. Complete the remaining permitted native families and source-qualified variants.
    Resolve genuine external rights/lineage gaps through actual applicable evidence.
    The 25 September public-source recheck resolved none of the existing blockers.
-6. Meet development adequacy, finalist robustness and precision readiness. Then
-   freeze exact systems and evaluate A once. Only after A passes, freeze the reduced
-   model/score charter on original development participants and evaluate B.
+6. Meet development adequacy, finalist robustness and precision readiness. Obtain
+   fresh confirmation participants, freeze a prospective protocol and exact
+   systems, then apply the unchanged superiority criteria. The consumed original
+   A/B cohorts cannot be reused as untouched confirmation.
 
 ## External evidence that code or prose cannot create
 
 - Applicable MSA-CNN grant, clarification of TinySleepNet terms, intended-use and
   weight rights where needed, and released-model training-cohort exclusion evidence.
-- Fresh independent confirmation participants if local precision is inadequate or
-  A is exposed and fails. B cannot become a retry pool.
+- Fresh independent confirmation participants: both original holdouts are now
+  retired by owner authorization. B cannot become a retry pool.
 - Independently established observation boundaries for whole-night score claims,
   and clinical/subjective criterion evidence for clinical construct validity.
 - Actual board/instrument access, authorized safety/bench work and paired device

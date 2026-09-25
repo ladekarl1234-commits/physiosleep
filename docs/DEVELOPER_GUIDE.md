@@ -65,6 +65,6 @@ Preserve original signals and old runs. Group every person's nights. Version sou
 | Missing model manifest or private path | Protected-training input is absent; do not bypass integrity checks |
 | Hash mismatch | Check whether source, output or line endings changed; restore or explicitly version before proceeding |
 | Plot font differences | Inspect numeric inputs and layout; do not promise identical rendering across platforms |
-| Passing tests but no audit score | Expected: public checks validate software/arithmetic, not benchmark superiority |
+| Passing public checks | These validate software and aggregate arithmetic; inspect the exploratory audit report separately for measured model performance |
 
 No license to third-party models or original data follows from this guide. See [RIGHTS](../RIGHTS.md).

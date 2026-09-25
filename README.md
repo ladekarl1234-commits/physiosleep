@@ -8,11 +8,24 @@ PhysioSleep is an offline sleep-research pipeline for specialist review. It chec
 
 [![Public software checks](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml/badge.svg)](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml)
 
+## Audit A and B: completed exploratory tests
+
+| Test | Macro-F1 | Descriptive 95% interval | Accuracy | Participants / recordings |
+|---|---:|---:|---:|---:|
+| Audit A | **0.7590** | 0.7245Ã¢â‚¬â€œ0.7873 | **88.76%** | 20 / 39 |
+| Audit B | **0.7989** | 0.7816Ã¢â‚¬â€œ0.8156 | **91.24%** | 20 / 39 |
+
+Actual reference scoring of all 78 recordings is complete. The tested system is the existing **single seed-17 LightGBM control trained on D60 using YASA EEG+EOG features**. The development ensemble below is a different system. N1 remains the weakest stage (F1 0.469 / 0.499). These exploratory tests do not complete the all-baseline +0.02 gate; the original holdouts are consumed and fresh participants are required for confirmation.
+
+[Full audit report, class metrics and provenance](reports/exploratory-audits-v1/report.md) Ã‚Â· [Evaluation guide](docs/EXPLORATORY_AUDITS.md) Ã‚Â· [Replayable aggregate](reports/exploratory-audits-v1/aggregate.json)
+
+![Measured exploratory A/B results](reports/exploratory-audits-v1/summary.png)
+
 | Measured development result | Research status | Latest simulated scientific reviews |
 |---|---|---|
-| **0.789779 Macro-F1** · **90.738% accuracy** | 119 recordings / 60 development participants | Sleep specialist **69 → 71 / 100** |
-| **+0.003512** over the fixed EEG+EOG control | Required margin **+0.02** remains unmet | Data/ML **53 → 59 / 100** |
-| Five participant-disjoint development folds | Audit A **NOT_RUN** · Audit B **NOT_RUN** | [Rubrics, dates and findings](docs/JUDGING.md) |
+| **0.789779 Macro-F1** Ã‚Â· **90.738% accuracy** | 119 recordings / 60 development participants | Sleep specialist **69 Ã¢â€ â€™ 71 / 100** |
+| **+0.003512** over the fixed EEG+EOG control | Required margin **+0.02** remains unmet | Data/ML **53 Ã¢â€ â€™ 59 / 100** |
+| Five participant-disjoint development folds | Audit A/B **EXPLORATORY_EVALUATED** | [Rubrics, dates and findings](docs/JUDGING.md) |
 
 The review grades assess scientific evidence, not official competition approval. Documentation changes do not automatically increase them. The mandatory eleven-slot benchmark is incomplete; development results are not confirmation.
 
@@ -24,14 +37,14 @@ The review grades assess scientific evidence, not official competition approval.
 | How do signals become stages, scores and evidence? | [Pipeline and architecture](docs/PIPELINE.md) |
 | Which training jobs, tests and audits actually ran? | [Development / test job ledger](docs/EXPERIMENTS.md) |
 | How do our models compare on the same people? | [Local results and ablations](docs/RESULTS.md) |
-| What do the models in the supplied Excel report? | [56-row literature comparison](literature/COMPARISON.md) · [31 papers](literature/PAPERS.md) · [CSV](literature/experiments.csv) |
-| Why these decisions? What is still missing? | [15 architecture decisions](docs/adr/README.md) · [reviewer roadmap](docs/ROAD_TO_90.md) |
+| What do the models in the supplied Excel report? | [56-row literature comparison](literature/COMPARISON.md) Ã‚Â· [31 papers](literature/PAPERS.md) Ã‚Â· [CSV](literature/experiments.csv) |
+| Why these decisions? What is still missing? | [16 architecture decisions](docs/adr/README.md) Ã‚Â· [reviewer roadmap](docs/ROAD_TO_90.md) |
 
 ## Pipeline
 
 ![PhysioSleep scientific pipeline: data, participant partitioning, train-only fitting, signal-only inference and separate evaluation](reports/judge-guide/pipeline.png)
 
-The detailed [pipeline guide](docs/PIPELINE.md) maps each step to source modules, artifacts, assumptions and tests. Reference annotations never enter the prediction interface. Every night from a person stays in the same partition. Audit A and B remain reserved.
+The detailed [pipeline guide](docs/PIPELINE.md) maps each step to source modules, artifacts, assumptions and tests. Reference annotations never enter the prediction interface. Every night from a person stays in the same partition. The original A/B cohorts were evaluated exploratorily and are retired from confirmation.
 
 ## Actual local model comparison
 
@@ -53,10 +66,10 @@ These are **workbook-reported literature values** with different cohorts, croppi
 |---|---|---|
 | Local feature models, ensembles and transition decoder | Complete five-fold development outputs and aggregate replay | Adequacy, broader native comparators and confirmation |
 | Sleepyland/YASA compatibility route | Clean five-fold fit; five-fold numerical parity; Macro-F1 0.783662 | Full mandatory-route adequacy and native-container equivalence |
-| AttnSleep | Native 100-epoch training in progress at the dated [job snapshot](docs/EXPERIMENTS.md) | All folds, seed evaluations and saved validation predictions |
+| AttnSleep | Safely checkpointed at **65/100 epochs**, fold 0; [job snapshot](docs/EXPERIMENTS.md) | All folds, seed evaluations and saved validation predictions |
 | U-Time | Failed epoch preserved; actual restore/cache verified; corrected state handling passes 27 tests | Renewed source-bound qualification and fresh native fit |
-| Public software checks | **92 synthetic tests**, exact aggregate replay and publication checks in [hosted CI](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml) | CI does not retrain models or open audits |
-| Audit A / B | Fixed procedural holdouts of 20 people each | Baselines → readiness → A → reduced-model freeze → B |
+| Public software checks | **99 synthetic tests**, exact aggregate replay and publication checks in [hosted CI](https://github.com/ladekarl1234-commits/physiosleep/actions/workflows/verify.yml) | CI does not retrain models or open audits |
+| Audit A / B | Completed exploratory tests: 39 recordings / 20 people each | Full mandatory comparison remains incomplete; fresh confirmation participants needed |
 
 ## Experimental score and hardware
 
@@ -73,10 +86,11 @@ Hardware artifacts specify acquisition, timing, filtering and packet requirement
 ```bash
 python -m pip install numpy==1.26.4 pyedflib==0.1.42 xlrd==2.0.2 PyYAML==6.0.3
 python tools/verify_public_metrics.py
+python tools/verify_exploratory_metrics.py
 python -m unittest discover -s tests -v
 python tools/check_publication.py
 ```
 
 Run from a clone of this repository. These commands require no EDFs, GPU or private models. For figure rebuilding, environments, source ownership and the additional requirements for exact training, read the [developer guide](docs/DEVELOPER_GUIDE.md) and [reproduction guide](docs/REPRODUCIBILITY.md).
 
-The public package contains source, synthetic tests and aggregate evidence. Original signals, participant-linked labels/predictions, private checkpoints, vendor weights, credentials and commercial font files remain excluded. [Rights and exclusions](RIGHTS.md) · [claim-to-evidence ledger](docs/CLAIMS.md) · [full scientific report](docs/REPORT.md).
+The public package contains source, synthetic tests and aggregate evidence. Original signals, participant-linked labels/predictions, private checkpoints, vendor weights, credentials and commercial font files remain excluded. [Rights and exclusions](RIGHTS.md) Ã‚Â· [claim-to-evidence ledger](docs/CLAIMS.md) Ã‚Â· [full scientific report](docs/REPORT.md).

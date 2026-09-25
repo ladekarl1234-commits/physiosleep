@@ -14,7 +14,8 @@ from .contracts import content_id, read_json
 from .research import artifact_id, file_sha256, utc_now
 
 CONTROL_KEYS = {"selection_manifest_path", "selection_manifest_sha256", "access_ledger_path"}
-EVENTS = {"SELECTION_FROZEN", "AUDIT_OPENED", "EVALUATION_RECORDED", "VERIFICATION_RECORDED"}
+EVENTS = {"SELECTION_FROZEN", "AUDIT_OPENED", "EVALUATION_RECORDED", "VERIFICATION_RECORDED",
+          "EXPLORATORY_RETIRED"}
 
 
 def canonical_ledger(path: Path, protocol_hash: str) -> Path:
@@ -99,6 +100,20 @@ def append_audit_event(path: Path, protocol_hash: str, phase: str, event: str, e
     same = [row for row in rows if row["phase"] == phase]
     if phase not in ("A", "B") or event not in EVENTS:
         raise ValueError("Unknown audit phase/event")
+    if event == "EXPLORATORY_RETIRED":
+        if same:
+            raise ValueError("An already registered audit cannot be retired a second time")
+        authorization = read_json(_artifact(evidence.get("authorization")))
+        selection = read_json(_artifact(evidence.get("selection")))
+        if (authorization.get("artifact_type") != "owner_exploratory_audit_authorization" or
+                authorization.get("owner_reply") != "Run both now as exploratory evaluations" or
+                authorization.get("protocol_hash") != protocol_hash or
+                authorization.get("fresh_data_required_for_confirmation") is not True or
+                selection.get("artifact_type") != "physiosleep_exploratory_audits_selection" or
+                selection.get("scope") != "EXPLORATORY_A_AND_B_NO_GATE_PASS" or
+                selection.get("protocol_hash") != protocol_hash or
+                selection.get("selection_id") != artifact_id(selection, "selection_id")):
+            raise ValueError("Exploratory retirement requires the owner's decision and frozen selection")
     if event == "SELECTION_FROZEN" and same:
         raise ValueError("Audit selection already registered; a failed audit cannot be redrawn")
     if phase == "B" and event in ("SELECTION_FROZEN", "AUDIT_OPENED"):

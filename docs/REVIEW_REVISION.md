@@ -1,6 +1,6 @@
 # Repository review and changes
 
-[Judge guide](JUDGE_GUIDE.md) · [Scientific grades](JUDGING.md)
+[Judge guide](JUDGE_GUIDE.md) Ã‚Â· [Scientific grades](JUDGING.md)
 
 On 25 September 2026 the owner asked for a repository that clearly exposes development/test work, grades, judging guidance, the pipeline and comparisons from the supplied Excel. Two independent simulated reviewer agents examined the existing package before the changes: a sleep-specialist methodologist and a data/ML verifier. The main implementation agent made the revisions; the reviewers did not implement their own findings.
 
@@ -25,4 +25,6 @@ The data/ML verification record and final closure status are linked from [judgin
 
 ## What this revision does not change
 
-The existing scientific grades remain **sleep specialist 71/100 and data/ML 59/100**. No numerical presentation grade is substituted for them. Audit A/B remain NOT_RUN, the required +0.02 margin is unmet, score targets are unmet and the device is unvalidated. Better documentation makes the evidence easier to assess; it cannot supply missing experiments or clinical measurements.
+At the earlier documentation-review cutoff, scientific grades were **sleep specialist 71/100 and data/ML 59/100**. No numerical presentation grade is substituted for them. At that review cutoff formal Audit A/B gates remained NOT_RUN; [subsequent exploratory tests](EXPLORATORY_AUDITS.md) are now complete. The required +0.02 margin is unmet, score targets are unmet and the device is unvalidated. Better documentation makes the evidence easier to assess; it cannot supply missing experiments or clinical measurements.
+
+The subsequent completed exploratory A/B tests were separately reviewed: specialist 73/100, ML 58/100. See [the current regrade and rationale](JUDGING.md).

@@ -34,10 +34,15 @@ flowchart LR
   H --> E[Separate evaluator and fixed mask]
   P --> E
   E --> R[Development results and selection]
-  A[Audit A and B signals and labels] --> U[Reserved: no fitting or selection]
+  A[Original A and B PSG signals] --> AP[Frozen D60 control: signal-only prediction]
+  AP --> AE[Separate exploratory evaluation]
+  AT[Original A and B reference labels] --> AE
+  AE --> AR[Retired cohorts: fresh people needed for confirmation]
 ```
 
 Development out-of-fold predictions exclude the evaluated person from that fold's fitting. They still support adaptive recipe selection, so they are not final confirmation. Audit data stay outside fitting shared normalization parameters, self-supervision, teachers, pseudolabels, calibration and model selection. Native signal-only recording-local scaling is an explicitly declared inference transform, not a population fit. The shared host provides procedural, not externally administered, separation.
+
+The original A/B cohorts follow the owner-authorized [exploratory branch](EXPLORATORY_AUDITS.md), using the single D60 seed-17 control. The development ensemble/decoder and score-study boxes above describe separate completed development work; they were not executed as part of that audit branch.
 
 ## Model families and integration boundaries
 

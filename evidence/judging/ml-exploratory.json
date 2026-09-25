@@ -1,0 +1,184 @@
+{
+  "artifact_type": "simulated_independent_data_ml_reproducibility_regrade",
+  "checks_not_performed": [
+    "No fresh-host training replay",
+    "No all-baseline A/B comparison",
+    "No Gate A/B confirmatory evaluation",
+    "No clinical or official adjudication"
+  ],
+  "interpretation": "The verified A/B point scores and individual descriptive intervals are useful exploratory outcomes. They do not restore untouched holdouts, resolve official rules/rights, complete mandatory comparisons, establish paired superiority, or confer Gate A/B passes. Fresh holdouts would be needed for confirmation.",
+  "previous_score": {
+    "data": {
+      "earned": 25,
+      "maximum": 30
+    },
+    "maximum": 100,
+    "ml": {
+      "earned": 16,
+      "maximum": 45
+    },
+    "reproducibility": {
+      "earned": 18,
+      "maximum": 25
+    },
+    "total": 59
+  },
+  "rubric": [
+    {
+      "category": "data",
+      "earned": 6,
+      "full_credit": "Publisher-linked original file identities and content hashes plus a reproducible acquisition/checksum procedure for every evaluated input.",
+      "id": "data_content_provenance",
+      "max": 7,
+      "previous_earned": 6,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "data",
+      "earned": 6,
+      "full_credit": "Native signal and annotation content, reader compatibility, timing and invalid intervals validated with all exceptions accounted for.",
+      "id": "data_reader_annotation_timing",
+      "max": 7,
+      "previous_earned": 6,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "data",
+      "earned": 7,
+      "full_credit": "Frozen participant/night-grouped D/A/B and fold assignments with independently protected holdouts and verified no cross-partition derived-sample leakage.",
+      "id": "data_participant_leakage",
+      "max": 8,
+      "previous_earned": 7,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "data",
+      "earned": 5,
+      "full_credit": "Fixed five-class labels, original epoch grid, invalid/missing accounting and prespecified metric denominators in all evaluated outputs.",
+      "id": "data_grid_labels_denominators",
+      "max": 5,
+      "previous_earned": 5,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "data",
+      "earned": 0,
+      "full_credit": "Untouched externally protected holdouts and settled applicable official crop, permission and scoring rules.",
+      "id": "data_holdout_and_official_rules",
+      "max": 3,
+      "previous_earned": 1,
+      "reason": "Both reserved A/B holdouts were consumed for owner-authorized exploratory scoring. They are no longer untouched; official crop, permission and scoring-rule uncertainty also remains. Former partial credit is withdrawn."
+    },
+    {
+      "category": "ml",
+      "earned": 7,
+      "full_credit": "Complete participant-disjoint candidate development predictions, fixed class metrics and source-bound model selection with selection limits disclosed.",
+      "id": "ml_candidate_development",
+      "max": 8,
+      "previous_earned": 7,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "ml",
+      "earned": 2,
+      "full_credit": "All registered mandatory clean comparators and required variants executed with complete eligible grids, rights, provenance and verified comparable D/A/B outcomes.",
+      "id": "ml_mandatory_comparators",
+      "max": 12,
+      "previous_earned": 2,
+      "reason": "Unchanged: exploratory A/B of one existing YASA control does not complete the eleven mandatory comparable slots."
+    },
+    {
+      "category": "ml",
+      "earned": 3,
+      "full_credit": "Native or demonstrated equivalent routes for each comparator with code/weight rights, checkpoint hashes and excluded-participant training/selection ancestry.",
+      "id": "ml_native_routes_and_lineage",
+      "max": 7,
+      "previous_earned": 3,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "ml",
+      "earned": 4,
+      "full_credit": "Frozen development selection, paired participant uncertainty and all prespecified staging and score targets met without post-selection confirmation claims.",
+      "id": "ml_selection_uncertainty_targets",
+      "max": 8,
+      "previous_earned": 4,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "ml",
+      "earned": 0,
+      "full_credit": "Untouched Gate A and Gate B completed against unchanged criteria with every eligible mandatory comparison and independent result verification.",
+      "id": "ml_audit_confirmation",
+      "max": 10,
+      "previous_earned": 0,
+      "reason": "Unchanged zero: one YASA D60 control on each consumed holdout, no mandatory comparator set, no paired superiority margin, no confirmatory gates."
+    },
+    {
+      "category": "reproducibility",
+      "earned": 5,
+      "full_credit": "Pinned runnable code, environment, commands, seeds and resource bounds for every reported result across a clean setup.",
+      "id": "repro_code_environment_commands",
+      "max": 6,
+      "previous_earned": 5,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "reproducibility",
+      "earned": 6,
+      "full_credit": "Complete immutable hash-bound source, input, model, prediction and result ancestry in a public-safe package or access-controlled manifest.",
+      "id": "repro_hash_bound_artifacts",
+      "max": 7,
+      "previous_earned": 6,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "reproducibility",
+      "earned": 5,
+      "full_credit": "Independent checks of actual executed commands and output arrays for each adopted result, separate from code text and synthetic fixtures.",
+      "id": "repro_independent_actual_outputs",
+      "max": 5,
+      "previous_earned": 5,
+      "reason": "At existing maximum. Local independent saved-array, receipt, metric and bootstrap recomputation adds evidence, but cannot raise this criterion or count as fresh-host training replay."
+    },
+    {
+      "category": "reproducibility",
+      "earned": 0,
+      "full_credit": "Independent fresh-host replay from the publishable materials and permitted data, with terminal logs and output identity checks.",
+      "id": "repro_external_fresh_replay",
+      "max": 4,
+      "previous_earned": 0,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    },
+    {
+      "category": "reproducibility",
+      "earned": 2,
+      "full_credit": "Reviewed public allowlist, raw/private/credential exclusion, third-party redistribution decisions and staged repository scan.",
+      "id": "repro_public_privacy_and_rights",
+      "max": 3,
+      "previous_earned": 2,
+      "reason": "No qualifying rubric change from exploratory A/B scores; prior earned value retained."
+    }
+  ],
+  "schema_version": "1.0",
+  "scope": "Fixed original fifteen-criterion simulated ML rubric; exploratory single-model A/B only; no official competition, gate or clinical certification",
+  "score": {
+    "data": {
+      "earned": 24,
+      "maximum": 30
+    },
+    "maximum": 100,
+    "ml": {
+      "earned": 16,
+      "maximum": 45
+    },
+    "reproducibility": {
+      "earned": 18,
+      "maximum": 25
+    },
+    "total": 58
+  },
+  "source_rubric_sha256": "0c5ce135406242295a459f532b5e7d0ef8fe45d825f6c804e06c11980b10083e",
+  "status": "REVIEW_COMPLETE",
+  "verification_public_sha256": "1524e43a480e2458731afcc291d97034a2944cd5ab77ba06049c0edf82d7c4c2"
+}

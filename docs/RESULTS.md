@@ -1,6 +1,10 @@
 # Results: local staging, score fidelity and literature context
 
-[Judge guide](JUDGE_GUIDE.md) · [Job ledger](EXPERIMENTS.md) · [Literature comparison](../literature/COMPARISON.md)
+[Judge guide](JUDGE_GUIDE.md) Â· [Job ledger](EXPERIMENTS.md) Â· [Literature comparison](../literature/COMPARISON.md)
+
+## Completed A/B exploratory tests
+
+The frozen D60 seed-17 control scored **0.759022 / 0.798875 Macro-F1** on A/B, with **88.757% / 91.239% accuracy**. Each phase includes 39 recordings from 20 people. [Full results, class metrics, confidence intervals and exact model identity](EXPLORATORY_AUDITS.md). The development systems below are separate evaluations and cannot be ranked against A/B as matched comparisons.
 
 ## Local staging comparison
 
@@ -9,16 +13,16 @@ These nine completed systems share **60 development participants, 119 recordings
 | System | Physiological inputs | Macro-F1 | Accuracy % | Absolute F1 change vs fixed control |
 |---|---|---:|---:|---:|
 | EOG | EOG (1) | 0.723293 | 87.179 | -0.062974 |
-| EEG | Fpz−Cz EEG (1) | 0.751696 | 88.991 | -0.034571 |
-| EEG + EOG · seed 17 | Fpz−Cz EEG + EOG (2) | 0.786267 | 90.494 | +0.000000 |
-| EEG + EOG · seed 43 | Fpz−Cz EEG + EOG (2) | 0.785769 | 90.474 | -0.000498 |
-| EEG + EOG · seed 101 | Fpz−Cz EEG + EOG (2) | 0.784727 | 90.408 | -0.001540 |
-| Two-view ensemble | Fpz−Cz EEG + EOG (2) | 0.783920 | 90.530 | -0.002347 |
-| Three-seed ensemble | Fpz−Cz EEG + EOG (2) | 0.787989 | 90.590 | +0.001722 |
-| Transition decoder | Fpz−Cz EEG + EOG (2) | 0.789779 | 90.738 | +0.003512 |
-| Sleepyland/YASA pooled groups | Fpz−Cz + Pz−Oz EEG + EOG (3) | 0.783662 | 90.461 | -0.002605 |
+| EEG | Fpzâˆ’Cz EEG (1) | 0.751696 | 88.991 | -0.034571 |
+| EEG + EOG Â· seed 17 | Fpzâˆ’Cz EEG + EOG (2) | 0.786267 | 90.494 | +0.000000 |
+| EEG + EOG Â· seed 43 | Fpzâˆ’Cz EEG + EOG (2) | 0.785769 | 90.474 | -0.000498 |
+| EEG + EOG Â· seed 101 | Fpzâˆ’Cz EEG + EOG (2) | 0.784727 | 90.408 | -0.001540 |
+| Two-view ensemble | Fpzâˆ’Cz EEG + EOG (2) | 0.783920 | 90.530 | -0.002347 |
+| Three-seed ensemble | Fpzâˆ’Cz EEG + EOG (2) | 0.787989 | 90.590 | +0.001722 |
+| Transition decoder | Fpzâˆ’Cz EEG + EOG (2) | 0.789779 | 90.738 | +0.003512 |
+| Sleepyland/YASA pooled groups | Fpzâˆ’Cz + Pzâˆ’Oz EEG + EOG (3) | 0.783662 | 90.461 | -0.002605 |
 
-[Download local results CSV](../reports/judge-guide/local-results.csv) · [Exact candidate confusion counts](../evidence/development-metrics.json) · [Sleepyland/YASA receipt](../evidence/sleepyland-yasa-development.json)
+[Download local results CSV](../reports/judge-guide/local-results.csv) Â· [Exact candidate confusion counts](../evidence/development-metrics.json) Â· [Sleepyland/YASA receipt](../evidence/sleepyland-yasa-development.json)
 
 ![Local comparisons](../reports/judge-guide/local_comparison.png)
 
@@ -28,11 +32,11 @@ These nine completed systems share **60 development participants, 119 recordings
 
 | Change | Observed development finding | Interpretation |
 |---|---|---|
-| EOG alone → EEG+EOG | 0.723293 → 0.786267 | Two-channel route improves staging here; does not establish minimum sensors |
+| EOG alone â†’ EEG+EOG | 0.723293 â†’ 0.786267 | Two-channel route improves staging here; does not establish minimum sensors |
 | EEG / EEG+EOG two-view mean | 0.783920, below fixed control | Adding a member can worsen results |
 | Three fixed seeds averaged | 0.787989 | Small reproducible development gain, not confirmation |
 | Add train-only transition prior | 0.789779; +0.001789 vs ensemble parent | Temporal structure helps modestly here |
-| 100 → 400 boosting rounds | 0.782354 → 0.786267 | Best tested prefix is the endpoint; convergence is unresolved |
+| 100 â†’ 400 boosting rounds | 0.782354 â†’ 0.786267 | Best tested prefix is the endpoint; convergence is unresolved |
 
 The [full report](REPORT.md#descriptive-uncertainty) gives 10,000-draw descriptive paired intervals and selection limitations. Training-seed variability is distinct from participant-bootstrap uncertainty.
 
@@ -44,7 +48,7 @@ N1 F1 is **0.4722**, while Wake F1 is 0.9786; Wake constitutes **63.27%** of val
 
 ## Experimental score
 
-The unchanged exploratory formula is `100 × sqrt(min(TST / 420 minutes, 1) × TST / SPT)`. It uses duration adequacy and continuity; it does not measure restorative sleep or diagnose disease. Eligibility requires at least seven hours of declared acquisition window, complete coverage and some sleep: **61/119 windows from 40/60 people**, with 58 windows ineligible. These are recording windows, not independently verified whole nights.
+The unchanged exploratory formula is `100 Ã— sqrt(min(TST / 420 minutes, 1) Ã— TST / SPT)`. It uses duration adequacy and continuity; it does not measure restorative sleep or diagnose disease. Eligibility requires at least seven hours of declared acquisition window, complete coverage and some sleep: **61/119 windows from 40/60 people**, with 58 windows ineligible. These are recording windows, not independently verified whole nights.
 
 | System | Score MAE, points | TST MAE, min | Within-SPT WASO MAE, min |
 |---|---:|---:|---:|
@@ -55,7 +59,7 @@ The unchanged exploratory formula is `100 × sqrt(min(TST / 420 minutes, 1) × T
 | Three-seed + transition | 5.677 | 24.331 | 63.088 |
 | Planned maximum | **5** | **15** | **10** |
 
-All systems fail the joint targets. The new candidate has score bias +0.716 points and score P90 error 12.475 points, exceeding the ten-point P90 threshold. Its three paired MAE intervals against EEG+EOG include zero. [Full intervals and controls](../reports/score-extension/summary.json) · [Score CSV](../reports/judge-guide/score-results.csv) · [Independent verification](../evidence/score-extension-verification.json).
+All systems fail the joint targets. The new candidate has score bias +0.716 points and score P90 error 12.475 points, exceeding the ten-point P90 threshold. Its three paired MAE intervals against EEG+EOG include zero. [Full intervals and controls](../reports/score-extension/summary.json) Â· [Score CSV](../reports/judge-guide/score-results.csv) Â· [Independent verification](../evidence/score-extension-verification.json).
 
 ![Score comparison](../reports/score-extension/08_score_extension.png)
 

@@ -9,6 +9,7 @@ python -m venv .venv
 # Windows: .venv/Scripts/python.exe; POSIX: .venv/bin/python
 python -m pip install numpy==1.26.4 pyedflib==0.1.42 xlrd==2.0.2 PyYAML==6.0.3
 python tools/verify_public_metrics.py
+python tools/verify_exploratory_metrics.py
 python -m unittest discover -s tests -v
 ```
 
@@ -26,7 +27,9 @@ The supplied `requirements/research.hashed.txt` pins the original scientific env
 
 Original modeling modules in `sleepedf/` are included for inspection. Their CLIs validate bound manifests and refuse missing private inputs. Prediction takes signal inputs and declared channels without reference Hypnograms; evaluator truth is separate. Each training job must hold the single local lease, initially four CPU threads and 10 GiB combined RSS, with at least 4 GiB free RAM and 20 GiB disk. Save optimizer/RNG/sampler state for native deep models. Pauses are not convergence.
 
-## Confirmation sequence
+## Confirmation sequence and retired cohorts
+
+On 25 September 2026 the owner authorized immediate exploratory evaluation of both original audit cohorts; see [ADR 0016](adr/0016-exploratory-audits.md). Those cohorts are retired from confirmation. The sequence below describes the unchanged scientific requirements for a future protocol using **fresh confirmation participants**, not permission to reopen the original A/B as untouched tests.
 
 1. Resolve all required baseline rights, lineage and native-route adequacy.
 2. Complete development fits and registered tuning/finalist seeds, all-night grouped.
@@ -35,7 +38,7 @@ Original modeling modules in `sleepedf/` are included for inspection. Their CLIs
 5. Open Audit A once through the evaluator; independently recompute the unchanged gate.
 6. Only after A passes, finalize the reduced model and score charter on the original development people, then freeze and evaluate B.
 
-No public replay command opens an audit. The repository does not include released weights or silently download data. See the [ADR index](adr/README.md) and [baseline gaps](BASELINES.md).
+No public replay command opens protected participant data. The repository does not include released weights or silently download data. See the [ADR index](adr/README.md) and [baseline gaps](BASELINES.md).
 
 ## Completed release checks
 

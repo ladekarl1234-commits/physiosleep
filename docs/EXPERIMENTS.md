@@ -2,7 +2,7 @@
 
 [Judge guide](JUDGE_GUIDE.md) · [Results](RESULTS.md) · [Mandatory registry](BASELINES.md)
 
-**Snapshot: 2026-09-25T02:11:00.624500+00:00.** This is a dated observation, not a live job dashboard. A development fit, a software test and a confirmatory audit are different jobs. [Machine-readable snapshot](../evidence/job-status.json).
+**Snapshot: 25 September 2026, after completed exploratory A/B evaluation.** This is a dated observation, not a live job dashboard. A development fit, a software test and a confirmatory audit are different jobs. [Machine-readable snapshot](../evidence/job-status.json).
 
 ## Completed development work
 
@@ -20,7 +20,7 @@
 
 | Job | Observed status | Next completion requirement |
 |---|---|---|
-| AttnSleep seed17, fold0 | **RUNNING_AT_SNAPSHOT**, completed **38/100 epochs**; batch128, 1,702 updates/epoch | Complete serious native folds, seed evaluations and prediction verification. Training loss is not held-out F1. |
+| AttnSleep seed17, fold0 | **STOPPED_WITH_VERIFIED_RESUMABLE_CHECKPOINT**, completed **65/100 epochs**; batch128, 1,702 updates/epoch | Complete serious native folds, seed evaluations and prediction verification. Training loss is not held-out F1. |
 | U-Time fold0, inner seed17 | **FAILED** after 433 training updates and validation; final state commit rejected tuple/list JSON representation | Read-only actual restoration and all 119 prepared-record hashes verified. Pointer fix passed 27 tests. Fresh original-seed replacement selected; renew source-bound qualifications before fitting. Old failed run remains preserved. |
 | Original U-Sleep preprocessing | Six synthetic tests and full-record numerical parity on two preexposed development recordings passed; independent real-output check pending at snapshot | Full development preparation, renewed model preflight and native fitting remain. |
 | Remaining mandatory native families/variants | Incomplete; some code rights, weights/lineage and runtime prerequisites unresolved | [Family-by-family registry](BASELINES.md) and [rights recheck](../evidence/rights-recheck-20260925.md) |
@@ -35,7 +35,7 @@ Observed protected-workspace commands were `python -B -m sleepedf.attnsleep_cuda
 
 | Check | Observed result | What it proves / does not prove |
 |---|---|---|
-| Public unittest suite | **92 passed** in recorded hosted CI | Synthetic data/timing/split/prediction/gate/decoder/summary behavior; not trained accuracy |
+| Public unittest suite | **99 synthetic checks** in this revision (92 original plus seven exploratory checks); hosted CI records the exact tested revision | Synthetic data/timing/split/prediction/gate/decoder/summary behavior; not trained accuracy |
 | Public metric replay | **PASS** for best candidate and Sleepyland/YASA | Exact aggregate confusion arithmetic; not independent raw-prediction access |
 | Publication checks | **PASS** at recorded hosted revision | Tracked-file boundaries, links and bound source/figure hashes; not a formal privacy proof |
 | Score extension review | **PASS**, 501 frozen bindings and 12 paired contrasts checked | Saved development evidence; no audit or clinical validation |
@@ -43,11 +43,11 @@ Observed protected-workspace commands were `python -B -m sleepedf.attnsleep_cuda
 
 See the [observed hosted-CI receipt](../evidence/hosted-ci.json), [workflow](../.github/workflows/verify.yml) and [reproduction commands](DEVELOPER_GUIDE.md). The receipt identifies its exact tested commit; newer documentation is not retroactively covered by an older run. The workflow page shows checks for each subsequent push.
 
-## Confirmation jobs
+## Exploratory evaluation and formal confirmation
 
-| Job | People | Status | Launch prerequisites |
+| Job | People | Status | Interpretation |
 |---|---:|---|---|
-| Audit A | 20 | **NOT_RUN, reserved** | All mandatory clean adequate systems; fixed checkpoints; finalist robustness; development precision/readiness; no prohibited exposure |
-| Audit B | 20 | **NOT_RUN, reserved** | A passes; original development-only sensor/score selection; frozen reduced model and score charter |
+| Audit A | 20 | **EXPLORATORY_EVALUATED**, F1 **0.759022** | 39 recordings, frozen D60 single-model control; no mandatory-comparator gate pass |
+| Audit B | 20 | **EXPLORATORY_EVALUATED**, F1 **0.798875** | 39 recordings, same control; not reduced-sensor confirmation |
 
-Both require at least **0.02 absolute pooled Macro-F1 improvement over every mandatory comparator** and positive simultaneous participant-bootstrap intervals, plus integrity and independent artifact checks. B is never a retry pool for a failed A. A running training job, a passed software check, a published paper score or an agent grade cannot substitute for this result.
+The original formal gates require at least **0.02 absolute pooled Macro-F1 improvement over every mandatory comparator** and positive simultaneous participant-bootstrap intervals, plus integrity and independent artifact checks. B is never a retry pool for a failed A. A running training job, a passed software check, a published paper score or an agent grade cannot substitute for this result.

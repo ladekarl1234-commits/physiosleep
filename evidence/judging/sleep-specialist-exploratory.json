@@ -1,0 +1,177 @@
+{
+  "rubric_id": "sleep-specialist-rubric-v1",
+  "rubric": [
+    {
+      "category": "understanding",
+      "id": "five_class_interpretation",
+      "maximum": 5,
+      "earned": 5
+    },
+    {
+      "category": "understanding",
+      "id": "independent_sleep_windows",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "understanding",
+      "id": "population_applicability",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "understanding",
+      "id": "objective_vs_clinical_constructs",
+      "maximum": 5,
+      "earned": 5
+    },
+    {
+      "category": "staging",
+      "id": "participant_separation",
+      "maximum": 8,
+      "earned": 8
+    },
+    {
+      "category": "staging",
+      "id": "matched_comparators_confirmation",
+      "maximum": 8,
+      "earned": 1
+    },
+    {
+      "category": "staging",
+      "id": "metrics_masks_aggregation",
+      "maximum": 6,
+      "earned": 6
+    },
+    {
+      "category": "staging",
+      "id": "clustered_uncertainty_selection",
+      "maximum": 4,
+      "earned": 4
+    },
+    {
+      "category": "staging",
+      "id": "reproducibility",
+      "maximum": 4,
+      "earned": 4
+    },
+    {
+      "category": "score",
+      "id": "formula_domain_missingness",
+      "maximum": 5,
+      "earned": 5
+    },
+    {
+      "category": "score",
+      "id": "component_fidelity",
+      "maximum": 5,
+      "earned": 2
+    },
+    {
+      "category": "score",
+      "id": "sensitivity_failure_cases",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "score",
+      "id": "clinical_subjective_validity",
+      "maximum": 5,
+      "earned": 0
+    },
+    {
+      "category": "device",
+      "id": "montage_contacts",
+      "maximum": 5,
+      "earned": 3
+    },
+    {
+      "category": "device",
+      "id": "acquisition_conversion",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "device",
+      "id": "paired_device_qualification",
+      "maximum": 5,
+      "earned": 0
+    },
+    {
+      "category": "communication",
+      "id": "calibrated_claims",
+      "maximum": 5,
+      "earned": 5
+    },
+    {
+      "category": "communication",
+      "id": "accessible_traceable_provenance",
+      "maximum": 5,
+      "earned": 4
+    },
+    {
+      "category": "communication",
+      "id": "failures_eligibility",
+      "maximum": 5,
+      "earned": 5
+    }
+  ],
+  "initial_score": 69,
+  "maximum": 100,
+  "review_date": "2026-09-25",
+  "status": "FINAL_SCOPED_AGGREGATE_SCIENTIFIC_REVIEW",
+  "simulated_perspective": true,
+  "clinical_or_competition_attestation": false,
+  "previous_score": 71,
+  "score": 73,
+  "rubric_changed": false,
+  "raw_data_accessed": false,
+  "audit_truth_or_prediction_arrays_accessed": false,
+  "audit_aggregate_reports_accessed": true,
+  "figures_visually_reviewed": false,
+  "numerical_verification": "Separate verifier; this review inspected aggregate evidence and source semantics without rerunning evaluation.",
+  "review_scope": "Completed exploratory A/B aggregate and report, frozen rubric, previously reviewed model-selection and evaluation source. Public status corrections handled separately.",
+  "additional_clinical_confirmation_or_device_credit": 0,
+  "additional_matched_comparator_credit": 0,
+  "additional_sqi_credit": 0,
+  "changes": [
+    {
+      "id": "population_applicability",
+      "previous": 3,
+      "earned": 4,
+      "reason": "Completed evaluation adds 78 recordings from 40 participant-disjoint people outside D60 fitting and selection; same Sleep-EDF source and cohort families do not establish external applicability."
+    },
+    {
+      "id": "clustered_uncertainty_selection",
+      "previous": 3,
+      "earned": 4,
+      "reason": "Frozen checkpoint and analysis, all78 predictions before truth access, phase-specific SC/ST participant-cluster intervals; fixed-checkpoint scope excludes training/selection variability and simultaneous or comparator-margin claims."
+    }
+  ],
+  "category_totals": {
+    "understanding": 18,
+    "staging": 23,
+    "score": 11,
+    "device": 7,
+    "communication": 14
+  },
+  "evidence_sha256": {
+    "reports/exploratory-audits-v1/report.md": "b270b67a888126a7a2d3f0f2dfad2d78d386788f240890ac392ac950aa038720",
+    "reports/exploratory-audits-v1/aggregate.json": "726a46d68cb682b0ec3a0d9d564cf2dec0f105a4012b1d93fcb061f0f2da9945",
+    "publication/physiosleep/evidence/judging/sleep-specialist-final.json": "ef331039a297f71d276c551e22f959fa017056cae8a0fd287ccd36785e1e12ed",
+    "publication/physiosleep/evidence/judging/sleep-specialist-initial.json": "e3a207a582f2224a53d3aa31e62b53e3fab5a6e6e9ef38c942c7026e1cc34ff4",
+    "research/exploratory-audits-v1.json": "0eead74d2dfe8795f91126aa69f9385857011374c682925ba398e5fd7952fb0c",
+    "sleepedf/exploratory_audits.py": "0e512cace18f0ac8aff24e18e2d3457496081be198afb12c4d8c05030fc65b64"
+  },
+  "findings": [
+    "N1 F1 remains approximately0.469/0.499; roughly63.4percent of valid epochs are Wake. Accuracy is not uniform stage recognition.",
+    "Four ST participants per phase limit subgroup representation and bootstrap stability.",
+    "Higher B performance does not establish improvement over A or another model.",
+    "No mandatory superiority, formal Gate A/B pass, new SQI clinical validity or physical-device qualification.",
+    "Both holdouts consumed; fresh confirmation participants required."
+  ],
+  "requested_public_corrections": [
+    "REPORT.md: replace untouched audit status and unmeasured all-development control claim",
+    "CLAIMS.md: separate completed exploratory evaluation from formal gate status"
+  ]
+}

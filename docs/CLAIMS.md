@@ -4,7 +4,7 @@
 |---|---|---|
 | Best development Macro-F1 0.789779 | `evidence/development-metrics.json`; replay script; aggregate figures | Adaptive D60 selection; not audit performance |
 | +0.003512 vs fixed control | Matched D119 confusion results in report | Below +0.02; not every mandatory comparator |
-| A/B not run | Current confirmation decision and frozen registry | NOT_RUN is not pass or fail |
+| A/B exploratory tests completed: Macro-F1 0.759022 / 0.798875 | [Saved-results report](../reports/exploratory-audits-v1/report.md), aggregate confusion counts and evaluator source | Single D60 control; formal gates NOT_RUN; consumed cohorts cannot be reused for confirmation |
 | Complete development epoch accounting | 276,133 complete / 274,271 valid / 1,862 invalid | Invalid labels never silently compacted |
 | Fixed EEG+EOG control score errors 6.37 / 24.71 / 73.31 | [Named systems in score table](RESULTS.md#experimental-score) | Historical control, not latest candidate; eligible 61 windows / 40 people; targets unmet |
 | Frozen transition candidate score errors 5.68 / 24.33 / 63.09 | [Score extension](../reports/score-extension/summary.json), [independent verification](../evidence/score-extension-verification.json) | Same 61/40 and charter; all three MAEs fail; paired intervals versus EEG+EOG include zero |

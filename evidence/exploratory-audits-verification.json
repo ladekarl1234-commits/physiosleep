@@ -1,0 +1,124 @@
+{
+  "artifact_type": "independent_exploratory_saved_array_verification",
+  "model_sha256": "abdc64d3cd736f0a2e6c89fb5843eee06a3af26f64f0abb80120ade794d83860",
+  "phases": {
+    "A": {
+      "accuracy": 0.8875700375346788,
+      "complete_psg_epochs": 92636,
+      "confusion": [
+        [
+          56106,
+          1351,
+          562,
+          33,
+          253
+        ],
+        [
+          1108,
+          2766,
+          1607,
+          20,
+          749
+        ],
+        [
+          208,
+          1058,
+          15254,
+          1066,
+          787
+        ],
+        [
+          24,
+          0,
+          465,
+          2366,
+          1
+        ],
+        [
+          168,
+          366,
+          504,
+          4,
+          5089
+        ]
+      ],
+      "descriptive_macro_f1_interval": {
+        "draws": 10000,
+        "lower": 0.7245196939177245,
+        "seed": 2026092301,
+        "upper": 0.7873022184353885
+      },
+      "evaluated_epochs": 91915,
+      "invalid_epochs": 721,
+      "macro_f1": 0.7590217019647509,
+      "participants": 20,
+      "recordings": 39,
+      "result_sha256": "ea587149451af65e5815e70576cfbd9d86ca4a712c1d05c003df21d985209071"
+    },
+    "B": {
+      "accuracy": 0.9123936763387488,
+      "complete_psg_epochs": 93101,
+      "confusion": [
+        [
+          56275,
+          1475,
+          147,
+          5,
+          112
+        ],
+        [
+          606,
+          2658,
+          849,
+          4,
+          447
+        ],
+        [
+          124,
+          1478,
+          16169,
+          412,
+          523
+        ],
+        [
+          13,
+          3,
+          854,
+          2476,
+          1
+        ],
+        [
+          200,
+          479,
+          281,
+          0,
+          5875
+        ]
+      ],
+      "descriptive_macro_f1_interval": {
+        "draws": 10000,
+        "lower": 0.7816396748577268,
+        "seed": 2026092302,
+        "upper": 0.8155520495492771
+      },
+      "evaluated_epochs": 91466,
+      "invalid_epochs": 1635,
+      "macro_f1": 0.7988746635413793,
+      "participants": 20,
+      "recordings": 39,
+      "result_sha256": "366e3155e303207d344e8573d9d10ab4a36bb6d421ac6830d1f2467cafe92843"
+    }
+  },
+  "public_aggregate_sha256": "726a46d68cb682b0ec3a0d9d564cf2dec0f105a4012b1d93fcb061f0f2da9945",
+  "schema_version": "1.0",
+  "scope": "local_saved_array_recomputation_not_training_replay_or_gate",
+  "selection_id": "sha256:819199847a3c1509a0d847184d551a39bb0d1543678299f629075054d2bc483b",
+  "selection_sha256": "0eead74d2dfe8795f91126aa69f9385857011374c682925ba398e5fd7952fb0c",
+  "source_file_count": 10,
+  "status": "PASS",
+  "verification_method": "independent local NPZ array and Fraction metric recomputation; separate PCG64 participant bootstrap; no project scoring import",
+  "verification_script_sha256": "6501178df7bc18d3d5e83cdd6b08becb849b8980ef4a62decfdf045308e8f1a4",
+  "verified_prediction_receipts": 78,
+  "verified_retirement_events": 2,
+  "verified_truth_opening_events": 2
+}

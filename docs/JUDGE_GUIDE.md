@@ -1,6 +1,6 @@
 # Start here: a judge's review guide
 
-[Documentation index](README.md) · [Repository home](../README.md)
+[Documentation index](README.md) Â· [Repository home](../README.md)
 
 ## The project in one minute
 
@@ -12,20 +12,20 @@ The best completed system is an integration of existing physiological features a
 
 | Time | Open | Decision to make |
 |---|---|---|
-| 0–1 min | [Pipeline](PIPELINE.md) | Can I trace signals to stages without reference-label leakage? |
-| 1–2 min | [Job ledger](EXPERIMENTS.md) | Which fits completed, which tests passed, which jobs failed and which audits remain unrun? |
-| 2–3 min | [Local results](RESULTS.md) | Do Macro-F1, N1, denominators and failed score targets support the claims? |
-| 3–4 min | [Excel comparison](../literature/COMPARISON.md) | Are published results attributed with their different protocols rather than treated as matched wins? |
-| 4–5 min | [Grades](JUDGING.md) and [claims](CLAIMS.md) | What credit is supported, what is missing and what would change the decision? |
+| 0â€“1 min | [Pipeline](PIPELINE.md) | Can I trace signals to stages without reference-label leakage? |
+| 1â€“2 min | [Job ledger](EXPERIMENTS.md) | Which fits completed, which tests passed, which jobs failed and which exploratory tests completed and which formal criteria remain unmet? |
+| 2â€“3 min | [Local results](RESULTS.md) | Do Macro-F1, N1, denominators and failed score targets support the claims? |
+| 3â€“4 min | [Excel comparison](../literature/COMPARISON.md) | Are published results attributed with their different protocols rather than treated as matched wins? |
+| 4â€“5 min | [Grades](JUDGING.md) and [claims](CLAIMS.md) | What credit is supported, what is missing and what would change the decision? |
 
-For a deeper technical review, inspect the [15 ADRs](adr/README.md), run the [public checks](DEVELOPER_GUIDE.md), inspect the [fixed audit criteria](REPORT.md#mandatory-benchmark-and-audit-protocol), and follow the claim links to aggregate evidence. Hardware is a separate [optional review branch](HARDWARE.md).
+For a deeper technical review, inspect the [16 ADRs](adr/README.md), run the [public checks](DEVELOPER_GUIDE.md), inspect the [fixed audit criteria](REPORT.md#mandatory-benchmark-and-audit-protocol), and follow the claim links to aggregate evidence. Hardware is a separate [optional review branch](HARDWARE.md).
 
 ## Current scorecard
 
-| Perspective | Initial → latest | Review cutoff | Interpretation |
+| Perspective | Initial â†’ latest | Review cutoff | Interpretation |
 |---|---:|---|---|
-| Sleep specialist | **69 → 71 / 100** | 24 September 2026 | Simulated scientific/document review; no clinical certification |
-| Data / ML | **53 → 59 / 100** | 25 September 2026 | Simulated scientific/reproducibility review; no official competition grade |
+| Sleep specialist | **69 â†’ 71 / 100** | 25 September 2026 | Simulated scientific/aggregate review; no clinical certification |
+| Data / ML | **53 â†’ 59 / 100** | 25 September 2026 | Simulated scientific/reproducibility review; no official competition grade |
 
 The [frozen criteria and original records](JUDGING.md) retain individual scores. The documentation review that produced this guide is separate and does not automatically rescore the science. Missing confirmation, external validity, adequate mandatory baselines and physical-device measurements remain substantive gaps.
 
@@ -36,7 +36,7 @@ The [frozen criteria and original records](JUDGING.md) retain individual scores.
 | Have you beaten every required baseline by +0.02? | **No.** Best gain over the fixed EEG+EOG control is +0.003512. [Local results](RESULTS.md), [eleven-slot registry](BASELINES.md). |
 | Is 90.7% accuracy misleading? | Wake is 63.27% of valid epochs and N1 F1 is only 0.4722. Assess fixed-five-class Macro-F1 and the confusion matrix. [Stage analysis](REPORT.md#development-experiments-and-results). |
 | Did the same person appear in fit and validation? | Every person's nights stay together; five 48/12-person development folds. Recipe selection still uses development, and audits are procedural holdouts on a shared host. [Pipeline](PIPELINE.md). |
-| Why no audit scores? | Required native comparators and readiness are incomplete. A/B are reserved, not failed or passed. [Confirmation rules](REPORT.md#mandatory-benchmark-and-audit-protocol). |
+| What are the actual audit scores? | A **0.7590**, B **0.7989** Macro-F1 for the single D60 control; [full exploratory results](EXPLORATORY_AUDITS.md). Required native comparators remain incomplete, so this is not a formal gate pass. |
 | What does the Excel prove? | It gives research context, not matched evidence. Each of its 56 numeric rows retains source and protocol. [Literature table](../literature/COMPARISON.md). |
 | Why only 61/119 windows for scores? | The unchanged charter requires at least seven hours, complete coverage and some sleep. None has independently established whole-night boundaries. [Score definitions and failures](RESULTS.md#experimental-score). |
 | Can I reproduce the results? | Public code tests, aggregate arithmetic and plots: yes. Exact private training: not from this clone alone; original data and frozen controlled artifacts are excluded. [Developer guide](DEVELOPER_GUIDE.md). |

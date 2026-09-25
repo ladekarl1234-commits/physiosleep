@@ -16,4 +16,5 @@ These records cover project-level choices, their status, alternatives and verifi
 - [ADR 0012: Bounded single-job local execution](0012-scheduler.md) — Accepted
 - [ADR 0013: Separate sanitized public repository](0013-publication.md) — Accepted by owner publication request
 - [ADR 0014: Independent simulated judging under frozen rubrics](0014-judging.md) — Accepted
-- [ADR 0015: Preserve confirmation after explicit owner clarification](0015-audit-order.md) — Accepted; latest owner decision
+- [ADR 0015: Preserve confirmation after explicit owner clarification](0015-audit-order.md) — Historical; superseded by ADR 0016
+- [ADR 0016: Owner-authorized exploratory evaluation of both audits](0016-exploratory-audits.md) — Accepted; formal benchmark criteria unchanged
